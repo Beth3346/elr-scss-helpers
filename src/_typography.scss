@@ -1,0 +1,89 @@
+@import 'node_modules/elr-scss-functions/main';
+
+@mixin elr-typography-classes() {
+  .elr-bold {
+    font-weight: bold;
+  }
+
+  .elr-italic {
+    font-style: italic;
+  }
+
+  .elr-underline {
+    text-decoration: underline;
+  }
+
+  .elr-uppercase {
+    text-transform: uppercase;
+  }
+
+  .elr-capitalize {
+    text-transform: capitalize;
+  }
+
+  .elr-text-small {
+    font-size: 80%;
+  }
+
+  .elr-text-left {
+    text-align: left;
+  }
+
+  .elr-text-right {
+    text-align: right;
+  }
+
+  .elr-text-center {
+    text-align: center;
+  }
+
+  .elr-text-justified {
+    text-align: justify;
+  }
+
+  .elr-avoid-wrap {
+    display: inline-block;
+  }
+}
+
+@mixin elr-typography-states() {
+  $danger-color: #f7322f;
+  $warning-color: #d1cb34;
+  $success-color: #7aba7b;
+  $info-color: #1daaf0;
+  $muted-color: #999;
+  $accent-color: #ed145b;
+
+  .elr-text-muted {
+    color: $muted-color;
+  }
+
+  .elr-text-disabled {
+    color: #ccc;
+  }
+
+  .elr-text-danger {
+    color: $danger-color;
+  }
+
+  .elr-text-error {
+    color: $danger-color;
+    font-weight: bold;
+  }
+
+  .elr-text-info {
+    color: $info-color;
+  }
+
+  .elr-text-warning {
+    color: $warning-color;
+  }
+
+  .elr-text-success {
+    color: $success-color;
+  }
+
+  .elr-highlight {
+    color: $accent-color;
+  }
+}

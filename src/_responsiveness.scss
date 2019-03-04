@@ -1,0 +1,24 @@
+// scss-lint:disable ImportantRule
+@mixin elr-responsive-classes() {
+  .elr-hide {
+    display: none !important;
+  }
+
+  .elr-hide-desktop {
+    @media (min-width: 769px) {
+      display: none !important;
+    }
+  }
+
+  .elr-hide-tablet {
+    @media (max-width: 768px) and (min-width: 569px) {
+      display: none !important;
+    }
+  }
+
+  .elr-hide-mobile {
+    @media (max-width: 568px) {
+      display: none !important;
+    }
+  }
+}

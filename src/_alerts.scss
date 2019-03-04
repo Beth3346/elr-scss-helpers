@@ -1,0 +1,54 @@
+@import 'node_modules/elr-scss-alerts/src/main';
+
+@mixin elr-notification-classes() {
+  .elr-notification {
+    @include elr-alert(
+      $config: (
+        border-radius: 3px
+      )
+    );
+    margin: 10px 0;
+    max-width: 768px;
+    width: 100%;
+  }
+
+  .elr-notification-info {
+    @include elr-alert-context(
+      $config: (
+        type: info
+      )
+    );
+  }
+
+  .elr-notification-danger {
+    @include elr-alert-context(
+      $config: (
+        type: danger
+      )
+    );
+  }
+
+  .elr-notification-warning {
+    @include elr-alert-context(
+      $config: (
+        type: warning
+      )
+    );
+  }
+
+  .elr-notification-success {
+    @include elr-alert-context(
+      $config: (
+        type: success
+      )
+    );
+  }
+
+  .elr-notification-muted {
+    @include elr-alert-context(
+      $config: (
+        type: muted
+      )
+    );
+  }
+}

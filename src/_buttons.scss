@@ -1,0 +1,129 @@
+@import 'node_modules/elr-scss-functions/main';
+@import 'node_modules/elr-scss-buttons/src/main';
+
+@mixin elr-buttons($config: ()) {
+  $config: extend(
+    (
+      background-color: #1976d2,
+      color: #fff,
+      width: 250px,
+      border-radius: 3px
+    ),
+    $config
+  );
+
+  $bg-color: map-get($config, background-color);
+  $color: map-get($config, color);
+  $width: map-get($config, width);
+  $border-radius: map-get($config, border-radius);
+
+  .elr-button {
+    @include elr-button;
+  }
+
+  .elr-button-small {
+    width: auto;
+  }
+
+  .elr-button-primary {
+    background-color: $bg-color;
+    border-color: $bg-color;
+
+    &:hover {
+      background-color: lighten($bg-color, 10%);
+      border-color: lighten($bg-color, 10%);
+    }
+  }
+
+  .elr-button-pill {
+    @include elr-button(
+      $config: (
+        pill: true
+      )
+    );
+  }
+
+  .elr-button-ghost {
+    @include elr-button(
+      $config: (
+        border-color: $bg-color,
+        background-color: transparent
+      )
+    );
+  }
+
+  .elr-button-group {
+    @include elr-button-group;
+  }
+
+  .elr-button-icon {
+    @include elr-icon-button;
+  }
+
+  .elr-button-icon-round {
+    @include elr-icon-button(
+      $config: (
+        round: true
+      )
+    );
+    padding: 10px 13px;
+  }
+}
+
+@mixin elr-buttons-action($config: ()) {
+  $danger-color: #f7322f;
+  $warning-color: #d1cb34;
+  $success-color: #7aba7b;
+  $info-color: #1daaf0;
+  $muted-color: #999;
+
+  .elr-button-danger {
+    background-color: $danger-color;
+    border-color: $danger-color;
+
+    &:hover {
+      background-color: lighten($danger-color, 10%);
+      border-color: lighten($danger-color, 10%);
+    }
+  }
+
+  .elr-button-warning {
+    background-color: $warning-color;
+    border-color: $warning-color;
+
+    &:hover {
+      background-color: lighten($warning-color, 10%);
+      border-color: lighten($warning-color, 10%);
+    }
+  }
+
+  .elr-button-success {
+    background-color: $success-color;
+    border-color: $success-color;
+
+    &:hover {
+      background-color: lighten($success-color, 10%);
+      border-color: lighten($success-color, 10%);
+    }
+  }
+
+  .elr-button-muted {
+    background-color: $muted-color;
+    border-color: $muted-color;
+
+    &:hover {
+      background-color: lighten($muted-color, 10%);
+      border-color: lighten($muted-color, 10%);
+    }
+  }
+
+  .elr-button-info {
+    background-color: $info-color;
+    border-color: $info-color;
+
+    &:hover {
+      background-color: lighten($info-color, 10%);
+      border-color: lighten($info-color, 10%);
+    }
+  }
+}

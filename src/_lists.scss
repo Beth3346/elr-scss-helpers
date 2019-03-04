@@ -1,0 +1,11 @@
+// List Classes
+@import 'node_modules/elr-scss-lists/src/main';
+
+@mixin elr-list-classes() {
+  .elr-unstyled-list {
+    @include elr-unstyled-list;
+  }
+  .elr-inline-list {
+    @include elr-inline-list;
+  }
+}

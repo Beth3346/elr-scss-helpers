@@ -1,0 +1,209 @@
+*:not(button) {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-shadow: none;
+  background: transparent;
+}
+
+* {
+  vertical-align: baseline;
+  box-sizing: border-box;
+  font-family: inherit;
+  line-height: inherit;
+  color: inherit;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  font-size: 100%;
+}
+
+input,
+select,
+textarea {
+  border: 1px solid #999;
+}
+
+html {
+  font-size: 16px;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: '';
+}
+
+// remember to define focus styles!
+:focus {
+  outline: 0;
+  text-decoration: none;
+}
+
+// remember to highlight inserts somehow!
+ins {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+// set img max-width
+img {
+  height: auto;
+}
+
+// ie 8 img max-width
+@media \0screen {
+  img {
+    width: auto;
+  }
+}
+
+body {
+  line-height: 1.5;
+  font-size: 1rem;
+  font-family: 'Lato', sans-serif;
+  color: #333;
+  background-color: #fff;
+}
+
+// make html5 compatible
+
+main,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+picture,
+section {
+  display: block;
+}
+
+.wrapper {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+.main-heading {
+  font-size: 36px;
+  font-weight: 700;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.subheading {
+  font-size: 16px;
+  color: #666;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.demo-content {
+  position: relative;
+  padding: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.layout-demo {
+  overflow: hidden;
+}
+
+pre {
+  margin: 20px 0;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  background-color: #e2e2e2;
+  color: #666;
+  font-size: 14px;
+}
+
+.box-model-label {
+  padding: 5px 0;
+  font-size: 14px;
+  color: #666;
+}

@@ -1,0 +1,251 @@
+// scss-lint:disable ImportantRule
+@import 'node_modules/elr-scss-functions/main';
+
+// Layout Classes
+@mixin elr-reset-element() {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  border: 0;
+}
+
+// TODO: import this from layouts scss module
+// Modern clearfix
+// Use instead of overflow:hidden to clear floats
+
+@mixin elr-clearfix() {
+  &:after,
+  &:before {
+    content: '';
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin elr-screen-reader() {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+// Centers an element horizontally on the page
+
+@mixin elr-center-block($config: ()) {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  float: none !important;
+}
+
+@mixin elr-layout-classes() {
+  .elr-pull-left {
+    float: left !important;
+  }
+
+  .elr-pull-right {
+    float: right !important;
+  }
+
+  .elr-no-float {
+    float: none !important;
+  }
+
+  .elr-clear {
+    @include elr-clearfix;
+  }
+
+  .elr-center-block {
+    @include elr-center-block;
+  }
+
+  .elr-screen-reader {
+    @include elr-screen-reader;
+  }
+
+  .elr-no-margin {
+    margin: 0 !important;
+  }
+
+  .elr-no-padding {
+    padding: 0 !important;
+  }
+
+  .elr-no-background {
+    background: transparent !important;
+  }
+
+  .elr-no-border {
+    border: 0 !important;
+  }
+
+  .elr-o-hidden {
+    overflow: hidden !important;
+  }
+
+  .elr-o-scroll {
+    overflow: scroll !important;
+  }
+
+  .elr-o-scroll-x {
+    overflow-x: scroll !important;
+    overflow-y: hidden;
+  }
+
+  .elr-o-scroll-y {
+    overflow-x: hidden;
+    overflow-y: scroll !important;
+  }
+}
+
+@mixin elr-flex-classes() {
+  .elr-flex {
+    display: flex !important;
+  }
+
+  .elr-flex-row {
+    flex-direction: row;
+  }
+
+  .elr-flex-column {
+    flex-direction: column;
+  }
+
+  .elr-flex-wrap {
+    flex-wrap: wrap;
+  }
+
+  .elr-flex-nowrap {
+    flex-wrap: nowrap !important;
+  }
+
+  .elr-flex-center {
+    align-items: center;
+  }
+
+  .elr-flex-baseline {
+    align-items: baseline;
+  }
+
+  .elr-flex-stretch {
+    align-items: stretch;
+  }
+
+  .elr-flex-top {
+    align-items: flex-start;
+  }
+
+  .elr-flex-bottom {
+    align-items: flex-end;
+  }
+
+  .elr-flex-justify-center {
+    justify-content: center;
+  }
+
+  .elr-flex-justify {
+    justify-content: space-between;
+  }
+
+  .elr-flex-even {
+    justify-content: space-around;
+  }
+
+  .elr-flex-left {
+    justify-content: flex-start;
+  }
+
+  .elr-flex-right {
+    justify-content: flex-end;
+  }
+
+  .elr-flex-auto {
+    flex: 1 1 auto;
+    min-width: 0;
+    min-height: 0;
+  }
+
+  .elr-flex-grow {
+    flex: 1 0 auto;
+  }
+
+  .elr-flex-first {
+    order: -1;
+  }
+
+  .elr-flex-last {
+    order: 99999;
+  }
+
+  .elr-flex-reverse {
+    flex-direction: row-reverse;
+  }
+}
+
+@mixin elr-positioning-classes() {
+  .elr-static {
+    position: static !important;
+  }
+
+  .elr-absolute {
+    position: absolute !important;
+  }
+
+  .elr-relative {
+    position: relative !important;
+  }
+
+  .elr-fixed {
+    position: fixed !important;
+  }
+
+  .elr-position-top {
+    top: 0 !important;
+  }
+
+  .elr-position-left {
+    left: 0 !important;
+  }
+
+  .elr-position-right {
+    right: 0 !important;
+  }
+
+  .elr-position-bottom {
+    bottom: 0 !important;
+  }
+
+  .elr-position-center-x {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+
+  .elr-position-center-y {
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+  }
+}
+
+@mixin elr-display-classes() {
+  .elr-block {
+    display: block !important;
+  }
+
+  .elr-inline {
+    display: inline !important;
+  }
+
+  .elr-inline-block {
+    display: inline-block !important;
+  }
+
+  .elr-none {
+    display: none !important;
+  }
+}

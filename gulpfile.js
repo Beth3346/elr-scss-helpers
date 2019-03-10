@@ -1,7 +1,6 @@
 const gulp = require('gulp');
 const path = require('path');
 const sass = require('gulp-sass');
-const scsslint = require('gulp-scss-lint');
 const plumber = require('gulp-plumber');
 const autoprefixer = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
@@ -40,7 +39,6 @@ function watchFiles(done) {
   gulp.watch(['./**/*.scss', 'dist/index.html'], () => {
     return gulp
       .src('./*.scss')
-      .pipe(scsslint())
       .pipe(plumber())
       .pipe(
         sass({
@@ -64,7 +62,6 @@ function watchFiles(done) {
 gulp.task('default', () => {
   return gulp
     .src('./*.scss')
-    .pipe(scsslint())
     .pipe(plumber())
     .pipe(
       sass({

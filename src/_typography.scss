@@ -21,6 +21,10 @@
     text-transform: capitalize;
   }
 
+  .elr-text-large {
+    font-size: 120%;
+  }
+
   .elr-text-small {
     font-size: 80%;
   }
@@ -43,6 +47,30 @@
 
   .elr-avoid-wrap {
     display: inline-block;
+  }
+
+  .elr-fz-36 {
+    font-size: 36px !important;
+  }
+
+  .elr-fz-30 {
+    font-size: 30px !important;
+  }
+
+  .elr-fz-24 {
+    font-size: 24px !important;
+  }
+
+  .elr-fz-18 {
+    font-size: 18px !important;
+  }
+
+  .elr-fz-16 {
+    font-size: 16px !important;
+  }
+
+  .elr-fz-14 {
+    font-size: 14px !important;
   }
 }
 

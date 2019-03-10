@@ -1,7 +1,7 @@
 @import 'node_modules/elr-scss-functions/main';
 @import 'node_modules/elr-scss-buttons/src/main';
 
-@mixin elr-buttons($config: ()) {
+@mixin elr-button-classes($config: ()) {
   $config: extend(
     (
       background-color: #1976d2,

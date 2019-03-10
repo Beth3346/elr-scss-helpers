@@ -1,10 +1,11 @@
 @import 'node_modules/elr-scss-functions/main';
-@import 'src/alerts';
-@import 'src/buttons';
-@import 'src/layout';
-@import 'src/lists';
-@import 'src/responsiveness';
-@import 'src/typography';
+@import 'alerts';
+@import 'background';
+@import 'buttons';
+@import 'layout';
+@import 'lists';
+@import 'responsiveness';
+@import 'typography';
 
 @mixin elr-helper-classes($config: ()) {
   $config: extend(
@@ -20,7 +21,7 @@
   $color: map-get($config, color);
   $border-radius: map-get($config, border-radius);
 
-  @include elr-buttons(
+  @include elr-button-classes(
     $config: (
       background-color: $link-color,
       border-radius: $border-radius
@@ -33,6 +34,7 @@
   @include elr-list-classes;
   @include elr-responsive-classes;
   @include elr-typography-classes;
+  @include elr-background-classes;
 }
 
 @mixin elr-action-helper-classes() {

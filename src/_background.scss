@@ -1,0 +1,17 @@
+@mixin elr-background-classes() {
+  .elr-no-background {
+    background: transparent !important;
+  }
+
+  .elr-no-repeat {
+    background-repeat: no-repeat !important;
+  }
+
+  .elr-background-fixed {
+    background-attachment: fixed;
+  }
+
+  .elr-background-centered {
+    background-position: center center;
+  }
+}

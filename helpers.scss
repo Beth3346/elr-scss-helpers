@@ -73,6 +73,20 @@ button {
   width: 200px;
 }
 
+.display-helpers {
+  width: 100%;
+  padding: 20px;
+}
+
+.display-helpers span,
+.display-helpers div {
+  background-color: #1976d2;
+  color: #fff;
+  padding: 10px;
+  line-height: 1;
+  margin: 10px 5px;
+}
+
 // .elr-flex-column {
 //   .flex-item {
 //     flex: 1;

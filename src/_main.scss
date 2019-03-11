@@ -12,18 +12,25 @@
     (
       link-color: #1976d2,
       color: #333,
-      border-radius: 3px
+      border-radius: 3px,
+      accent-color: rgb(240, 44, 151),
+      button-color: #1976d2
     ),
     $config
   );
 
+  // accent color
+  // button color
+
   $link-color: map-get($config, link-color);
   $color: map-get($config, color);
   $border-radius: map-get($config, border-radius);
+  $accent-color: map-get($config, accent-color);
+  $button-color: map-get($config, button-color);
 
   @include elr-button-classes(
     $config: (
-      background-color: $link-color,
+      background-color: $button-color,
       border-radius: $border-radius
     )
   );
@@ -38,6 +45,12 @@
 }
 
 @mixin elr-action-helper-classes() {
+  // danger color
+  // warning color
+  // success color
+  // muted color
+  // info color
+
   @include elr-notification-classes;
   @include elr-buttons-action;
   @include elr-typography-states;

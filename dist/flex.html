@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+  <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>CSS Helpers Demo | ELR CSS Utilities</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:400,700"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/helpers.css" />
+  </head>
+
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+    <div class="wrapper">
+      <div class="content-holder">
+        <div class="demo-content elr-block">
+          <h1 class="main-heading elr-mb-10">Flex Helpers</h1>
+          <p class="box-model-label">
+            display: flex; flex-direction: row;
+          </p>
+          <div class="flex-demo elr-flex elr-flex-row">
+            <div class="flex-item">Flex Item</div>
+            <div class="flex-item">Flex Item</div>
+            <div class="flex-item">Flex Item</div>
+            <div class="flex-item">Flex Item</div>
+          </div>
+          <p class="box-model-label">
+            display: flex; flex-direction: row; flex-wrap: wrap;
+          </p>
+          <div class="flex-demo elr-flex elr-flex-wrap">
+            <div class="flex-item">Flex Item</div>
+            <div class="flex-item">Flex Item</div>
+            <div class="flex-item">Flex Item</div>
+            <div class="flex-item">Flex Item</div>
+          </div>
+          <p class="box-model-label">
+            display: flex; flex-direction: row; align-items: baseline;
+          </p>
+          <div class="flex-demo elr-flex elr-flex-baseline">
+            <div class="flex-item">Flex Item</div>
+            <div class="flex-item">Flex Item</div>
+            <div class="flex-item">Flex Item</div>
+            <div class="flex-item">Flex Item</div>
+          </div>
+          <p class="box-model-label">
+            display: flex; flex-direction: row; align-items: center;
+          </p>
+          <div class="flex-demo elr-flex elr-flex-center">
+            <div class="flex-item">Flex Item</div>
+            <div class="flex-item">Flex Item</div>
+            <div class="flex-item">Flex Item</div>
+            <div class="flex-item">Flex Item</div>
+          </div>
+          <p class="box-model-label">
+            display: flex; flex-direction: row; align-items: flex-start;
+          </p>
+          <div class="flex-demo elr-flex elr-flex-top">
+            <div class="flex-item">Flex Item</div>
+            <div class="flex-item">Flex Item</div>
+            <div class="flex-item">Flex Item</div>
+            <div class="flex-item">Flex Item</div>
+          </div>
+          <p class="box-model-label">
+            display: flex; flex-direction: row; align-items: flex-end;
+          </p>
+          <div class="flex-demo elr-flex elr-flex-bottom">
+            <div class="flex-item">Flex Item</div>
+            <div class="flex-item">Flex Item</div>
+            <div class="flex-item">Flex Item</div>
+            <div class="flex-item">Flex Item</div>
+          </div>
+          <p class="box-model-label">
+            display: flex; flex-direction: row; justify-content: center;
+          </p>
+          <div class="flex-demo elr-flex elr-flex-justify-center">
+            <div class="flex-item">Flex Item</div>
+            <div class="flex-item">Flex Item</div>
+          </div>
+          <p class="box-model-label">
+            display: flex; flex-direction: row; justify-content: space-between;
+          </p>
+          <div class="flex-demo elr-flex elr-flex-justify">
+            <div class="flex-item">Flex Item</div>
+            <div class="flex-item">Flex Item</div>
+          </div>
+          <p class="box-model-label">
+            display: flex; flex-direction: row; justify-content: space-around;
+          </p>
+          <div class="flex-demo elr-flex elr-flex-even">
+            <div class="flex-item">Flex Item</div>
+            <div class="flex-item">Flex Item</div>
+          </div>
+          <p class="box-model-label">
+            display: flex; flex-direction: row; justify-content: flex-start;
+          </p>
+          <div class="flex-demo elr-flex elr-flex-left">
+            <div class="flex-item">Flex Item</div>
+            <div class="flex-item">Flex Item</div>
+          </div>
+          <p class="box-model-label">
+            display: flex; flex-direction: row; justify-content: flex-end;
+          </p>
+          <div class="flex-demo elr-flex elr-flex-right">
+            <div class="flex-item">Flex Item</div>
+            <div class="flex-item">Flex Item</div>
+          </div>
+        </div>
+        <div class="demo-content layout-demo elr-block">
+          <h1 class="main-heading">Reordering Content with Flexbox Demo</h1>
+          <h2 class="subheading">
+            Use caution when reordering elements with flexbox as screen readers
+            will be inconsistent with what's on the screen.
+          </h2>
+          <div class="flex-demo elr-flex elr-flex-row">
+            <div class="flex-item">Flex Item 1</div>
+            <div class="flex-item">Flex Item 2</div>
+            <div class="flex-item">Flex Item 3</div>
+          </div>
+          <div class="flex-demo elr-flex">
+            <div class="flex-item">Flex Item 1</div>
+            <div class="flex-item">Flex Item 2</div>
+            <div class="flex-item elr-flex-first">Flex Item 3</div>
+          </div>
+          <div class="flex-demo elr-flex elr-flex-row">
+            <div class="flex-item elr-flex-last">Flex Item 1</div>
+            <div class="flex-item">Flex Item 2</div>
+            <div class="flex-item">Flex Item 3</div>
+          </div>
+          <div class="flex-demo elr-flex elr-flex-reverse">
+            <div class="flex-item">Flex Item 1</div>
+            <div class="flex-item">Flex Item 2</div>
+            <div class="flex-item">Flex Item 3</div>
+          </div>
+        </div>
+        <div class="demo-content layout-demo elr-block">
+          <h1 class="main-heading">Flex Column Helpers Demo</h1>
+          <div class="flex-demo elr-flex elr-flex-column">
+            <div class="flex-item">Flex Item 1</div>
+            <div class="flex-item">Flex Item 2</div>
+            <div class="flex-item">Flex Item 3</div>
+          </div>
+          <div class="flex-demo elr-flex elr-flex-column elr-flex-justify">
+            <div class="flex-item">Flex Item 1</div>
+            <div class="flex-item">Flex Item 2</div>
+            <div class="flex-item">Flex Item 3</div>
+          </div>
+          <div class="flex-demo elr-flex elr-flex-column elr-flex-even">
+            <div class="flex-item">Flex Item 1</div>
+            <div class="flex-item">Flex Item 2</div>
+            <div class="flex-item">Flex Item 3</div>
+          </div>
+          <div class="flex-demo elr-flex elr-flex-column elr-flex-right">
+            <div class="flex-item">Flex Item 1</div>
+            <div class="flex-item">Flex Item 2</div>
+            <div class="flex-item">Flex Item 3</div>
+          </div>
+          <div
+            class="flex-demo elr-flex elr-flex-column elr-flex-justify-center"
+          >
+            <div class="flex-item">Flex Item 1</div>
+            <div class="flex-item">Flex Item 2</div>
+            <div class="flex-item">Flex Item 3</div>
+          </div>
+        </div>
+      </div>
+      <a class="elr-block" href="/">Home</a>
+    </div>
+  </body>
+</html>

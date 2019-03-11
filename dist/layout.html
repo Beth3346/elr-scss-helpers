@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+  <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>CSS Helpers Demo | ELR CSS Utilities</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:400,700"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/helpers.css" />
+  </head>
+
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+    <div class="wrapper">
+      <div class="content-holder">
+        <div class="demo-content elr-block">
+          <h1 class="main-heading elr-mb-10">Layout Helpers</h1>
+          <div class="demo-content layout-demo elr-block">
+            <div class="box elr-pull-left">Float Left</div>
+            <div class="box elr-pull-right">Float Right</div>
+            <div class="box elr-pull-left elr-no-float">No Float</div>
+            <div class="box elr-center-block">Centered</div>
+            <pre>&lt;div class="elr-clear"&gt;&lt/div&gt;</pre>
+            <pre>&lt;div class="elr-screen-reader"&gt;&lt/div&gt;</pre>
+          </div>
+          <div class="demo-content layout-demo elr-block">
+            <h1 class="main-heading">Box Model Helpers Demo</h1>
+            <p class="box-model-label">margin: 20px padding: 20px 1px border</p>
+            <div class="box-model-holder">
+              <div class="box-model">
+                Box Model
+              </div>
+            </div>
+            <p class="box-model-label">margin: 0 padding: 20px 1px border</p>
+            <div class="box-model-holder">
+              <div class="box-model elr-no-margin">
+                Box Model
+              </div>
+            </div>
+            <p class="box-model-label">margin: 20px; padding: 0; 1px border</p>
+            <div class="box-model-holder">
+              <div class="box-model elr-no-padding">
+                Box Model
+              </div>
+            </div>
+            <p class="box-model-label">margin: 20px; padding: 20px; 0 border</p>
+            <div class="box-model-holder">
+              <div class="box-model elr-no-border">
+                Box Model
+              </div>
+            </div>
+            <p class="box-model-label">
+              margin: 20px; padding: 20px; 1px border; background: transparent
+            </p>
+            <div class="box-model-holder">
+              <div class="box-model elr-no-background">
+                Box Model
+              </div>
+            </div>
+          </div>
+          <div class="demo-content layout-demo elr-block">
+            <h1 class="main-heading">Overflow Helpers Demo</h1>
+            <div class="overflow-holder">
+              <div class="box-model-overflow">This box is too big</div>
+            </div>
+            <div class="overflow-holder elr-o-hidden">
+              <div class="box-model-overflow">This box is too big</div>
+            </div>
+            <div class="overflow-holder elr-o-scroll">
+              <div class="box-model-overflow">This box is too big</div>
+            </div>
+            <div class="overflow-holder elr-o-scroll-x">
+              <div class="box-model-overflow">This box is too big</div>
+            </div>
+            <div class="overflow-holder elr-o-scroll-y">
+              <div class="box-model-overflow">This box is too big</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="elr-block" href="/">Home</a>
+    </div>
+  </body>
+</html>

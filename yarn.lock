@@ -1087,10 +1087,10 @@ elr-scss-alerts@^0.1.4:
   dependencies:
     elr-scss-functions "0.1.2"
 
-elr-scss-buttons@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/elr-scss-buttons/-/elr-scss-buttons-0.0.3.tgz#f2493567a81caaa14a7fa3e951fe0dbb40b54b0c"
-  integrity sha512-MLxOLPobeKV6vVugB7zz35Ydom+lGH1ejNSNiHk4gwKYxehsL7RztbXSgtSQOcoGQ3gTwu2pq3duBjvCzmX5qg==
+elr-scss-buttons@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/elr-scss-buttons/-/elr-scss-buttons-0.0.4.tgz#1b33492a366891ee91f047c5fd6a94da1725293b"
+  integrity sha512-lVq5q34cTNPlEInW/k5wRQG1oByIklzyYWlrArEoipuWgtedGapy8sM58kK5XPqrUZM8KcutPPBOSZPG4xR+Yw==
   dependencies:
     elr-scss-functions "0.1.2"
 

@@ -200,6 +200,12 @@ pre {
   background-color: #e2e2e2;
   color: #666;
   font-size: 14px;
+
+  button {
+    margin: 0;
+    margin-left: 20px;
+    cursor: pointer;
+  }
 }
 
 .box-model-label {

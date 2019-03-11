@@ -22,6 +22,11 @@
       integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
       crossorigin="anonymous"
     />
+    <script
+      src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js"
+      integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ="
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/helpers.css" />
   </head>
@@ -35,18 +40,59 @@
     <![endif]-->
     <div class="wrapper">
       <div class="content-holder">
-        <div class="demo-content">
+        <div class="demo-content elr-block">
           <h1 class="main-heading">Button Helpers</h1>
+          <h3>Basic Button</h3>
           <button class="elr-button">Button</button>
+          <pre>&lt;button class="elr-button"&gt;Button&lt;/button&gt;</pre>
           <button class="elr-button elr-button-primary">Primary</button>
+          <pre class="elr-flex">
+            <span id="code">&lt;button class="elr-button elr-button-primary"&gt;Button&lt;/button&gt;</span>
+            <button class="js-clip"><i class="far fa-clipboard"></i></button>
+          </pre>
+          <button class="elr-button elr-button-secondary">Secondary</button>
+          <pre>
+&lt;button class="elr-button elr-button-secondary"&gt;Button&lt;/button&gt;</pre
+          >
+          <h3>Pill Button</h3>
           <button class="elr-button-pill">Button</button>
+          <button class="elr-button-pill elr-button-primary">Primary</button>
+          <button class="elr-button-pill elr-button-secondary">
+            Secondary
+          </button>
+          <h3>Ghost Button</h3>
           <button class="elr-button-ghost">Button</button>
+          <button class="elr-button-ghost elr-button-primary">Primary</button>
+          <button class="elr-button-ghost elr-button-secondary">
+            Secondary
+          </button>
+          <h3>Icon Buttons</h3>
+          <p>icon can be on left or right</p>
           <button class="elr-button elr-button-icon">
             <div class="elr-icon">
               <i class="fas fa-arrow-alt-circle-down"></i>
             </div>
             <span class="elr-button-text">Download</span>
           </button>
+          <button class="elr-button elr-button-primary elr-button-icon">
+            <div class="elr-icon">
+              <i class="fas fa-arrow-alt-circle-down"></i>
+            </div>
+            <span class="elr-button-text">Download</span>
+          </button>
+          <button class="elr-button elr-button-secondary elr-button-icon">
+            <div class="elr-icon">
+              <i class="fas fa-arrow-alt-circle-down"></i>
+            </div>
+            <span class="elr-button-text">Download</span>
+          </button>
+          <button class="elr-button elr-button-icon">
+            <span class="elr-button-text">Download</span>
+            <div class="elr-icon">
+              <i class="fas fa-arrow-alt-circle-down"></i>
+            </div>
+          </button>
+          <p>or button can have an icon only</p>
           <button class="elr-button elr-button-icon">
             <div class="elr-icon">
               <i class="fas fa-arrow-alt-circle-down"></i>
@@ -78,5 +124,14 @@
       </div>
       <a class="elr-block" href="/">Home</a>
     </div>
+    <script>
+      let clipboard = new ClipboardJS('.js-clip', {
+        target: function(trigger) {
+          return trigger.previousElementSibling;
+        }
+      });
+
+      console.log(clipboard.trigger);
+    </script>
   </body>
 </html>

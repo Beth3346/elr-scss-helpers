@@ -7,20 +7,24 @@
 @import 'responsiveness';
 @import 'typography';
 
+// config
+$primary-color: #1976d2;
+$text-color: #333;
+$border-radius: 3px;
+$accent-color: rgb(240, 44, 151);
+$button-color: #1976d2;
+
 @mixin elr-helper-classes($config: ()) {
   $config: extend(
     (
-      link-color: #1976d2,
-      color: #333,
-      border-radius: 3px,
-      accent-color: rgb(240, 44, 151),
-      button-color: #1976d2
+      link-color: $primary-color,
+      color: $text-color,
+      border-radius: $border-radius,
+      accent-color: $accent-color,
+      button-color: $primary-color
     ),
     $config
   );
-
-  // accent color
-  // button color
 
   $link-color: map-get($config, link-color);
   $color: map-get($config, color);
@@ -31,7 +35,8 @@
   @include elr-button-classes(
     $config: (
       background-color: $button-color,
-      border-radius: $border-radius
+      border-radius: $border-radius,
+      accent-color: $accent-color
     )
   );
   @include elr-display-classes;

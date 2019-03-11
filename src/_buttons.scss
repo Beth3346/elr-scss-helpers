@@ -7,7 +7,8 @@
       background-color: #1976d2,
       color: #fff,
       width: 250px,
-      border-radius: 3px
+      border-radius: 3px,
+      accent-color: rgb(240, 44, 151)
     ),
     $config
   );
@@ -16,6 +17,7 @@
   $color: map-get($config, color);
   $width: map-get($config, width);
   $border-radius: map-get($config, border-radius);
+  $accent-color: map-get($config, accent-color);
 
   .elr-button {
     @include elr-button;
@@ -35,21 +37,72 @@
     }
   }
 
+  .elr-button-secondary {
+    background-color: $accent-color;
+    border-color: $accent-color;
+
+    &:hover {
+      background-color: lighten($accent-color, 10%);
+      border-color: lighten($accent-color, 10%);
+    }
+  }
+
   .elr-button-pill {
     @include elr-button(
       $config: (
         pill: true
       )
     );
+
+    &.elr-button-primary {
+      background-color: $bg-color;
+      border-color: $bg-color;
+
+      &:hover {
+        background-color: lighten($bg-color, 10%);
+        border-color: lighten($bg-color, 10%);
+      }
+    }
+
+    &.elr-button-secondary {
+      background-color: $accent-color;
+      border-color: $accent-color;
+
+      &:hover {
+        background-color: lighten($accent-color, 10%);
+        border-color: lighten($accent-color, 10%);
+      }
+    }
   }
 
   .elr-button-ghost {
     @include elr-button(
       $config: (
-        border-color: $bg-color,
-        background-color: transparent
+        border-color: #333,
+        background-color: transparent,
+        color: #333
       )
     );
+
+    &.elr-button-primary {
+      border-color: $bg-color;
+      color: $bg-color;
+
+      &:hover {
+        background-color: $bg-color;
+        color: #fff;
+      }
+    }
+
+    &.elr-button-secondary {
+      border-color: $accent-color;
+      color: $accent-color;
+
+      &:hover {
+        background-color: $accent-color;
+        color: #fff;
+      }
+    }
   }
 
   .elr-button-group {
@@ -66,7 +119,7 @@
         round: true
       )
     );
-    padding: 10px 13px;
+    // padding: 10px 13px;
   }
 }
 

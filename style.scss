@@ -200,6 +200,12 @@ pre {
   background-color: #e2e2e2;
   color: #666;
   font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 700px;
+  border-radius: 3px;
+  white-space: pre-wrap;
 
   button {
     margin: 0;
@@ -212,4 +218,19 @@ pre {
   padding: 5px 0;
   font-size: 14px;
   color: #666;
+}
+
+.button-clip {
+  font-size: 16px;
+  border-radius: 3px;
+  background-color: #fff;
+  color: #333;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4), -1px -1px 5px rgba(0, 0, 0, 0.4);
+  border: 1px solid #999;
+  transition: background-color 0.3s, box-shadow 0.3s;
+
+  &:hover {
+    // background-color: #e5e5e5;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  }
 }

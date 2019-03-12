@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.com/Beth3346/elr-scss-helpers.svg?branch=master)](https://travis-ci.com/Beth3346/elr-scss-helpers)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![npm](https://img.shields.io/npm/dm/elr-scss-helpers.svg?style=flat)](https://npmjs.com/package/elr-scss-helpers)
+[![last commit](https://img.shields.io/github/last-commit/Beth3346/elr-scss-helpers.svg)](https://github.com/Beth3346/elr-scss-helpers)
 
 a library of sass mixins
 

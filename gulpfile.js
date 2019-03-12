@@ -36,7 +36,7 @@ function clean() {
 
 // Watch files
 function watchFiles(done) {
-  gulp.watch(['./**/*.scss', 'dist/index.html'], () => {
+  gulp.watch(['./**/*.scss', 'dist/*.html'], () => {
     return gulp
       .src('./*.scss')
       .pipe(plumber())

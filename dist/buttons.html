@@ -38,63 +38,91 @@
         <a href="#">upgrade your browser</a> to improve your experience.
       </p>
     <![endif]-->
+    <header class="header-main">
+      <div class="header-inner">
+        <p class="logo">ELR SCSS Helpers</p>
+        <nav class="nav-main">
+          <ul class="elr-inline-list">
+            <li><a href="/buttons.html">Buttons</a></li>
+            <li><a href="/display.html">Display</a></li>
+            <li><a href="/background.html">Background</a></li>
+            <li><a href="/flex.html">Flex</a></li>
+            <li><a href="/layout.html">Layout</a></li>
+            <li><a href="/list.html">List</a></li>
+            <li><a href="/positioning.html">Positioning</a></li>
+            <li><a href="/responsive.html">Responsive</a></li>
+            <li><a href="/typography.html">Typography</a></li>
+            <!-- <li><a href="/layout.html">Action Styles</a></li> -->
+          </ul>
+        </nav>
+      </div>
+    </header>
     <div class="wrapper">
-      <div class="content-holder">
+      <nav class="content-nav">
+        <ul>
+          <li><a href="#basic-buttons">Basic Buttons</a></li>
+          <li><a href="#pill-buttons">Pill Buttons</a></li>
+          <li><a href="#ghost-buttons">Ghost Buttons</a></li>
+          <li><a href="#icon-buttons">Icon Buttons</a></li>
+          <li><a href="#button-groups">Button Group</a></li>
+        </ul>
+      </nav>
+      <div id="basic-buttons" class="content-holder">
         <div class="demo-content elr-block">
           <h1 class="main-heading">Button Helpers</h1>
           <h3>Basic Button</h3>
           <button class="elr-button">Button</button>
           <pre>
             <span>&lt;button class="elr-button"&gt;Button&lt;/button&gt;</span>
-            <button class="button-clip js-clip"><i class="far fa-clipboard"></i></button>
+            <button class="button-clip js-clip"><i class="fas fa-clipboard"></i></button>
           </pre>
           <button class="elr-button elr-button-primary">Primary</button>
           <pre>
             <span>&lt;button class="elr-button elr-button-primary"&gt;Button&lt;/button&gt;</span>
-            <button class="button-clip js-clip"><i class="far fa-clipboard"></i></button>
+            <button class="button-clip js-clip"><i class="fas fa-clipboard"></i></button>
           </pre>
           <button class="elr-button elr-button-secondary">Secondary</button>
           <pre>
             <span>&lt;button class="elr-button elr-button-secondary"&gt;Button&lt;/button&gt;</span>
-            <button class="button-clip js-clip"><i class="far fa-clipboard"></i></button>
+            <button class="button-clip js-clip"><i class="fas fa-clipboard"></i></button>
           </pre>
-          <h3>Pill Button</h3>
+          <h3 id="pill-buttons">Pill Button</h3>
           <button class="elr-button-pill">Button</button>
           <pre>
             <span>&lt;button class="elr-button-pill"&gt;Button&lt;/button&gt;</span>
-            <button class="button-clip js-clip"><i class="far fa-clipboard"></i></button>
+            <button class="button-clip js-clip"><i class="fas fa-clipboard"></i></button>
           </pre>
           <button class="elr-button-pill elr-button-primary">Primary</button>
           <pre>
             <span>&lt;button class="elr-button-pill elr-button-primary"&gt;Primary&lt;/button&gt;</span>
-            <button class="button-clip js-clip"><i class="far fa-clipboard"></i></button>
+            <button class="button-clip js-clip"><i class="fas fa-clipboard"></i></button>
           </pre>
           <button class="elr-button-pill elr-button-secondary">
             Secondary
           </button>
           <pre>
             <span>&lt;button class="elr-button-pill elr-button-secondary"&gt;Secondary&lt;/button&gt;</span>
-            <button class="button-clip js-clip"><i class="far fa-clipboard"></i></button>
+            <button class="button-clip js-clip"><i class="fas fa-clipboard"></i></button>
           </pre>
-          <h3>Ghost Button</h3>
+          <h3 id="ghost-buttons">Ghost Button</h3>
           <button class="elr-button-ghost">Button</button>
           <pre>
             <span>&lt;button class="elr-button-ghost"&gt;Button&lt;/button&gt;</span>
-            <button class="button-clip js-clip"><i class="far fa-clipboard"></i></button>
+            <button class="button-clip js-clip"><i class="fas fa-clipboard"></i></button>
           </pre>
           <button class="elr-button-ghost elr-button-primary">Primary</button>
           <pre>
             <span>&lt;button class=&quot;elr-button-ghost&quot;&gt;Primary&lt;/button&gt;</span>
-            <button class="button-clip js-clip"><i class="far fa-clipboard"></i></button>
+            <button class="button-clip js-clip"><i class="fas fa-clipboard"></i></button>
           </pre>
           <button class="elr-button-ghost elr-button-secondary">
             Secondary
           </button>
           <pre>
             <span>&lt;button class=&quot;elr-button-ghost&quot;&gt;Secondary&lt;/button&gt;</span>
-            <button class="button-clip js-clip"><i class="far fa-clipboard"></i></button>
+            <button class="button-clip js-clip"><i class="fas fa-clipboard"></i></button>
           </pre>
-          <h3>Icon Buttons</h3>
+          <h3 id="icon-buttons">Icon Buttons</h3>
           <p>icon can be on left or right</p>
           <button class="elr-button elr-button-icon">
             <div class="elr-icon">
@@ -107,7 +135,7 @@
         &lt;div class=&quot;elr-icon&quot;&gt;&lt;i class=&quot;fas fa-arrow-alt-circle-down&quot;&gt;&lt;/i&gt;&lt;/div&gt;
         &lt;span class=&quot;elr-button-text&quot;>Download&lt;/span&gt;
 &lt;/button&gt;</span>
-            <button class="button-clip js-clip"><i class="far fa-clipboard"></i></button>
+            <button class="button-clip js-clip"><i class="fas fa-clipboard"></i></button>
           </pre>
           <button class="elr-button elr-button-primary elr-button-icon">
             <div class="elr-icon">
@@ -120,7 +148,7 @@
         &lt;div class=&quot;elr-icon&quot;&gt;&lt;i class=&quot;fas fa-arrow-alt-circle-down&quot;&gt;&lt;/i&gt;&lt;/div&gt;
         &lt;span class=&quot;elr-button-text&quot;>Download&lt;/span&gt;
 &lt;/button&gt;</span>
-            <button class="button-clip js-clip"><i class="far fa-clipboard"></i></button>
+            <button class="button-clip js-clip"><i class="fas fa-clipboard"></i></button>
           </pre>
           <button class="elr-button elr-button-secondary elr-button-icon">
             <div class="elr-icon">
@@ -133,7 +161,7 @@
         &lt;div class=&quot;elr-icon&quot;&gt;&lt;i class=&quot;fas fa-arrow-alt-circle-down&quot;&gt;&lt;/i&gt;&lt;/div&gt;
         &lt;span class=&quot;elr-button-text&quot;>Download&lt;/span&gt;
 &lt;/button&gt;</span>
-            <button class="button-clip js-clip"><i class="far fa-clipboard"></i></button>
+            <button class="button-clip js-clip"><i class="fas fa-clipboard"></i></button>
           </pre>
           <button class="elr-button elr-button-icon">
             <span class="elr-button-text">Download</span>
@@ -146,7 +174,7 @@
         &lt;span class=&quot;elr-button-text&quot;>Download&lt;/span&gt;
         &lt;div class=&quot;elr-icon&quot;&gt;&lt;i class=&quot;fas fa-arrow-alt-circle-down&quot;&gt;&lt;/i&gt;&lt;/div&gt;
 &lt;/button&gt;</span>
-            <button class="button-clip js-clip"><i class="far fa-clipboard"></i></button>
+            <button class="button-clip js-clip"><i class="fas fa-clipboard"></i></button>
           </pre>
           <p>or button can have an icon only</p>
           <button class="elr-button elr-button-icon">
@@ -154,14 +182,30 @@
               <i class="fas fa-arrow-alt-circle-down"></i>
             </div>
           </button>
+          <pre>
+            <span>&lt;button class="elr-button elr-button-icon"&gt;
+        &lt;div class="elr-icon"&gt;
+                &lt;i class="fas fa-arrow-alt-circle-down"&gt;&lt;/i&gt;
+        &lt;/div&gt;
+&lt;/button&gt;</span>
+            <button class="button-clip js-clip"><i class="fas fa-clipboard"></i></button>
+          </pre>
           <button class="elr-button elr-button-icon-round">
             <div class="elr-icon">
               <i class="fas fa-cat"></i>
             </div>
           </button>
+          <pre>
+            <span>&lt;button class="elr-button elr-button-icon-round"&gt;
+        &lt;div class="elr-icon"&gt;
+                &lt;i class="fas fa-cat"&gt;&lt;/i&gt;
+        &lt;/div&gt;
+&lt;/button&gt;</span>
+            <button class="button-clip js-clip"><i class="fas fa-clipboard"></i></button>
+          </pre>
         </div>
         <div class="demo-content">
-          <h1 class="main-heading">Button Group</h1>
+          <h1 id="button-groups" class="main-heading">Button Group</h1>
           <div class="elr-button-group">
             <button class="elr-button elr-button-primary elr-button-group-item">
               Button 1
@@ -176,9 +220,17 @@
               Button 4
             </button>
           </div>
+          <pre>
+            <span>&lt;div class="elr-button-group"&gt;
+        &lt;button class="elr-button elr-button-primary elr-button-group-item"&gt;Button 1&lt;/button&gt;
+        &lt;button class="elr-button elr-button-primary elr-button-group-item"&gt;Button 2&lt;/button&gt;
+        &lt;button class="elr-button elr-button-primary elr-button-group-item"&gt;Button 3&lt;/button&gt;
+        &lt;button class="elr-button elr-button-primary elr-button-group-item"&gt;Button 4&lt;/button&gt;
+&lt;/div&gt;</span>
+            <button class="button-clip js-clip"><i class="fas fa-clipboard"></i></button>
+          </pre>
         </div>
       </div>
-      <a class="elr-block" href="/">Home</a>
     </div>
     <script>
       let clipboard = new ClipboardJS('.js-clip', {
@@ -187,7 +239,11 @@
         }
       });
 
-      console.log(clipboard.trigger);
+      clipboard.on('success', function(e) {
+        console.log('copied');
+
+        e.clearSelection();
+      });
     </script>
   </body>
 </html>

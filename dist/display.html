@@ -53,6 +53,13 @@
       </div>
     </header>
     <div class="wrapper">
+      <nav class="content-nav">
+        <ul>
+          <li><a href="#display-block">Display Block</a></li>
+          <li><a href="#display-inline">Display Inline</a></li>
+          <li><a href="#display-inline-block">Display Inline Block</a></li>
+        </ul>
+      </nav>
       <div class="content-holder">
         <div class="demo-content elr-block">
           <h1 class="main-heading elr-mb-10">Display Helpers</h1>
@@ -60,7 +67,7 @@
             Helpers for common display rules. Flex and grid are intentionally
             left out. They are included in other mixins.
           </p>
-          <h3>Display Block</h3>
+          <h3 id="display-block">Display Block</h3>
           <div class="display-helpers">
             <span>Default Span</span><span>Default Span</span>
             <span class="elr-block">Span with Display Block</span>
@@ -70,7 +77,7 @@
             <span>&lt;span class="elr-block"&gt;Span with Display Block&lt;/span&gt;</span>
             <button class="button-clip js-clip"><i class="fas fa-clipboard"></i></button>
           </pre>
-          <h3>Display Inline</h3>
+          <h3 id="display-inline">Display Inline</h3>
           <div class="display-helpers">
             <div>Default Div</div>
             <div>Default Div</div>
@@ -97,7 +104,6 @@
           </pre>
         </div>
       </div>
-      <a class="elr-block" href="/">Home</a>
     </div>
   </body>
 </html>

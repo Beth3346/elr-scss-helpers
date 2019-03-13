@@ -58,9 +58,9 @@ button {
 .flex-demo {
   padding: 20px;
   background-color: #ff7f50;
-  margin: 20px;
+  margin: 20px 0;
   height: 300px;
-  width: 600px;
+  width: 100%;
   position: relative;
 }
 
@@ -70,7 +70,7 @@ button {
   color: #fff;
   font-weight: bold;
   text-align: center;
-  width: 200px;
+  min-width: 300px;
 }
 
 .display-helpers {

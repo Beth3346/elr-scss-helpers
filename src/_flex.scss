@@ -1,0 +1,96 @@
+// scss-lint:disable ImportantRule
+@import 'node_modules/elr-scss-functions/main';
+
+@mixin elr-flex-classes() {
+  .elr-flex {
+    display: flex !important;
+  }
+
+  .elr-flex-row {
+    flex-direction: row;
+  }
+
+  .elr-flex-column {
+    flex-direction: column;
+  }
+
+  .elr-flex-wrap {
+    flex-wrap: wrap;
+  }
+
+  .elr-flex-nowrap {
+    flex-wrap: nowrap !important;
+  }
+
+  .elr-flex-center {
+    align-items: center;
+  }
+
+  .elr-flex-baseline {
+    align-items: baseline;
+  }
+
+  .elr-flex-stretch {
+    align-items: stretch;
+  }
+
+  .elr-flex-top {
+    align-items: flex-start;
+  }
+
+  .elr-flex-bottom {
+    align-items: flex-end;
+  }
+
+  .elr-flex-justify-center {
+    justify-content: center;
+  }
+
+  .elr-flex-justify {
+    justify-content: space-between;
+  }
+
+  .elr-flex-even {
+    justify-content: space-around;
+  }
+
+  .elr-flex-left {
+    justify-content: flex-start;
+  }
+
+  .elr-flex-right {
+    justify-content: flex-end;
+  }
+
+  .elr-flex-grow {
+    flex-grow: 1;
+  }
+
+  .elr-flex-shrink {
+    flex-shrink: 1;
+  }
+
+  .elr-flex-1 {
+    flex: 1;
+  }
+
+  .elr-flex-2 {
+    flex: 2;
+  }
+
+  .elr-flex-3 {
+    flex: 3;
+  }
+
+  .elr-flex-first {
+    order: -1;
+  }
+
+  .elr-flex-last {
+    order: 99999;
+  }
+
+  .elr-flex-reverse {
+    flex-direction: row-reverse;
+  }
+}

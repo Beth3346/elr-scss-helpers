@@ -25,6 +25,7 @@
 html {
   scroll-behavior: smooth;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 body,
@@ -205,6 +206,7 @@ section {
   flex: 3;
   flex-grow: 1;
   flex-shrink: 1;
+  max-width: 75%;
 }
 
 .main-heading {
@@ -240,8 +242,8 @@ pre {
   margin: 20px 0;
   padding: 10px 20px;
   border: 1px solid #ccc;
-  background-color: #e2e2e2;
-  color: #666;
+  background-color: #f0f0f0;
+  color: #333;
   font-size: 14px;
   display: flex;
   justify-content: space-between;

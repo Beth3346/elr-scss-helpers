@@ -52,25 +52,81 @@
         </nav>
       </div>
     </header>
-    <div class="wrapper">
+    <div id="display-flex" class="wrapper">
+      <nav class="content-nav">
+        <ul>
+          <li><a href="#display-flex">Display Flex</a></li>
+          <li><a href="#flex-alignment">Flex Alignment</a></li>
+          <li><a href="#flex-sizing">Flex Sizing</a></li>
+          <li><a href="#flex-direction">Flex Direction</a></li>
+          <li><a href="#flex-reorder">Flex Reorder</a></li>
+        </ul>
+      </nav>
       <div class="content-holder">
         <div class="demo-content elr-block">
           <h1 class="main-heading elr-mb-10">Flex Helpers</h1>
+          <h3>Display Flex</h3>
           <p class="box-model-label">
-            display: flex; flex-direction: row;
+            Adding the .elr-flex class sets the container's display property to
+            flex. Notice that by default elements inside a flex container don't
+            wrap. Since the items have a minimum width of 300px they break out
+            of their container. We'll fix this later.
+          </p>
+          <div class="flex-demo elr-flex">
+            <div class="flex-item">Flex Item. Min Width 300px</div>
+            <div class="flex-item">Flex Item. Min Width 300px</div>
+            <div class="flex-item">Flex Item. Min Width 300px</div>
+            <div class="flex-item">Flex Item. Min Width 300px</div>
+          </div>
+          <pre>
+            <span>&lt;div class="elr-flex"&gt;&lt;/div&gt;</span>
+            <button class="button-clip js-clip"><i class="fas fa-clipboard"></i></button>
+          </pre>
+          <h3 id="flex-direction">Flex Direction</h3>
+          <p class="box-model-label">
+            Adding the .elr-flex-row class sets the container's children to
+            appear along the x-axis. Since the min width was removed they no
+            longer break out of their container but they also don't fill their
+            container. We will address this later.
           </p>
           <div class="flex-demo elr-flex elr-flex-row">
+            <div class="flex-item" style="min-width: 0">
+              Flex Item.<br />Min Width 0px
+            </div>
+            <div class="flex-item" style="min-width: 0">
+              Flex Item.<br />Min Width 0px
+            </div>
+            <div class="flex-item" style="min-width: 0">
+              Flex Item.<br />Min Width 0px
+            </div>
+            <div class="flex-item" style="min-width: 0">
+              Flex Item.<br />Min Width 0px
+            </div>
+          </div>
+          <pre>
+            <span>&lt;div class="elr-flex elr-flex-row"&gt;&lt;/div&gt;</span>
+            <button class="button-clip js-clip"><i class="fas fa-clipboard"></i></button>
+          </pre>
+          <p class="box-model-label">
+            Adding the .elr-flex-row class sets the container's children to
+            appear along the y-axis. They also don't fill their container. We
+            will address this later.
+          </p>
+          <div class="flex-demo elr-flex elr-flex-column">
             <div class="flex-item">Flex Item</div>
             <div class="flex-item">Flex Item</div>
             <div class="flex-item">Flex Item</div>
             <div class="flex-item">Flex Item</div>
           </div>
           <pre>
-            <span>&lt;div class="flex-demo elr-flex elr-flex-row"&gt;&lt;/div&gt;</span>
+            <span>&lt;div class="elr-flex elr-flex-column"&gt;&lt;/div&gt;</span>
             <button class="button-clip js-clip"><i class="fas fa-clipboard"></i></button>
           </pre>
           <p class="box-model-label">
-            display: flex; flex-direction: row; flex-wrap: wrap;
+            One way to prevent children from breaking out of their flex box
+            container is with the flex-wrap: wrap; rule. Adding the
+            elr-flex-wrap class causes the elements to go on to another row
+            instead of breaking out of their container.
           </p>
           <div class="flex-demo elr-flex elr-flex-wrap">
             <div class="flex-item">Flex Item</div>
@@ -78,103 +134,198 @@
             <div class="flex-item">Flex Item</div>
             <div class="flex-item">Flex Item</div>
           </div>
+          <pre>
+            <span>&lt;div class="elr-flex elr-flex-wrap"&gt;&lt;/div&gt;</span>
+            <button class="button-clip js-clip"><i class="fas fa-clipboard"></i></button>
+          </pre>
+          <h3 id="flex-sizing">Flex Sizing</h3>
+          <p>
+            In the above examples we see a little bit about the behavior of flex
+            helper classes but they're not super flexible. This is where the
+            sizing classes can help. These are the style rules that enable
+            flexbox to replace a traditional grid system.
+          </p>
+          <p class="box-model-label">
+            Adding .elr-flex-grow and .elr-flex-shrink allow the boxes to fill
+            up all of the available space. When the window resizes the boxes
+            will shrink along with their parent container.
+          </p>
+          <div class="flex-demo elr-flex">
+            <div
+              style="min-width: 0;"
+              class="flex-item elr-flex-grow elr-flex-shrink"
+            >
+              Flex Item. Min Width 0px
+            </div>
+            <div
+              style="min-width: 0;"
+              class="flex-item elr-flex-grow elr-flex-shrink"
+            >
+              Flex Item. Min Width 0px
+            </div>
+            <div
+              style="min-width: 0;"
+              class="flex-item elr-flex-grow elr-flex-shrink"
+            >
+              Flex Item. Min Width 0px
+            </div>
+            <div
+              style="min-width: 0;"
+              class="flex-item elr-flex-grow elr-flex-shrink"
+            >
+              Flex Item. Min Width 0px
+            </div>
+          </div>
+          <pre>
+            <span>&lt;div style=&quot;min-width: 0;&quot; class=&quot;flex-item elr-flex-grow elr-flex-shrink&quot; &gt;Flex Item. Min Width 0px&lt;/div&gt;</span>
+            <button class="button-clip js-clip"><i class="fas fa-clipboard"></i></button>
+          </pre>
+          <p class="box-model-label"></p>
+          <div class="flex-demo elr-flex">
+            <div style="min-width: 0;" class="flex-item elr-flex-1">
+              Flex Item. Min Width 0px
+            </div>
+            <div style="min-width: 0;" class="flex-item elr-flex-2">
+              Flex Item. Min Width 0px
+            </div>
+          </div>
+          <pre>
+            <span>&lt;div style=&quot;min-width: 0;&quot; class=&quot;flex-item elr-flex-1&quot; &gt;Flex Item. Min Width 0px&lt;/div&gt;
+&lt;div style=&quot;min-width: 0;&quot; class=&quot;flex-item elr-flex-2&quot; &gt;Flex Item. Min Width 0px&lt;/div&gt;</span>
+            <button class="button-clip js-clip"><i class="fas fa-clipboard"></i></button>
+          </pre>
+          <p class="box-model-label"></p>
+          <div class="flex-demo elr-flex">
+            <div style="min-width: 0;" class="flex-item elr-flex-1">
+              Flex Item. Min Width 0px
+            </div>
+            <div style="min-width: 0;" class="flex-item elr-flex-3">
+              Flex Item. Min Width 0px
+            </div>
+          </div>
+          <pre>
+            <span>&lt;div style=&quot;min-width: 0;&quot; class=&quot;flex-item elr-flex-1&quot; &gt;Flex Item. Min Width 0px&lt;/div&gt;
+&lt;div style=&quot;min-width: 0;&quot; class=&quot;flex-item elr-flex-3&quot; &gt;Flex Item. Min Width 0px&lt;/div&gt;</span>
+            <button class="button-clip js-clip"><i class="fas fa-clipboard"></i></button>
+          </pre>
+          <h3 id="flex-alignment">Flex Alignment Classes</h3>
           <p class="box-model-label">
             display: flex; flex-direction: row; align-items: baseline;
           </p>
-          <div class="flex-demo elr-flex elr-flex-baseline">
-            <div class="flex-item">Flex Item</div>
-            <div class="flex-item">Flex Item</div>
+          <div class="flex-demo elr-flex elr-flex-wrap elr-flex-baseline">
             <div class="flex-item">Flex Item</div>
             <div class="flex-item">Flex Item</div>
           </div>
           <p class="box-model-label">
             display: flex; flex-direction: row; align-items: center;
           </p>
-          <div class="flex-demo elr-flex elr-flex-center">
-            <div class="flex-item">Flex Item</div>
-            <div class="flex-item">Flex Item</div>
+          <div class="flex-demo elr-flex elr-flex-wrap elr-flex-center">
             <div class="flex-item">Flex Item</div>
             <div class="flex-item">Flex Item</div>
           </div>
           <p class="box-model-label">
             display: flex; flex-direction: row; align-items: flex-start;
           </p>
-          <div class="flex-demo elr-flex elr-flex-top">
-            <div class="flex-item">Flex Item</div>
-            <div class="flex-item">Flex Item</div>
+          <div class="flex-demo elr-flex elr-flex-wrap elr-flex-top">
             <div class="flex-item">Flex Item</div>
             <div class="flex-item">Flex Item</div>
           </div>
           <p class="box-model-label">
             display: flex; flex-direction: row; align-items: flex-end;
           </p>
-          <div class="flex-demo elr-flex elr-flex-bottom">
-            <div class="flex-item">Flex Item</div>
-            <div class="flex-item">Flex Item</div>
+          <div class="flex-demo elr-flex elr-flex-wrap elr-flex-bottom">
             <div class="flex-item">Flex Item</div>
             <div class="flex-item">Flex Item</div>
           </div>
           <p class="box-model-label">
             display: flex; flex-direction: row; justify-content: center;
           </p>
-          <div class="flex-demo elr-flex elr-flex-justify-center">
+          <div class="flex-demo elr-flex elr-flex-wrap elr-flex-justify-center">
             <div class="flex-item">Flex Item</div>
             <div class="flex-item">Flex Item</div>
           </div>
           <p class="box-model-label">
             display: flex; flex-direction: row; justify-content: space-between;
           </p>
-          <div class="flex-demo elr-flex elr-flex-justify">
+          <div class="flex-demo elr-flex elr-flex-wrap elr-flex-justify">
             <div class="flex-item">Flex Item</div>
             <div class="flex-item">Flex Item</div>
           </div>
           <p class="box-model-label">
             display: flex; flex-direction: row; justify-content: space-around;
           </p>
-          <div class="flex-demo elr-flex elr-flex-even">
+          <div class="flex-demo elr-flex elr-flex-wrap elr-flex-even">
             <div class="flex-item">Flex Item</div>
             <div class="flex-item">Flex Item</div>
           </div>
           <p class="box-model-label">
             display: flex; flex-direction: row; justify-content: flex-start;
           </p>
-          <div class="flex-demo elr-flex elr-flex-left">
+          <div class="flex-demo elr-flex elr-flex-wrap elr-flex-left">
             <div class="flex-item">Flex Item</div>
             <div class="flex-item">Flex Item</div>
           </div>
           <p class="box-model-label">
             display: flex; flex-direction: row; justify-content: flex-end;
           </p>
-          <div class="flex-demo elr-flex elr-flex-right">
+          <div class="flex-demo elr-flex elr-flex-wrap elr-flex-right">
             <div class="flex-item">Flex Item</div>
             <div class="flex-item">Flex Item</div>
           </div>
-        </div>
-        <div class="demo-content layout-demo elr-block">
-          <h1 class="main-heading">Reordering Content with Flexbox Demo</h1>
+          <h3 id="flex-reorder">Flex Reorder</h3>
           <h2 class="subheading">
             Use caution when reordering elements with flexbox as screen readers
             will be inconsistent with what's on the screen.
           </h2>
           <div class="flex-demo elr-flex elr-flex-row">
-            <div class="flex-item">Flex Item 1</div>
-            <div class="flex-item">Flex Item 2</div>
-            <div class="flex-item">Flex Item 3</div>
+            <div style="min-width: 0" class="flex-item elr-flex-1">
+              Flex Item 1
+            </div>
+            <div style="min-width: 0" class="flex-item elr-flex-1">
+              Flex Item 2
+            </div>
+            <div style="min-width: 0" class="flex-item elr-flex-1">
+              Flex Item 3
+            </div>
           </div>
           <div class="flex-demo elr-flex">
-            <div class="flex-item">Flex Item 1</div>
-            <div class="flex-item">Flex Item 2</div>
-            <div class="flex-item elr-flex-first">Flex Item 3</div>
+            <div style="min-width: 0" class="flex-item elr-flex-1">
+              Flex Item 1
+            </div>
+            <div style="min-width: 0" class="flex-item elr-flex-1">
+              Flex Item 2
+            </div>
+            <div
+              style="min-width: 0"
+              class="flex-item elr-flex-1 elr-flex-first"
+            >
+              Flex Item 3
+            </div>
           </div>
           <div class="flex-demo elr-flex elr-flex-row">
-            <div class="flex-item elr-flex-last">Flex Item 1</div>
-            <div class="flex-item">Flex Item 2</div>
-            <div class="flex-item">Flex Item 3</div>
+            <div
+              style="min-width: 0"
+              class="flex-item elr-flex-1 elr-flex-last"
+            >
+              Flex Item 1
+            </div>
+            <div style="min-width: 0" class="flex-item elr-flex-1">
+              Flex Item 2
+            </div>
+            <div style="min-width: 0" class="flex-item elr-flex-1">
+              Flex Item 3
+            </div>
           </div>
           <div class="flex-demo elr-flex elr-flex-reverse">
-            <div class="flex-item">Flex Item 1</div>
-            <div class="flex-item">Flex Item 2</div>
-            <div class="flex-item">Flex Item 3</div>
+            <div style="min-width: 0" class="flex-item elr-flex-1">
+              Flex Item 1
+            </div>
+            <div style="min-width: 0" class="flex-item elr-flex-1">
+              Flex Item 2
+            </div>
+            <div style="min-width: 0" class="flex-item elr-flex-1">
+              Flex Item 3
+            </div>
           </div>
         </div>
         <div class="demo-content layout-demo elr-block">
@@ -208,7 +359,6 @@
           </div>
         </div>
       </div>
-      <a class="elr-block" href="/">Home</a>
     </div>
   </body>
 </html>

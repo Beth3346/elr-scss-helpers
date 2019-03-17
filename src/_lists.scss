@@ -1,11 +1,21 @@
 // List Classes
+@import 'node_modules/elr-scss-functions/main';
 @import 'node_modules/elr-scss-lists/src/main';
 
-@mixin elr-list-classes() {
-  .elr-unstyled-list {
+@mixin elr-list-classes($config: ()) {
+  $config: extend(
+    (
+      prefix: 'elr'
+    ),
+    $config
+  );
+
+  $prefix: map-get($config, prefix);
+
+  .#{$prefix}-unstyled-list {
     @include elr-unstyled-list;
   }
-  .elr-inline-list {
+  .#{$prefix}-inline-list {
     @include elr-inline-list;
   }
 }

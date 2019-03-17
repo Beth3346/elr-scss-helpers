@@ -1,43 +1,64 @@
-@mixin elr-positioning-classes() {
-  .elr-static {
+@import 'node_modules/elr-scss-functions/main';
+
+@mixin elr-positioning-classes($config: ()) {
+  $config: extend(
+    (
+      prefix: 'elr'
+    ),
+    $config
+  );
+
+  $prefix: map-get($config, prefix);
+
+  .#{$prefix}-static {
     position: static !important;
   }
 
-  .elr-absolute {
+  .#{$prefix}-absolute {
     position: absolute !important;
   }
 
-  .elr-relative {
+  .#{$prefix}-relative {
     position: relative !important;
   }
 
-  .elr-fixed {
+  .#{$prefix}-fixed {
     position: fixed !important;
   }
 
-  .elr-position-top {
+  .#{$prefix}-sticky {
+    position: sticky !important;
+  }
+
+  .#{$prefix}-position-top {
     top: 0 !important;
   }
 
-  .elr-position-left {
+  .#{$prefix}-position-left {
     left: 0 !important;
   }
 
-  .elr-position-right {
+  .#{$prefix}-position-right {
     right: 0 !important;
   }
 
-  .elr-position-bottom {
+  .#{$prefix}-position-bottom {
     bottom: 0 !important;
   }
 
-  .elr-position-center-x {
+  .#{$prefix}-position-center-x {
     left: 50% !important;
     transform: translateX(-50%) !important;
   }
 
-  .elr-position-center-y {
+  .#{$prefix}-position-center-y {
     top: 50% !important;
     transform: translateY(-50%) !important;
+  }
+
+  .#{$prefix}-position-center {
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
   }
 }

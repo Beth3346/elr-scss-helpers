@@ -4,6 +4,7 @@
 @mixin elr-button-classes($config: ()) {
   $config: extend(
     (
+      prefix: 'elr',
       background-color: #1976d2,
       color: #fff,
       width: 250px,
@@ -13,21 +14,22 @@
     $config
   );
 
+  $prefix: map-get($config, prefix);
   $bg-color: map-get($config, background-color);
   $color: map-get($config, color);
   $width: map-get($config, width);
   $border-radius: map-get($config, border-radius);
   $accent-color: map-get($config, accent-color);
 
-  .elr-button {
+  .#{$prefix}-button {
     @include elr-button;
   }
 
-  .elr-button-small {
+  .#{$prefix}-button-small {
     width: auto;
   }
 
-  .elr-button-primary {
+  .#{$prefix}-button-primary {
     background-color: $bg-color;
     border-color: $bg-color;
 
@@ -37,7 +39,7 @@
     }
   }
 
-  .elr-button-secondary {
+  .#{$prefix}-button-secondary {
     background-color: $accent-color;
     border-color: $accent-color;
 
@@ -47,14 +49,14 @@
     }
   }
 
-  .elr-button-pill {
+  .#{$prefix}-button-pill {
     @include elr-button(
       $config: (
         pill: true
       )
     );
 
-    &.elr-button-primary {
+    &.#{$prefix}-button-primary {
       background-color: $bg-color;
       border-color: $bg-color;
 
@@ -64,7 +66,7 @@
       }
     }
 
-    &.elr-button-secondary {
+    &.#{$prefix}-button-secondary {
       background-color: $accent-color;
       border-color: $accent-color;
 
@@ -75,7 +77,7 @@
     }
   }
 
-  .elr-button-ghost {
+  .#{$prefix}-button-ghost {
     @include elr-button(
       $config: (
         border-color: #333,
@@ -84,7 +86,7 @@
       )
     );
 
-    &.elr-button-primary {
+    &.#{$prefix}-button-primary {
       border-color: $bg-color;
       color: $bg-color;
 
@@ -94,7 +96,7 @@
       }
     }
 
-    &.elr-button-secondary {
+    &.#{$prefix}-button-secondary {
       border-color: $accent-color;
       color: $accent-color;
 
@@ -105,15 +107,15 @@
     }
   }
 
-  .elr-button-group {
+  .#{$prefix}-button-group {
     @include elr-button-group;
   }
 
-  .elr-button-icon {
+  .#{$prefix}-button-icon {
     @include elr-icon-button;
   }
 
-  .elr-button-icon-round {
+  .#{$prefix}-button-icon-round {
     @include elr-icon-button(
       $config: (
         round: true
@@ -124,13 +126,26 @@
 }
 
 @mixin elr-buttons-action($config: ()) {
-  $danger-color: #f7322f;
-  $warning-color: #d1cb34;
-  $success-color: #7aba7b;
-  $info-color: #1daaf0;
-  $muted-color: #999;
+  $config: extend(
+    (
+      prefix: 'elr',
+      danger-color: #f7322f,
+      warning-color: #d1cb34,
+      success-color: #7aba7b,
+      info-color: #1daaf0,
+      muted-color: #999
+    ),
+    $config
+  );
 
-  .elr-button-danger {
+  $prefix: map-get($config, prefix);
+  $danger-color: map-get($config, danger-color);
+  $warning-color: map-get($config, warning-color);
+  $success-color: map-get($config, success-color);
+  $info-color: map-get($config, info-color);
+  $muted-color: map-get($config, muted-color);
+
+  .#{$prefix}-button-danger {
     background-color: $danger-color;
     border-color: $danger-color;
 
@@ -140,7 +155,7 @@
     }
   }
 
-  .elr-button-warning {
+  .#{$prefix}-button-warning {
     background-color: $warning-color;
     border-color: $warning-color;
 
@@ -150,7 +165,7 @@
     }
   }
 
-  .elr-button-success {
+  .#{$prefix}-button-success {
     background-color: $success-color;
     border-color: $success-color;
 
@@ -160,7 +175,7 @@
     }
   }
 
-  .elr-button-muted {
+  .#{$prefix}-button-muted {
     background-color: $muted-color;
     border-color: $muted-color;
 
@@ -170,7 +185,7 @@
     }
   }
 
-  .elr-button-info {
+  .#{$prefix}-button-info {
     background-color: $info-color;
     border-color: $info-color;
 

@@ -1,96 +1,105 @@
 // scss-lint:disable ImportantRule
 @import 'node_modules/elr-scss-functions/main';
 
-@mixin elr-flex-classes() {
-  .elr-flex {
+@mixin elr-flex-classes($config: ()) {
+  $config: extend(
+    (
+      prefix: 'elr'
+    ),
+    $config
+  );
+
+  $prefix: map-get($config, prefix);
+
+  .#{$prefix}-flex {
     display: flex !important;
   }
 
-  .elr-flex-row {
+  .#{$prefix}-flex-row {
     flex-direction: row;
   }
 
-  .elr-flex-column {
+  .#{$prefix}-flex-column {
     flex-direction: column;
   }
 
-  .elr-flex-wrap {
+  .#{$prefix}-flex-wrap {
     flex-wrap: wrap;
   }
 
-  .elr-flex-nowrap {
+  .#{$prefix}-flex-nowrap {
     flex-wrap: nowrap !important;
   }
 
-  .elr-flex-center {
+  .#{$prefix}-flex-center {
     align-items: center;
   }
 
-  .elr-flex-baseline {
+  .#{$prefix}-flex-baseline {
     align-items: baseline;
   }
 
-  .elr-flex-stretch {
+  .#{$prefix}-flex-stretch {
     align-items: stretch;
   }
 
-  .elr-flex-top {
+  .#{$prefix}-flex-top {
     align-items: flex-start;
   }
 
-  .elr-flex-bottom {
+  .#{$prefix}-flex-bottom {
     align-items: flex-end;
   }
 
-  .elr-flex-justify-center {
+  .#{$prefix}-flex-justify-center {
     justify-content: center;
   }
 
-  .elr-flex-justify {
+  .#{$prefix}-flex-justify {
     justify-content: space-between;
   }
 
-  .elr-flex-even {
+  .#{$prefix}-flex-even {
     justify-content: space-around;
   }
 
-  .elr-flex-left {
+  .#{$prefix}-flex-left {
     justify-content: flex-start;
   }
 
-  .elr-flex-right {
+  .#{$prefix}-flex-right {
     justify-content: flex-end;
   }
 
-  .elr-flex-grow {
+  .#{$prefix}-flex-grow {
     flex-grow: 1;
   }
 
-  .elr-flex-shrink {
+  .#{$prefix}-flex-shrink {
     flex-shrink: 1;
   }
 
-  .elr-flex-1 {
+  .#{$prefix}-flex-1 {
     flex: 1;
   }
 
-  .elr-flex-2 {
+  .#{$prefix}-flex-2 {
     flex: 2;
   }
 
-  .elr-flex-3 {
+  .#{$prefix}-flex-3 {
     flex: 3;
   }
 
-  .elr-flex-first {
+  .#{$prefix}-flex-first {
     order: -1;
   }
 
-  .elr-flex-last {
+  .#{$prefix}-flex-last {
     order: 99999;
   }
 
-  .elr-flex-reverse {
+  .#{$prefix}-flex-reverse {
     flex-direction: row-reverse;
   }
 }

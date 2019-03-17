@@ -18,13 +18,56 @@ yarn add elr-scss-helpers
 
 ## Why
 
-This package takes a more functional CSS approach to Scss. Using a Scss mixin allows for easy configuration of your base styles to ensure that your helpers will match the look and feel of your project.
+This package takes a more functional CSS approach to Scss. Using a
+Scss mixin allows for easy configuration of your base styles to
+ensure that your helpers will match the look and feel of your
+project.
 
-Which style you choose can depend a lot on your project and your needs. A functional CSS approach is beneficial in situations where you have a lot of control over your HTML/JSX/Pug...whatever you're using to write markup that eventually becomes HTML.
+Which style you choose can depend a lot on your project and your
+needs. A functional CSS approach is beneficial in situations where
+you have a lot of control over your HTML/JSX/Pug... whatever you're
+using to write markup that eventually becomes HTML. Especially if
+you are using a component based framework.
 
-Using a more stylesheet based approach is useful when you don't necessarily have control over your HTML. Like when you're working with a CMS where HTML structure is set in stone or dictated by your content team.
+Keep in mind that adding non-semantic classes to your HTML will
+result in tightly coupled markup. If your product manager tells you
+that now all headlines should be green instead of blue using style
+classes could make these updates tedious and time consuming. Its for
+this reason that I will not include classes that apply hard coded
+color styles.
 
-I usually find myself using more of a hybrid of these 2 approaches. Though I'm leaning towards a more functional approach these days.
+Using a more stylesheet based approach is useful when you don't
+necessarily have control over your HTML. Like when you're working
+with a CMS where HTML structure is set in stone or dictated by your
+content team.
+
+Its also beneficial to use a more stylesheet based approach when you
+are creating traditional HTML/CSS based applications without a
+framework. If you are not creating reusable components you likely
+have a lot of HTML that repeats throughout your site. Using a
+stylesheet based approach with a BEM or similar CSS methodology will
+be much easier to maintain down the road.
+
+I usually find myself using more of a hybrid of these 2 approaches.
+Though I'm leaning towards a more functional approach these days in
+my React and Vue applications.
+
+## Whats with this "elr" prefix?
+
+I have added namespacing to avoid clashes with other frameworks. If
+you don't like the 'elr' prefix or want to use a brand prefix you are free to change it. Don't make it too long though since you'll be typing it a lot.
+
+```scss
+@include elr-helper-classes(
+  $config: (
+    prefix: 'abc'
+  )
+);
+```
+
+```html
+<button class="abc-button">Button</button>
+```
 
 ## Helper Classes
 
@@ -76,21 +119,42 @@ if you only want to add button helpers
 
 ```html
 <button class="elr-button">Button</button>
+```
+
+```html
 <button class="elr-button-small">Button</button>
+```
+
+```html
 <button class="elr-button-primary">Button</button>
+```
+
+```html
 <button class="elr-button-pill">Button</button>
+```
+
+```html
 <button class="elr-button-ghost">Button</button>
+```
+
+```html
 <button class="elr-button elr-button-icon">
   <div class="elr-icon">
     <i class="fas fa-arrow-alt-circle-down"></i>
   </div>
   <span class="elr-button-text">Download</span>
 </button>
+```
+
+```html
 <button class="elr-button elr-button-icon">
   <div class="elr-icon">
     <i class="fas fa-arrow-alt-circle-down"></i>
   </div>
 </button>
+```
+
+```html
 <button class="elr-button elr-button-icon-round">
   <div class="elr-icon">
     <i class="fas fa-cat"></i>

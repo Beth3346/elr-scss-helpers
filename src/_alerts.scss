@@ -1,7 +1,17 @@
+@import 'node_modules/elr-scss-functions/main';
 @import 'node_modules/elr-scss-alerts/src/main';
 
-@mixin elr-notification-classes() {
-  .elr-notification {
+@mixin elr-notification-classes($config: ()) {
+  $config: extend(
+    (
+      prefix: 'elr'
+    ),
+    $config
+  );
+
+  $prefix: map-get($config, prefix);
+
+  .#{$prefix}-notification {
     @include elr-alert(
       $config: (
         border-radius: 3px
@@ -12,7 +22,7 @@
     width: 100%;
   }
 
-  .elr-notification-info {
+  .#{$prefix}-notification-info {
     @include elr-alert-context(
       $config: (
         type: info
@@ -20,7 +30,7 @@
     );
   }
 
-  .elr-notification-danger {
+  .#{$prefix}-notification-danger {
     @include elr-alert-context(
       $config: (
         type: danger
@@ -28,7 +38,7 @@
     );
   }
 
-  .elr-notification-warning {
+  .#{$prefix}-notification-warning {
     @include elr-alert-context(
       $config: (
         type: warning
@@ -36,7 +46,7 @@
     );
   }
 
-  .elr-notification-success {
+  .#{$prefix}-notification-success {
     @include elr-alert-context(
       $config: (
         type: success
@@ -44,7 +54,7 @@
     );
   }
 
-  .elr-notification-muted {
+  .#{$prefix}-notification-muted {
     @include elr-alert-context(
       $config: (
         type: muted

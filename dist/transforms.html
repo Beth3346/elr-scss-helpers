@@ -35,7 +35,7 @@
     <![endif]-->
     <header class="header-main">
       <div class="header-inner">
-        <p class="logo">ELR SCSS Helpers</p>
+        <p class="logo"><a href="/">ELR SCSS Helpers</a></p>
         <nav class="nav-main">
           <ul class="elr-inline-list">
             <li><a href="/buttons.html">Buttons</a></li>
@@ -104,6 +104,52 @@
 &lt;/div&gt;</span>
             <button class="button-clip js-clip"><i class="fas fa-clipboard"></i></button>
           </pre>
+        </div>
+        <div>
+          <h3 id="skew">Translate</h3>
+          <div class="display-helpers elr-flex elr-flex-wrap">
+            <div style="border: 1px solid #333; background: transparent">
+              <div class="elr-reset box">
+                <p>No Translate</p>
+              </div>
+            </div>
+            <div style="border: 1px solid #333; background: transparent">
+              <div class="elr-reset box elr-move-up-50">
+                <p>Move 50% up</p>
+              </div>
+            </div>
+            <div style="border: 1px solid #333; background: transparent">
+              <div class="elr-reset box elr-move-left-50">
+                <p>Move 50% left</p>
+              </div>
+            </div>
+            <div style="border: 1px solid #333; background: transparent">
+              <div class="elr-reset box elr-move-right-50">
+                <p>Move 50% right</p>
+              </div>
+            </div>
+            <div style="border: 1px solid #333; background: transparent">
+              <div class="elr-reset box elr-move-down-50">
+                <p>Move 50% down</p>
+              </div>
+            </div>
+          </div>
+          <p>
+            Cannot be used in combination with other transform helpers. Use
+            position helpers instead.
+          </p>
+          <div class="display-helpers elr-flex elr-flex-wrap">
+            <div style="border: 1px solid #333; background: transparent">
+              <div class="elr-reset box elr-move-right-50 elr-move-down-50">
+                <p>Move 50% right</p>
+              </div>
+            </div>
+          </div>
+          <div class="display-helpers elr-flex">
+            <div class="box elr-skew-y">
+              <p>Skew 25deg</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

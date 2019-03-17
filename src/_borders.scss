@@ -1,0 +1,21 @@
+@import 'node_modules/elr-scss-functions/main';
+
+@mixin elr-borders($config: ()) {
+  $config: extend(
+    (
+      prefix: 'elr'
+    ),
+    $config
+  );
+
+  $prefix: map-get($config, prefix);
+
+  // no border
+  // border thickness
+  // border style
+  // context-based border colors
+
+  .#{$prefix}-no-border {
+    border: 0 !important;
+  }
+}

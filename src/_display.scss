@@ -1,17 +1,26 @@
-@mixin elr-display-classes() {
-  .elr-block {
+@mixin elr-display-classes($config: ()) {
+  $config: extend(
+    (
+      prefix: 'elr'
+    ),
+    $config
+  );
+
+  $prefix: map-get($config, prefix);
+
+  .#{$prefix}-block {
     display: block !important;
   }
 
-  .elr-inline {
+  .#{$prefix}-inline {
     display: inline !important;
   }
 
-  .elr-inline-block {
+  .#{$prefix}-inline-block {
     display: inline-block !important;
   }
 
-  .elr-display-none {
+  .#{$prefix}-display-none {
     display: none !important;
   }
 }

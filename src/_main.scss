@@ -17,10 +17,18 @@ $text-color: #333;
 $border-radius: 3px;
 $accent-color: rgb(240, 44, 151);
 $button-color: #1976d2;
+$danger-color: #f7322f;
+$warning-color: #d1cb34;
+$success-color: #7aba7b;
+$info-color: #1daaf0;
+$muted-color: #999;
+
+// TODO: allow for custom prefixes
 
 @mixin elr-helper-classes($config: ()) {
   $config: extend(
     (
+      prefix: 'elr',
       link-color: $primary-color,
       color: $text-color,
       border-radius: $border-radius,
@@ -30,6 +38,7 @@ $button-color: #1976d2;
     $config
   );
 
+  $prefix: map-get($config, prefix);
   $link-color: map-get($config, link-color);
   $color: map-get($config, color);
   $border-radius: map-get($config, border-radius);
@@ -38,30 +47,106 @@ $button-color: #1976d2;
 
   @include elr-button-classes(
     $config: (
+      prefix: $prefix,
       background-color: $button-color,
       border-radius: $border-radius,
       accent-color: $accent-color
     )
   );
-  @include elr-display-classes;
-  @include elr-flex-classes;
-  @include elr-layout-classes;
-  @include elr-positioning-classes;
-  @include elr-list-classes;
-  @include elr-responsive-classes;
-  @include elr-typography-classes;
-  @include elr-background-classes;
-  @include elr-transforms-classes;
+  @include elr-display-classes(
+    $config: (
+      prefix: $prefix
+    )
+  );
+  @include elr-flex-classes(
+    $config: (
+      prefix: $prefix
+    )
+  );
+  @include elr-layout-classes(
+    $config: (
+      prefix: $prefix
+    )
+  );
+  @include elr-positioning-classes(
+    $config: (
+      prefix: $prefix
+    )
+  );
+  @include elr-list-classes(
+    $config: (
+      prefix: $prefix
+    )
+  );
+  @include elr-responsive-classes(
+    $config: (
+      prefix: $prefix
+    )
+  );
+  @include elr-typography-classes(
+    $config: (
+      prefix: $prefix
+    )
+  );
+  @include elr-background-classes(
+    $config: (
+      prefix: $prefix
+    )
+  );
+  @include elr-transforms-classes(
+    $config: (
+      prefix: $prefix
+    )
+  );
 }
 
-@mixin elr-action-helper-classes() {
-  // danger color
-  // warning color
-  // success color
-  // muted color
-  // info color
+@mixin elr-action-helper-classes($config: ()) {
+  $config: extend(
+    (
+      prefix: 'elr',
+      danger-color: $danger-color,
+      warning-color: $warning-color,
+      success-color: $success-color,
+      info-color: $info-color,
+      muted-color: $muted-color,
+      accent-color: $accent-color
+    ),
+    $config
+  );
 
-  @include elr-notification-classes;
-  @include elr-buttons-action;
-  @include elr-typography-states;
+  $prefix: map-get($config, prefix);
+  $danger-color: map-get($config, danger-color);
+  $warning-color: map-get($config, warning-color);
+  $success-color: map-get($config, success-color);
+  $info-color: map-get($config, info-color);
+  $muted-color: map-get($config, muted-color);
+  $accent-color: map-get($config, accent-color);
+
+  @include elr-notification-classes(
+    $config: (
+      prefix: $prefix
+    )
+  );
+  @include elr-buttons-action(
+    $config: (
+      prefix: $prefix,
+      danger-color: $danger-color,
+      warning-color: $warning-color,
+      success-color: $success-color,
+      info-color: $info-color,
+      muted-color: $muted-color,
+      accent-color: $accent-color
+    )
+  );
+  @include elr-typography-states(
+    $config: (
+      prefix: $prefix,
+      danger-color: $danger-color,
+      warning-color: $warning-color,
+      success-color: $success-color,
+      info-color: $info-color,
+      muted-color: $muted-color,
+      accent-color: $accent-color
+    )
+  );
 }

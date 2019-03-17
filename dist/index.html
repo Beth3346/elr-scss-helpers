@@ -35,7 +35,7 @@
     <![endif]-->
     <header class="header-main">
       <div class="header-inner">
-        <p class="logo">ELR SCSS Helpers</p>
+        <p class="logo"><a href="/">ELR SCSS Helpers</a></p>
         <nav class="nav-main">
           <ul class="elr-inline-list">
             <li><a href="/buttons.html">Buttons</a></li>
@@ -46,6 +46,7 @@
             <li><a href="/list.html">List</a></li>
             <li><a href="/positioning.html">Positioning</a></li>
             <li><a href="/responsive.html">Responsive</a></li>
+            <li><a href="/transforms.html">Transforms</a></li>
             <li><a href="/typography.html">Typography</a></li>
             <!-- <li><a href="/layout.html">Action Styles</a></li> -->
           </ul>
@@ -54,35 +55,84 @@
     </header>
     <div class="wrapper">
       <div class="content-holder">
-        <div class="demo-content elr-block">
-          <h1 class="main-heading">Notifications Demo</h1>
-          <a class="elr-block" href="/notifications.html">Notifications Demo</a>
+        <div class="lead-content">
+          <h2>Why</h2>
+          <p>
+            This package takes a more functional CSS approach to Scss. Using a
+            Scss mixin allows for easy configuration of your base styles to
+            ensure that your helpers will match the look and feel of your
+            project.
+          </p>
+          <p>
+            Which style you choose can depend a lot on your project and your
+            needs. A functional CSS approach is beneficial in situations where
+            you have a lot of control over your HTML/JSX/Pug... whatever you're
+            using to write markup that eventually becomes HTML. Especially if
+            you are using a component based framework.
+          </p>
+          <p>
+            Keep in mind that adding non-semantic classes to your HTML will
+            result in tightly coupled markup. If your product manager tells you
+            that now all headlines should be green instead of blue using style
+            classes could make these updates tedious and time consuming. Its for
+            this reason that I will not include classes that apply hard coded
+            color styles.
+          </p>
+          <p>
+            Using a more stylesheet based approach is useful when you don't
+            necessarily have control over your HTML. Like when you're working
+            with a CMS where HTML structure is set in stone or dictated by your
+            content team.
+          </p>
+          <p>
+            Its also beneficial to use a more stylesheet based approach when you
+            are creating traditional HTML/CSS based applications without a
+            framework. If you are not creating reusable components you likely
+            have a lot of HTML that repeats throughout your site. Using a
+            stylesheet based approach with a BEM or similar CSS methodology will
+            be much easier to maintain down the road.
+          </p>
+          <p>
+            I usually find myself using more of a hybrid of these 2 approaches.
+            Though I'm leaning towards a more functional approach these days in
+            my React and Vue applications.
+          </p>
+          <h2>Whats with this "elr" prefix?</h2>
+          <p>
+            I have added namespacing to avoid clashes with other frameworks. If
+            you don't like the 'elr' prefix you are free to change it.
+          </p>
         </div>
-        <div class="demo-content">
-          <h1 class="main-heading">Button Helpers Demo</h1>
-          <a class="elr-block" href="/buttons.html">Buttons</a>
-        </div>
-        <div class="demo-content">
-          <h1 class="main-heading">Display Helpers Demo</h1>
-          <a class="elr-block" href="/display.html">Display Demo</a>
-        </div>
-        <div class="demo-content layout-demo elr-block">
-          <h1 class="main-heading">Layout Helpers Demo</h1>
-          <a class="elr-block" href="/layout.html">Layout Demo</a>
-        </div>
-          <div class="demo-content layout-demo elr-block">
-            <h1 class="main-heading">Flex Helpers Demo</h1>
-            <a class="elr-block" href="/flex.html">Flex Demo</a>
-          </div>
-          <div class="demo-content layout-demo elr-block">
-            <h1 class="main-heading">Positioning Helpers Demo</h1>
-            <a class="elr-block" href="/positioning.html">Positioning Demo</a>
-          </div>
-          <div class="demo-content layout-demo elr-block">
-            <h1 class="main-heading">List Helpers Demo</h1>
-            <a class="elr-block" href="/list.html">List Demo</a>
-          </div>
-        </div>
+        <ul class="feature-list">
+          <li>
+            <p class="feature-name">Notifications Demo</p>
+            <a href="/notifications.html">Notifications Demo</a>
+          </li>
+          <li>
+            <p class="feature-name">Button Helpers Demo</p>
+            <a href="/buttons.html">Buttons</a>
+          </li>
+          <li>
+            <p class="feature-name">Display Helpers Demo</p>
+            <a href="/display.html">Display Demo</a>
+          </li>
+          <li>
+            <p class="feature-name">Layout Helpers Demo</p>
+            <a href="/layout.html">Layout Demo</a>
+          </li>
+          <li>
+            <p class="feature-name">Flex Helpers Demo</p>
+            <a href="/flex.html">Flex Demo</a>
+          </li>
+          <li>
+            <p class="feature-name">Positioning Helpers Demo</p>
+            <a href="/positioning.html">Positioning Demo</a>
+          </li>
+          <li>
+            <p class="feature-name">List Helpers Demo</p>
+            <a href="/list.html">List Demo</a>
+          </li>
+        </ul>
       </div>
     </div>
   </body>

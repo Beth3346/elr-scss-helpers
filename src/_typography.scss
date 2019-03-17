@@ -1,117 +1,140 @@
 @import 'node_modules/elr-scss-functions/main';
 
-@mixin elr-typography-classes() {
-  .elr-bold {
+@mixin elr-typography-classes($config: ()) {
+  $config: extend(
+    (
+      prefix: 'elr'
+    ),
+    $config
+  );
+
+  $prefix: map-get($config, prefix);
+
+  .#{$prefix}-bold {
     font-weight: bold;
   }
 
-  .elr-italic {
+  .#{$prefix}-italic {
     font-style: italic;
   }
 
-  .elr-underline {
+  .#{$prefix}-underline {
     text-decoration: underline;
   }
 
-  .elr-uppercase {
+  .#{$prefix}-uppercase {
     text-transform: uppercase;
   }
 
-  .elr-capitalize {
+  .#{$prefix}-capitalize {
     text-transform: capitalize;
   }
 
-  .elr-text-large {
+  .#{$prefix}-text-large {
     font-size: 120%;
   }
 
-  .elr-text-small {
+  .#{$prefix}-text-small {
     font-size: 80%;
   }
 
-  .elr-text-left {
+  .#{$prefix}-text-left {
     text-align: left;
   }
 
-  .elr-text-right {
+  .#{$prefix}-text-right {
     text-align: right;
   }
 
-  .elr-text-center {
+  .#{$prefix}-text-center {
     text-align: center;
   }
 
-  .elr-text-justified {
+  .#{$prefix}-text-justified {
     text-align: justify;
   }
 
-  .elr-avoid-wrap {
+  .#{$prefix}-avoid-wrap {
     display: inline-block;
   }
 
-  .elr-fz-36 {
+  .#{$prefix}-fz-36 {
     font-size: 36px !important;
   }
 
-  .elr-fz-30 {
+  .#{$prefix}-fz-30 {
     font-size: 30px !important;
   }
 
-  .elr-fz-24 {
+  .#{$prefix}-fz-24 {
     font-size: 24px !important;
   }
 
-  .elr-fz-18 {
+  .#{$prefix}-fz-18 {
     font-size: 18px !important;
   }
 
-  .elr-fz-16 {
+  .#{$prefix}-fz-16 {
     font-size: 16px !important;
   }
 
-  .elr-fz-14 {
+  .#{$prefix}-fz-14 {
     font-size: 14px !important;
   }
 }
 
-@mixin elr-typography-states() {
-  $danger-color: #f7322f;
-  $warning-color: #d1cb34;
-  $success-color: #7aba7b;
-  $info-color: #1daaf0;
-  $muted-color: #999;
-  $accent-color: #ed145b;
+@mixin elr-typography-states($config: ()) {
+  $config: extend(
+    (
+      prefix: 'elr',
+      danger-color: #f7322f,
+      warning-color: #d1cb34,
+      success-color: #7aba7b,
+      info-color: #1daaf0,
+      muted-color: #999,
+      accent-color: rgb(240, 44, 151)
+    ),
+    $config
+  );
 
-  .elr-text-muted {
+  $prefix: map-get($config, prefix);
+  $danger-color: map-get($config, danger-color);
+  $warning-color: map-get($config, warning-color);
+  $success-color: map-get($config, success-color);
+  $info-color: map-get($config, info-color);
+  $muted-color: map-get($config, muted-color);
+  $accent-color: map-get($config, accent-color);
+
+  .#{$prefix}-text-muted {
     color: $muted-color;
   }
 
-  .elr-text-disabled {
+  .#{$prefix}-text-disabled {
     color: #ccc;
   }
 
-  .elr-text-danger {
+  .#{$prefix}-text-danger {
     color: $danger-color;
   }
 
-  .elr-text-error {
+  .#{$prefix}-text-error {
     color: $danger-color;
     font-weight: bold;
   }
 
-  .elr-text-info {
+  .#{$prefix}-text-info {
     color: $info-color;
   }
 
-  .elr-text-warning {
+  .#{$prefix}-text-warning {
     color: $warning-color;
   }
 
-  .elr-text-success {
+  .#{$prefix}-text-success {
     color: $success-color;
   }
 
-  .elr-highlight {
+  .#{$prefix}-highlight {
     color: $accent-color;
   }
 }

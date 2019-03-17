@@ -1,17 +1,189 @@
+@import 'node_modules/elr-scss-functions/main';
+
 // rotates
 // skews
 // move
+// scale
 
-@mixin elr-transforms-classes() {
-  .elr-rotate-90 {
+@mixin elr-transforms-classes($config: ()) {
+  $config: extend(
+    (
+      prefix: 'elr'
+    ),
+    $config
+  );
+
+  $prefix: map-get($config, prefix);
+
+  .#{$prefix}-rotate-90 {
     transform: rotate(90deg);
   }
 
-  .elr-rotate-180 {
+  .#{$prefix}-rotate-180 {
     transform: rotate(180deg);
   }
 
-  .elr-rotate-270 {
+  .#{$prefix}-rotate-270 {
     transform: rotate(270deg);
+  }
+
+  .#{$prefix}-move-left-10 {
+    transform: translateX(10%);
+  }
+
+  .#{$prefix}-move-down-10 {
+    transform: translateY(10%);
+  }
+
+  .#{$prefix}-move-right-10 {
+    transform: translateX(-10%);
+  }
+
+  .#{$prefix}-move-up-10 {
+    transform: translateY(-10%);
+  }
+
+  .#{$prefix}-move-left-20 {
+    transform: translateX(20%);
+  }
+
+  .#{$prefix}-move-down-20 {
+    transform: translateY(20%);
+  }
+
+  .#{$prefix}-move-right-20 {
+    transform: translateX(-20%);
+  }
+
+  .#{$prefix}-move-up-20 {
+    transform: translateY(-20%);
+  }
+
+  .#{$prefix}-move-left-30 {
+    transform: translateX(30%);
+  }
+
+  .#{$prefix}-move-down-30 {
+    transform: translateY(30%);
+  }
+
+  .#{$prefix}-move-right-30 {
+    transform: translateX(-30%);
+  }
+
+  .#{$prefix}-move-up-30 {
+    transform: translateY(-30%);
+  }
+
+  .#{$prefix}-move-left-40 {
+    transform: translateX(40%);
+  }
+
+  .#{$prefix}-move-down-40 {
+    transform: translateY(40%);
+  }
+
+  .#{$prefix}-move-right-40 {
+    transform: translateX(-40%);
+  }
+
+  .#{$prefix}-move-up-40 {
+    transform: translateY(-40%);
+  }
+
+  .#{$prefix}-move-left-50 {
+    transform: translateX(50%);
+  }
+
+  .#{$prefix}-move-down-50 {
+    transform: translateY(50%);
+  }
+
+  .#{$prefix}-move-right-50 {
+    transform: translateX(-50%);
+  }
+
+  .#{$prefix}-move-up-50 {
+    transform: translateY(-50%);
+  }
+
+  .#{$prefix}-move-left-60 {
+    transform: translateX(60%);
+  }
+
+  .#{$prefix}-move-down-60 {
+    transform: translateY(60%);
+  }
+
+  .#{$prefix}-move-right-60 {
+    transform: translateX(-60%);
+  }
+
+  .#{$prefix}-move-up-60 {
+    transform: translateY(-60%);
+  }
+
+  .#{$prefix}-move-left-70 {
+    transform: translateX(70%);
+  }
+
+  .#{$prefix}-move-down-70 {
+    transform: translateY(70%);
+  }
+
+  .#{$prefix}-move-right-70 {
+    transform: translateX(-70%);
+  }
+
+  .#{$prefix}-move-up-70 {
+    transform: translateY(-70%);
+  }
+
+  .#{$prefix}-move-left-80 {
+    transform: translateX(80%);
+  }
+
+  .#{$prefix}-move-down-80 {
+    transform: translateY(80%);
+  }
+
+  .#{$prefix}-move-right-80 {
+    transform: translateX(-80%);
+  }
+
+  .#{$prefix}-move-up-80 {
+    transform: translateY(-80%);
+  }
+
+  .#{$prefix}-move-left-90 {
+    transform: translateX(90%);
+  }
+
+  .#{$prefix}-move-down-90 {
+    transform: translateY(90%);
+  }
+
+  .#{$prefix}-move-right-90 {
+    transform: translateX(-90%);
+  }
+
+  .#{$prefix}-move-up-90 {
+    transform: translateY(-90%);
+  }
+
+  .#{$prefix}-move-left-100 {
+    transform: translateX(100%);
+  }
+
+  .#{$prefix}-move-down-100 {
+    transform: translateY(100%);
+  }
+
+  .#{$prefix}-move-right-100 {
+    transform: translateX(-100%);
+  }
+
+  .#{$prefix}-move-up-100 {
+    transform: translateY(-100%);
   }
 }

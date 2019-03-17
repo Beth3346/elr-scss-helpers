@@ -44,272 +44,281 @@
   float: none !important;
 }
 
-@mixin elr-layout-classes() {
-  .elr-columns-3 {
+@mixin elr-layout-classes($config: ()) {
+  $config: extend(
+    (
+      prefix: 'elr'
+    ),
+    $config
+  );
+
+  $prefix: map-get($config, prefix);
+
+  .#{$prefix}-columns-3 {
     columns: 3 200px;
     column-gap: 2em;
   }
 
-  .elr-columns-2 {
+  .#{$prefix}-columns-2 {
     columns: 2 200px;
     column-gap: 2em;
   }
 
-  .elr-pull-left {
+  .#{$prefix}-pull-left {
     float: left !important;
   }
 
-  .elr-pull-right {
+  .#{$prefix}-pull-right {
     float: right !important;
   }
 
-  .elr-no-float {
+  .#{$prefix}-no-float {
     float: none !important;
   }
 
-  .elr-clear {
+  .#{$prefix}-clear {
     @include elr-clearfix;
   }
 
-  .elr-center-block {
+  .#{$prefix}-center-block {
     @include elr-center-block;
   }
 
-  .elr-screen-reader {
+  .#{$prefix}-screen-reader {
     @include elr-screen-reader;
   }
 
-  .elr-no-margin {
+  .#{$prefix}-no-margin {
     margin: 0 !important;
   }
 
-  .elr-no-padding {
+  .#{$prefix}-no-padding {
     padding: 0 !important;
   }
 
-  .elr-no-background {
+  .#{$prefix}-no-background {
     background: transparent !important;
   }
 
-  .elr-no-border {
+  .#{$prefix}-no-border {
     border: 0 !important;
   }
 
-  .elr-o-hidden {
+  .#{$prefix}-o-hidden {
     overflow: hidden !important;
   }
 
-  .elr-o-scroll {
+  .#{$prefix}-o-scroll {
     overflow: scroll !important;
   }
 
-  .elr-o-scroll-x {
+  .#{$prefix}-o-scroll-x {
     overflow-x: scroll !important;
     overflow-y: hidden;
   }
 
-  .elr-o-scroll-y {
+  .#{$prefix}-o-scroll-y {
     overflow-x: hidden;
     overflow-y: scroll !important;
   }
 
-  .elr-p-40 {
+  .#{$prefix}-p-40 {
     padding: 40px !important;
   }
 
-  .elr-p-30 {
+  .#{$prefix}-p-30 {
     padding: 30px !important;
   }
 
-  .elr-p-20 {
+  .#{$prefix}-p-20 {
     padding: 20px !important;
   }
 
-  .elr-p-10 {
+  .#{$prefix}-p-10 {
     padding: 10px !important;
   }
 
-  .elr-p-5 {
+  .#{$prefix}-p-5 {
     padding: 5px !important;
   }
 
-  .elr-pl-40 {
+  .#{$prefix}-pl-40 {
     padding-left: 40px !important;
   }
 
-  .elr-pl-30 {
+  .#{$prefix}-pl-30 {
     padding-left: 30px !important;
   }
 
-  .elr-pl-20 {
+  .#{$prefix}-pl-20 {
     padding-left: 20px !important;
   }
 
-  .elr-pl-10 {
+  .#{$prefix}-pl-10 {
     padding-left: 10px !important;
   }
 
-  .elr-pl-5 {
+  .#{$prefix}-pl-5 {
     padding-left: 5px !important;
   }
 
-  .elr-pr-40 {
+  .#{$prefix}-pr-40 {
     padding-right: 40px !important;
   }
 
-  .elr-pr-30 {
+  .#{$prefix}-pr-30 {
     padding-right: 30px !important;
   }
 
-  .elr-pr-20 {
+  .#{$prefix}-pr-20 {
     padding-right: 20px !important;
   }
 
-  .elr-pr-10 {
+  .#{$prefix}-pr-10 {
     padding-right: 10px !important;
   }
 
-  .elr-pr-5 {
+  .#{$prefix}-pr-5 {
     padding-right: 5px !important;
   }
 
-  .elr-pt-40 {
+  .#{$prefix}-pt-40 {
     padding-top: 40px !important;
   }
 
-  .elr-pt-30 {
+  .#{$prefix}-pt-30 {
     padding-top: 30px !important;
   }
 
-  .elr-pt-20 {
+  .#{$prefix}-pt-20 {
     padding-top: 20px !important;
   }
 
-  .elr-pt-10 {
+  .#{$prefix}-pt-10 {
     padding-top: 10px !important;
   }
 
-  .elr-pt-5 {
+  .#{$prefix}-pt-5 {
     padding-top: 5px !important;
   }
 
-  .elr-pb-40 {
+  .#{$prefix}-pb-40 {
     padding-bottom: 40px !important;
   }
 
-  .elr-pb-30 {
+  .#{$prefix}-pb-30 {
     padding-bottom: 30px !important;
   }
 
-  .elr-pb-20 {
+  .#{$prefix}-pb-20 {
     padding-bottom: 20px !important;
   }
 
-  .elr-pb-10 {
+  .#{$prefix}-pb-10 {
     padding-bottom: 10px !important;
   }
 
-  .elr-pb-5 {
+  .#{$prefix}-pb-5 {
     padding-bottom: 5px !important;
   }
 
-  .elr-m-40 {
+  .#{$prefix}-m-40 {
     margin: 40px !important;
   }
 
-  .elr-m-30 {
+  .#{$prefix}-m-30 {
     margin: 30px !important;
   }
 
-  .elr-m-20 {
+  .#{$prefix}-m-20 {
     margin: 20px !important;
   }
 
-  .elr-m-10 {
+  .#{$prefix}-m-10 {
     margin: 10px !important;
   }
 
-  .elr-m-5 {
+  .#{$prefix}-m-5 {
     margin: 5px !important;
   }
 
-  .elr-ml-40 {
+  .#{$prefix}-ml-40 {
     margin-left: 40px !important;
   }
 
-  .elr-ml-30 {
+  .#{$prefix}-ml-30 {
     margin-left: 30px !important;
   }
 
-  .elr-ml-20 {
+  .#{$prefix}-ml-20 {
     margin-left: 20px !important;
   }
 
-  .elr-ml-10 {
+  .#{$prefix}-ml-10 {
     margin-left: 10px !important;
   }
 
-  .elr-ml-5 {
+  .#{$prefix}-ml-5 {
     margin-left: 5px !important;
   }
 
-  .elr-mr-40 {
+  .#{$prefix}-mr-40 {
     margin-right: 40px !important;
   }
 
-  .elr-mr-30 {
+  .#{$prefix}-mr-30 {
     margin-right: 30px !important;
   }
 
-  .elr-mr-20 {
+  .#{$prefix}-mr-20 {
     margin-right: 20px !important;
   }
 
-  .elr-mr-10 {
+  .#{$prefix}-mr-10 {
     margin-right: 10px !important;
   }
 
-  .elr-mr-5 {
+  .#{$prefix}-mr-5 {
     margin-right: 5px !important;
   }
 
-  .elr-mt-40 {
+  .#{$prefix}-mt-40 {
     margin-top: 40px !important;
   }
 
-  .elr-mt-30 {
+  .#{$prefix}-mt-30 {
     margin-top: 30px !important;
   }
 
-  .elr-mt-20 {
+  .#{$prefix}-mt-20 {
     margin-top: 20px !important;
   }
 
-  .elr-mt-10 {
+  .#{$prefix}-mt-10 {
     margin-top: 10px !important;
   }
 
-  .elr-mt-5 {
+  .#{$prefix}-mt-5 {
     margin-top: 5px !important;
   }
 
-  .elr-mb-40 {
+  .#{$prefix}-mb-40 {
     margin-bottom: 40px !important;
   }
 
-  .elr-mb-30 {
+  .#{$prefix}-mb-30 {
     margin-bottom: 30px !important;
   }
 
-  .elr-mb-20 {
+  .#{$prefix}-mb-20 {
     margin-bottom: 20px !important;
   }
 
-  .elr-mb-10 {
+  .#{$prefix}-mb-10 {
     margin-bottom: 10px !important;
   }
 
-  .elr-mb-5 {
+  .#{$prefix}-mb-5 {
     margin-bottom: 5px !important;
   }
 }

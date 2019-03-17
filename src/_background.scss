@@ -1,17 +1,28 @@
-@mixin elr-background-classes() {
-  .elr-no-background {
+@import 'node_modules/elr-scss-functions/main';
+
+@mixin elr-background-classes($config: ()) {
+  $config: extend(
+    (
+      prefix: 'elr'
+    ),
+    $config
+  );
+
+  $prefix: map-get($config, prefix);
+
+  .#{$prefix}-no-background {
     background: transparent !important;
   }
 
-  .elr-no-repeat {
+  .#{$prefix}-no-repeat {
     background-repeat: no-repeat !important;
   }
 
-  .elr-background-fixed {
+  .#{$prefix}-background-fixed {
     background-attachment: fixed;
   }
 
-  .elr-background-centered {
+  .#{$prefix}-background-centered {
     background-position: center center;
   }
 }

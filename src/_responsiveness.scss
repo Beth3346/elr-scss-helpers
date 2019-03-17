@@ -1,22 +1,33 @@
 // scss-lint:disable ImportantRule
-@mixin elr-responsive-classes() {
-  .elr-hide {
+@import 'node_modules/elr-scss-functions/main';
+
+@mixin elr-responsive-classes($config: ()) {
+  $config: extend(
+    (
+      prefix: 'elr'
+    ),
+    $config
+  );
+
+  $prefix: map-get($config, prefix);
+
+  .#{$prefix}-hide {
     display: none !important;
   }
 
-  .elr-hide-desktop {
+  .#{$prefix}-hide-desktop {
     @media (min-width: 769px) {
       display: none !important;
     }
   }
 
-  .elr-hide-tablet {
+  .#{$prefix}-hide-tablet {
     @media (max-width: 768px) and (min-width: 569px) {
       display: none !important;
     }
   }
 
-  .elr-hide-mobile {
+  .#{$prefix}-hide-mobile {
     @media (max-width: 568px) {
       display: none !important;
     }

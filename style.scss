@@ -313,6 +313,10 @@ pre {
     line-height: 1;
   }
 
+  a {
+    text-decoration: none;
+  }
+
   .nav-main {
     ul {
       padding: 0;
@@ -321,5 +325,27 @@ pre {
     a {
       color: #fff;
     }
+  }
+}
+
+.lead-content p {
+  padding: 5px 0;
+}
+
+.lead-content h2 {
+  font-size: 20px;
+}
+
+.feature-list {
+  list-style: none;
+  padding: 20px 0 40px;
+
+  li {
+    padding: 10px 0;
+  }
+
+  .feature-name {
+    font-weight: bold;
+    color: #1976d2;
   }
 }

@@ -1,7 +1,7 @@
 {
   "name": "elr-scss-helpers",
   "description": "a scss mixin with some css helper classes",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "author": "Elizabeth Rogers",
   "bugs": {
     "url": "https://github.com/Beth3346/elr-scss-helpers",

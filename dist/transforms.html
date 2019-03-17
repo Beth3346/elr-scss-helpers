@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>CSS Helpers Demo | ELR CSS Utilities</title>
+    <title>Transforms Helpers Demo | ELR CSS Utilities</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
@@ -47,19 +47,65 @@
             <li><a href="/positioning.html">Positioning</a></li>
             <li><a href="/responsive.html">Responsive</a></li>
             <li><a href="/typography.html">Typography</a></li>
-            <!-- <li><a href="/layout.html">Action Styles</a></li> -->
             <li><a href="/transforms.html">Transforms</a></li>
+            <!-- <li><a href="/layout.html">Action Styles</a></li> -->
           </ul>
         </nav>
       </div>
     </header>
     <div class="wrapper">
+      <nav class="content-nav">
+        <ul>
+          <li><a href="#rotate">Rotate</a></li>
+        </ul>
+      </nav>
       <div class="content-holder">
         <div class="demo-content elr-block">
-          <h1 class="main-heading elr-mb-10">Action Button Helpers</h1>
+          <h1 class="main-heading elr-mb-10">Transform Helpers</h1>
+          <p class="elr-mb-20">
+            Helpers for common transformation effects.
+          </p>
+          <h3 id="rotate">Rotate</h3>
+          <div class="display-helpers elr-flex">
+            <div class="box elr-flex elr-flex-center elr-flex-justify-center">
+              <p>No Rotation</p>
+            </div>
+            <div
+              class="box elr-flex elr-flex-center elr-flex-justify-center elr-rotate-90"
+            >
+              <p>Rotate 90deg</p>
+            </div>
+            <div
+              class="box elr-flex elr-flex-center elr-flex-justify-center elr-rotate-180"
+            >
+              <p>Rotate 180deg</p>
+            </div>
+            <div
+              class="box elr-flex elr-flex-center elr-flex-justify-center elr-rotate-270"
+            >
+              <p>Rotate 270deg</p>
+            </div>
+          </div>
+          <pre>
+            <span>&lt;div class="box elr-flex elr-flex-center elr-flex-justify-center elr-rotate-90"&gt;
+        &lt;p&gt;Rotate 90deg&lt;/p&gt;
+&lt;/div&gt;</span>
+            <button class="button-clip js-clip"><i class="fas fa-clipboard"></i></button>
+          </pre>
+          <pre>
+            <span>&lt;div class="box elr-flex elr-flex-center elr-flex-justify-center elr-rotate-180"&gt;
+        &lt;p&gt;Rotate 180deg&lt;/p&gt;
+&lt;/div&gt;</span>
+            <button class="button-clip js-clip"><i class="fas fa-clipboard"></i></button>
+          </pre>
+          <pre>
+            <span>&lt;div class="box elr-flex elr-flex-center elr-flex-justify-center elr-rotate-270"&gt;
+        &lt;p&gt;Rotate 270deg&lt;/p&gt;
+&lt;/div&gt;</span>
+            <button class="button-clip js-clip"><i class="fas fa-clipboard"></i></button>
+          </pre>
         </div>
       </div>
-      <a class="elr-block" href="/">Home</a>
     </div>
   </body>
 </html>

@@ -1,0 +1,43 @@
+@mixin elr-positioning-classes() {
+  .elr-static {
+    position: static !important;
+  }
+
+  .elr-absolute {
+    position: absolute !important;
+  }
+
+  .elr-relative {
+    position: relative !important;
+  }
+
+  .elr-fixed {
+    position: fixed !important;
+  }
+
+  .elr-position-top {
+    top: 0 !important;
+  }
+
+  .elr-position-left {
+    left: 0 !important;
+  }
+
+  .elr-position-right {
+    right: 0 !important;
+  }
+
+  .elr-position-bottom {
+    bottom: 0 !important;
+  }
+
+  .elr-position-center-x {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+
+  .elr-position-center-y {
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+  }
+}

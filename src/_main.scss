@@ -7,6 +7,9 @@
 @import 'responsiveness';
 @import 'typography';
 @import 'flex';
+@import 'display';
+@import 'positioning';
+@import 'transforms';
 
 // config
 $primary-color: #1976d2;
@@ -48,6 +51,7 @@ $button-color: #1976d2;
   @include elr-responsive-classes;
   @include elr-typography-classes;
   @include elr-background-classes;
+  @include elr-transforms-classes;
 }
 
 @mixin elr-action-helper-classes() {

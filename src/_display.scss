@@ -1,0 +1,17 @@
+@mixin elr-display-classes() {
+  .elr-block {
+    display: block !important;
+  }
+
+  .elr-inline {
+    display: inline !important;
+  }
+
+  .elr-inline-block {
+    display: inline-block !important;
+  }
+
+  .elr-display-none {
+    display: none !important;
+  }
+}

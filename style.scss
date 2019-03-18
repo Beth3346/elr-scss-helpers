@@ -242,6 +242,10 @@ a {
     font-size: 18px;
   }
 
+  h4 {
+    font-size: 16px;
+  }
+
   p {
     padding: 5px 0;
     font-size: 14px;
@@ -324,6 +328,10 @@ pre {
     font-size: 30px;
     font-weight: bold;
     line-height: 1;
+
+    a {
+      color: #fff;
+    }
   }
 
   a {

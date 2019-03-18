@@ -20,6 +20,19 @@ button {
   margin: 10px;
 }
 
+.float-demo {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #eeeeee;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.float-demo p {
+  color: #333;
+  font-size: 16px;
+}
+
 .box {
   clear: both;
 }

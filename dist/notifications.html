@@ -91,5 +91,18 @@
       </div>
       <a class="elr-block" href="/">Home</a>
     </div>
+    <script>
+      let clipboard = new ClipboardJS('.js-clip', {
+        target: function(trigger) {
+          return trigger.previousElementSibling;
+        }
+      });
+
+      clipboard.on('success', function(e) {
+        console.log('copied');
+
+        e.clearSelection();
+      });
+    </script>
   </body>
 </html>

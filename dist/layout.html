@@ -178,12 +178,16 @@
                 incidunt cumque beatae expedita harum! Assumenda.
               </p>
             </div>
+            <pre><span>&lt;div class="elr-pull-left"&gt;&lt/div&gt;</span><button class="button-clip js-clip"><i class="fas fa-clipboard"></i></button></pre>
+            <pre><span>&lt;div class="elr-pull-right"&gt;&lt/div&gt;</span><button class="button-clip js-clip"><i class="fas fa-clipboard"></i></button></pre>
+            <pre><span>&lt;div class="elr-no-float"&gt;&lt/div&gt;</span><button class="button-clip js-clip"><i class="fas fa-clipboard"></i></button></pre>
+            <pre><span>&lt;div class="elr-center-block"&gt;&lt/div&gt;</span><button class="button-clip js-clip"><i class="fas fa-clipboard"></i></button></pre>
             <h3 id="clear" class="main-heading">Clear</h3>
             <p>
               Use the clear helper class for quick and dirty old school float
               clearing. Avoid using this unless you have a very good reason.
             </p>
-            <pre>&lt;div class="elr-clear"&gt;&lt/div&gt;</pre>
+            <pre><span>&lt;div class="elr-clear"&gt;&lt/div&gt;</span><button class="button-clip js-clip"><i class="fas fa-clipboard"></i></button></pre>
           </div>
           <div class="demo-content layout-demo elr-block">
             <h3 id="screen-reader" class="main-heading">Screen Reader</h3>
@@ -195,9 +199,7 @@
               screen readers.
             </p>
             <p class="elr-screen-reader">For screen readers only</p>
-            <pre>
-&lt;p class="elr-screen-reader"&gt;Something for screen readers only.&lt/p&gt;</pre
-            >
+            <pre><span>&lt;p class="elr-screen-reader"&gt;Something for screen readers only.&lt/p&gt;</span><button class="button-clip js-clip"><i class="fas fa-clipboard"></i></button></pre>
           </div>
           <div class="demo-content layout-demo elr-block">
             <h3 id="box-model-resets" class="main-heading">Box Model Resets</h3>
@@ -304,7 +306,7 @@
               would advise that you use the empty div method instead. Its gross
               but not as gross as using overflow: hidden to clear floats.
             </p>
-            <pre>&lt;div style="clear: both"&gt;&lt;/div&gt;</pre>
+            <pre><span>&lt;div style="clear: both"&gt;&lt;/div&gt;</span><button class="button-clip js-clip"><i class="fas fa-clipboard"></i></button></pre>
             <h4 class="main-heading">Overflow scroll</h4>
             <p>
               Overflow scroll will hide the content initially but make it
@@ -398,5 +400,18 @@
         </div>
       </div>
     </div>
+    <script>
+      let clipboard = new ClipboardJS('.js-clip', {
+        target: function(trigger) {
+          return trigger.previousElementSibling;
+        }
+      });
+
+      clipboard.on('success', function(e) {
+        console.log('copied');
+
+        e.clearSelection();
+      });
+    </script>
   </body>
 </html>

@@ -56,79 +56,213 @@
     <div class="wrapper">
       <nav class="content-nav">
         <ul>
-          <li><a href="#display-flex">Display Flex</a></li>
-          <li><a href="#flex-alignment">Flex Alignment</a></li>
-          <li><a href="#flex-sizing">Flex Sizing</a></li>
-          <li><a href="#flex-direction">Flex Direction</a></li>
-          <li><a href="#flex-reorder">Flex Reorder</a></li>
+          <li><a href="#floats">Floats</a></li>
+          <li><a href="#box-model-resets">Box Model Resets</a></li>
+          <li><a href="#overflow-helpers">Overflow Helpers</a></li>
+          <li><a href="#columns">CSS Column Helpers</a></li>
+          <li><a href="#shapes">CSS Shapes Helpers</a></li>
+          <li><a href="/positioning.html">Positioning</a></li>
+          <li><a href="/grid.html">Grid</a></li>
+          <li><a href="/flex.html">Flex</a></li>
         </ul>
       </nav>
       <div class="content-holder">
         <div class="demo-content elr-block">
           <h1 class="main-heading elr-mb-10">Layout Helpers</h1>
+          <p>
+            Creating layouts in CSS has always been notoriously difficult. We've
+            always had to rely on hacks to achieve any sort of complex layouts.
+            Before CSS we used tables to hack together layouts that mimicked
+            print layouts.
+          </p>
+          <p>
+            After CSS overtook tables for styling web pages we relied on floats.
+            And while complex layouts are possible with floats they come with a
+            lot of trade offs.
+          </p>
+          <p>
+            With the addition of Flexbox and CSS Grid we finally have real
+            layout tools. We no longer need to hack together floated layouts!
+            However its still useful to understand how float based layouts work
+            because chances are you will need to maintain sites that use them. I
+            don't recommend refactoring float based layouts to flex/grid layouts
+            unless its absolutely necessary. Don't "fix" whats already working.
+            Use flex and grid layouts on your new projects.
+          </p>
+          <p>
+            <a href="https://css-tricks.com/all-about-floats/"
+              >Learn more about floats</a
+            >
+          </p>
           <div class="demo-content layout-demo elr-block">
-            <div class="box elr-pull-left">Float Left</div>
-            <div class="box elr-pull-right">Float Right</div>
-            <div class="box elr-pull-left elr-no-float">No Float</div>
-            <div class="box elr-center-block">Centered</div>
+            <h3 id="floats">Floats</h3>
+            <p>
+              The purpose of CSS floats is to allow text to wrap around images
+              and other blocks.
+            </p>
+            <div>
+              <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Asperiores, corporis neque nobis, minima modi iure nemo voluptates
+              optio possimus impedit reprehenderit ullam corrupti dolore
+              voluptatibus assumenda illum ipsam earum ducimus! Aliquid nesciunt
+              nulla, nobis velit quia aliquam modi ducimus pariatur optio a
+              facilis omnis sapiente sequi quaerat dolorum dicta, illo dolor
+              itaque officia perspiciatis placeat iusto tempore neque.</p>
+              <div class="float-box elr-pull-left">Float Left</div>
+              <p>Voluptatem similique temporibus exercitationem officia alias
+              blanditiis debitis tempora nostrum obcaecati molestiae, itaque
+              sunt velit incidunt nulla atque eum tenetur accusantium voluptatum
+              dignissimos! Veritatis consequuntur provident quos hic animi
+              perferendis,
+              <div class="float-box elr-pull-right">Float Right</div><p>
+              distinctio sequi minus omnis voluptates odio vero repudiandae sed,
+              eum recusandae dolorem et ipsam? Commodi reprehenderit vitae
+              magnam, quibusdam enim, excepturi tenetur quam, quaerat id ut
+              assumenda earum. Facere tenetur ullam dolorem autem est pariatur
+              et corporis ab aut maxime omnis ea reprehenderit asperiores harum
+              iste, nisi ut, nam deleniti? Tenetur blanditiis iste modi error?
+              Obcaecati fugit nostrum quod, minus ipsam quae natus, maiores
+              aperiam, explicabo nesciunt facere cum recusandae. Optio odit sed
+              sint quis nam reiciendis veritatis vel adipisci maiores vitae.
+              Iure ab, vitae quos aliquam earum, sequi quas, aut modi corporis
+              consequatur labore libero deleniti ratione? Sed voluptate id magni
+              officiis quaerat rerum voluptas eveniet eius! Deserunt nulla
+              veritatis a.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui quia quo quam vel error repellat consequuntur! Nesciunt saepe dolorum, fuga expedita eligendi suscipit rem quam fugit ipsa molestiae quidem dignissimos! Accusantium autem enim, facere error alias non laboriosam vel dolores, repellat totam aspernatur, rem beatae veniam ducimus officiis culpa numquam id dicta distinctio molestiae quis. Magni aspernatur voluptatum facilis voluptas quidem. <div class="float-box elr-center-block">Centered</div>Minima delectus molestiae minus ratione ab illum totam suscipit ipsum, esse rerum atque sunt facere ad praesentium molestias? Error reiciendis consectetur, autem fugiat rem exercitationem sunt laudantium placeat. Nemo veniam nihil quas sapiente praesentium. Accusantium facilis voluptatibus soluta magnam explicabo quo necessitatibus ipsum, repudiandae ea eum. Rem quidem voluptate unde nisi porro quaerat ut eligendi quod repudiandae nesciunt id consequuntur error, ab vel quae eveniet ipsa sint reiciendis veritatis odit dolore. Repellat nemo amet iure hic officiis cumque repellendus ab corporis magnam expedita distinctio ut, libero obcaecati illo at.</p>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis, cumque asperiores architecto mollitia sapiente blanditiis doloremque enim non.</p><div class="box elr-pull-left elr-no-float">No Float</div><p>Nostrum ullam alias, id accusamus tenetur perspiciatis eaque accusantium consequuntur dolore similique dicta iure, dolor iusto! Sapiente sed quasi facilis, officia inventore dolore laudantium consectetur architecto, aut voluptates voluptas fugit, doloribus esse perferendis odit expedita. Optio, voluptatum velit. Deleniti voluptates dolor labore sed nam assumenda molestias beatae adipisci culpa veritatis. Quod sunt voluptate, recusandae expedita corporis animi placeat natus. Sed, vitae quos, impedit perferendis asperiores at tempore vel explicabo, maxime expedita qui adipisci corrupti aperiam. Eos incidunt cumque beatae expedita harum! Assumenda.</p>
+            </div>
+            <h3 id="clear">Clear</h3>
+            <p>
+              Use the clear helper class for quick and dirty old school float
+              clearing. Avoid using this.
+            </p>
             <pre>&lt;div class="elr-clear"&gt;&lt/div&gt;</pre>
-            <pre>&lt;div class="elr-screen-reader"&gt;&lt/div&gt;</pre>
           </div>
           <div class="demo-content layout-demo elr-block">
-            <h1 class="main-heading">Box Model Helpers Demo</h1>
-            <p class="box-model-label">margin: 20px padding: 20px 1px border</p>
+            <h3 id="screen-reader">Screen Reader</h3>
+            <p>
+              When the text that is displayed to visitors reads awkwardly it may
+              be useful to provide some well written text to visitors who are
+              using screen readers. Add the screen-reader class to a line of
+              text and it will be hidden from view but it will be read aloud by
+              screen readers.
+            </p>
+            <p class="elr-screen-reader">For screen readers only</p>
+            <pre>
+&lt;p class="elr-screen-reader"&gt;Something for screen readers only.&lt/p&gt;</pre
+            >
+          </div>
+          <div class="demo-content layout-demo elr-block">
+            <h3 id="box-model-resets" class="main-heading">Box Model Resets</h3>
+            <p>
+              The CSS box model includes a block's margin, border, padding and
+              content. The width of all of these values is added to calculate
+              the total width of a block.
+            </p>
+            <p>
+              An element's width property will include its content. The border
+              width and padding is included if the block has a box-sizing
+              property value of border-box. Margin is never include in the
+              width. So box with a width property value of 200px, padding of
+              20px and a margin of 20px will take up 280px of the screen.
+            </p>
+            <p>
+              By default all blocks have a box-sizing property value of
+              "content-box". This means that if you set a box to have a width of
+              200px the width of the border will be added on to the width. So a
+              box with a 1px border will have a total width of 202px.
+            </p>
+            <p>
+              In the past few years its become more common to apply a box-sizing
+              property value of "border-box" to all elements. This means that if
+              you set a box to have a width of 200px the width of the border and
+              padding will be included in width. So a box with a 1px border and
+              20px of padding will have a total width of 200px.
+            </p>
+            <p>
+              <a href="https://css-tricks.com/almanac/properties/b/box-sizing/"
+                >CSS Tricks Box Sizing</a
+              >
+            </p>
+            <p class="box-model-label">
+              width: 250px; margin: 20px; padding: 20px; border: 3px solid #333;
+              Notice how the content box is so much larger.
+            </p>
             <div class="box-model-holder">
-              <div class="box-model">
-                Box Model
+              <div class="box-model" style="border-width: 3px">
+                Border Box
+              </div>
+              <div
+                class="box-model"
+                style="border-width: 3px; box-sizing: content-box;"
+              >
+                Content Box
               </div>
             </div>
+            <h4>No Margin</h4>
             <p class="box-model-label">margin: 0 padding: 20px 1px border</p>
             <div class="box-model-holder">
               <div class="box-model elr-no-margin">
                 Box Model
               </div>
             </div>
+            <h4>No padding</h4>
             <p class="box-model-label">margin: 20px; padding: 0; 1px border</p>
             <div class="box-model-holder">
               <div class="box-model elr-no-padding">
                 Box Model
               </div>
             </div>
+            <h4>No border</h4>
             <p class="box-model-label">margin: 20px; padding: 20px; 0 border</p>
             <div class="box-model-holder">
               <div class="box-model elr-no-border">
                 Box Model
               </div>
             </div>
-            <p class="box-model-label">
-              margin: 20px; padding: 20px; 1px border; background: transparent
-            </p>
-            <div class="box-model-holder">
-              <div class="box-model elr-no-background">
-                Box Model
-              </div>
-            </div>
           </div>
           <div class="demo-content layout-demo elr-block">
-            <h1 class="main-heading">Overflow Helpers Demo</h1>
+            <h3 id="overflow-helpers">Overflow Helpers</h3>
+            <h4>No overflow property applied</h4>
+            <p>
+              By default all boxes have an overflow property value of show. This
+              means that if the content is too large for its container it will
+              just break out. Sometimes this is desireable. Its generally better
+              to have text break out of its box but still be readable than to
+              cut off text.
+            </p>
             <div class="overflow-holder">
               <div class="box-model-overflow">This box is too big</div>
             </div>
+            <h4>Overflow hidden</h4>
+            <p>
+              Overflow hidden will hide anything that doesn't fix in the parent
+              container. Notice how the text is just arbitrarily cut off. You
+              can't see it unless you go into the source HTML!
+            </p>
             <div class="overflow-holder elr-o-hidden">
               <div class="box-model-overflow">This box is too big</div>
             </div>
+            <h4>Overflow scroll</h4>
+            <p>
+              Overflow scroll will hide the content initially but make it
+              visible when the container is scrolled.
+            </p>
             <div class="overflow-holder elr-o-scroll">
               <div class="box-model-overflow">This box is too big</div>
             </div>
+            <h4>Overflow y is hidden. Overflow x scrolls</h4>
             <div class="overflow-holder elr-o-scroll-x">
               <div class="box-model-overflow">This box is too big</div>
             </div>
+            <h4>Overflow x is hidden. Overflow y scrolls</h4>
             <div class="overflow-holder elr-o-scroll-y">
               <div class="box-model-overflow">This box is too big</div>
             </div>
           </div>
           <div class="demo-content layout-demo elr-block">
-            <h1 class="main-heading">CSS Columns Helpers Demo</h1>
+            <h3 id="columns">CSS Columns Helpers</h3>
             <div class="elr-columns-3 elr-mb-40">
               <p class="elr-pb-10">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi

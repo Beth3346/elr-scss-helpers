@@ -202,6 +202,10 @@ section {
   }
 }
 
+a {
+  color: #1976d2;
+}
+
 .content-holder {
   flex: 3;
   flex-grow: 1;
@@ -232,6 +236,21 @@ section {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+
+  h3 {
+    padding: 10px 0;
+    font-size: 18px;
+  }
+
+  p {
+    padding: 5px 0;
+    font-size: 14px;
+    color: #666;
+  }
+
+  h3 + p {
+    margin-top: -10px;
+  }
 }
 
 .layout-demo {
@@ -264,12 +283,6 @@ pre {
     margin-left: 20px;
     cursor: pointer;
   }
-}
-
-.box-model-label {
-  padding: 5px 0;
-  font-size: 14px;
-  color: #666;
 }
 
 .button-clip {

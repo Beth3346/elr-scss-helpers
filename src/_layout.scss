@@ -85,10 +85,6 @@
     @include elr-screen-reader;
   }
 
-  .#{$prefix}-no-background {
-    background: transparent !important;
-  }
-
   .#{$prefix}-no-border {
     border: 0 !important;
   }
@@ -119,7 +115,7 @@
     padding: 0 !important;
   }
 
-  $steps: 5 10 15 20 25 30 35 40;
+  $steps: 5 10 15 20 25 30 35 40 45 50 55 60;
 
   @each $step in $steps {
     .#{$prefix}-p-#{$step} {
@@ -127,39 +123,39 @@
     }
 
     .#{$prefix}-pt-#{$step} {
-      padding: #{$step}px !important;
+      padding-top: #{$step}px !important;
     }
 
     .#{$prefix}-pr-#{$step} {
-      padding: #{$step}px !important;
+      padding-right: #{$step}px !important;
     }
 
     .#{$prefix}-pb-#{$step} {
-      padding: #{$step}px !important;
+      padding-bottom: #{$step}px !important;
     }
 
     .#{$prefix}-pl-#{$step} {
-      padding: #{$step}px !important;
+      padding-left: #{$step}px !important;
     }
 
     .#{$prefix}-m-#{$step} {
-      padding: #{$step}px !important;
+      margin: #{$step}px !important;
     }
 
     .#{$prefix}-mt-#{$step} {
-      padding: #{$step}px !important;
+      margin-top: #{$step}px !important;
     }
 
     .#{$prefix}-mr-#{$step} {
-      padding: #{$step}px !important;
+      margin-right: #{$step}px !important;
     }
 
     .#{$prefix}-mb-#{$step} {
-      padding: #{$step}px !important;
+      margin-bottom: #{$step}px !important;
     }
 
     .#{$prefix}-ml-#{$step} {
-      padding: #{$step}px !important;
+      margin-left: #{$step}px !important;
     }
   }
 }

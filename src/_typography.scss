@@ -58,28 +58,12 @@
     display: inline-block;
   }
 
-  .#{$prefix}-fz-36 {
-    font-size: 36px !important;
-  }
+  $font-sizes: 14 16 18 24 30 36 48;
 
-  .#{$prefix}-fz-30 {
-    font-size: 30px !important;
-  }
-
-  .#{$prefix}-fz-24 {
-    font-size: 24px !important;
-  }
-
-  .#{$prefix}-fz-18 {
-    font-size: 18px !important;
-  }
-
-  .#{$prefix}-fz-16 {
-    font-size: 16px !important;
-  }
-
-  .#{$prefix}-fz-14 {
-    font-size: 14px !important;
+  @each $size in $font-sizes {
+    .#{$prefix}-fz-#{$size} {
+      font-size: #{$size}px !important;
+    }
   }
 }
 
@@ -98,43 +82,44 @@
   );
 
   $prefix: map-get($config, prefix);
-  $danger-color: map-get($config, danger-color);
-  $warning-color: map-get($config, warning-color);
-  $success-color: map-get($config, success-color);
-  $info-color: map-get($config, info-color);
-  $muted-color: map-get($config, muted-color);
-  $accent-color: map-get($config, accent-color);
+  $color-map: (
+    danger: (
+      name: 'danger',
+      color: map-get($config, danger-color)
+    ),
+    warning: (
+      name: 'warning',
+      color: map-get($config, warning-color)
+    ),
+    success: (
+      name: 'success',
+      color: map-get($config, success-color)
+    ),
+    info: (
+      name: 'info',
+      color: map-get($config, info-color)
+    ),
+    muted: (
+      name: 'muted',
+      color: map-get($config, muted-color)
+    ),
+    accent: (
+      name: 'accent',
+      color: map-get($config, accent-color)
+    )
+  );
 
-  .#{$prefix}-text-muted {
-    color: $muted-color;
-  }
+  @each $color, $map in $color-map {
+    $name: map-get($map, name);
+    $color: map-get($map, color);
 
-  .#{$prefix}-text-disabled {
-    color: #ccc;
-  }
-
-  .#{$prefix}-text-danger {
-    color: $danger-color;
+    .#{$prefix}-text-#{$name} {
+      color: $color;
+    }
   }
 
   .#{$prefix}-text-error {
     color: $danger-color;
     font-weight: bold;
-  }
-
-  .#{$prefix}-text-info {
-    color: $info-color;
-  }
-
-  .#{$prefix}-text-warning {
-    color: $warning-color;
-  }
-
-  .#{$prefix}-text-success {
-    color: $success-color;
-  }
-
-  .#{$prefix}-highlight {
-    color: $accent-color;
   }
 }

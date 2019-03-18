@@ -18,4 +18,20 @@
   .#{$prefix}-inline-list {
     @include elr-inline-list;
   }
+
+  .#{$prefix}-border-list {
+    @include elr-border-list;
+
+    li {
+      font-size: 14px;
+    }
+  }
+
+  .#{$prefix}-check-list {
+    @include elr-bullet-list();
+  }
+
+  .#{$prefix}-icon-list {
+    @include elr-icon-list;
+  }
 }

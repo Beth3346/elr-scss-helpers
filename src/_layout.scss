@@ -54,14 +54,11 @@
 
   $prefix: map-get($config, prefix);
 
-  .#{$prefix}-columns-3 {
-    columns: 3 200px;
-    column-gap: 2em;
-  }
-
-  .#{$prefix}-columns-2 {
-    columns: 2 200px;
-    column-gap: 2em;
+  @for $i from 2 through 4 {
+    .#{$prefix}-columns-#{$i} {
+      columns: $i 200px;
+      column-gap: 2em;
+    }
   }
 
   .#{$prefix}-pull-left {
@@ -86,14 +83,6 @@
 
   .#{$prefix}-screen-reader {
     @include elr-screen-reader;
-  }
-
-  .#{$prefix}-no-margin {
-    margin: 0 !important;
-  }
-
-  .#{$prefix}-no-padding {
-    padding: 0 !important;
   }
 
   .#{$prefix}-no-background {
@@ -122,203 +111,55 @@
     overflow-y: scroll !important;
   }
 
-  .#{$prefix}-p-40 {
-    padding: 40px !important;
+  .#{$prefix}-no-margin {
+    margin: 0 !important;
   }
 
-  .#{$prefix}-p-30 {
-    padding: 30px !important;
+  .#{$prefix}-no-padding {
+    padding: 0 !important;
   }
 
-  .#{$prefix}-p-20 {
-    padding: 20px !important;
-  }
+  $steps: 5 10 15 20 25 30 35 40;
 
-  .#{$prefix}-p-10 {
-    padding: 10px !important;
-  }
+  @each $step in $steps {
+    .#{$prefix}-p-#{$step} {
+      padding: #{$step}px !important;
+    }
 
-  .#{$prefix}-p-5 {
-    padding: 5px !important;
-  }
+    .#{$prefix}-pt-#{$step} {
+      padding: #{$step}px !important;
+    }
 
-  .#{$prefix}-pl-40 {
-    padding-left: 40px !important;
-  }
+    .#{$prefix}-pr-#{$step} {
+      padding: #{$step}px !important;
+    }
 
-  .#{$prefix}-pl-30 {
-    padding-left: 30px !important;
-  }
+    .#{$prefix}-pb-#{$step} {
+      padding: #{$step}px !important;
+    }
 
-  .#{$prefix}-pl-20 {
-    padding-left: 20px !important;
-  }
+    .#{$prefix}-pl-#{$step} {
+      padding: #{$step}px !important;
+    }
 
-  .#{$prefix}-pl-10 {
-    padding-left: 10px !important;
-  }
+    .#{$prefix}-m-#{$step} {
+      padding: #{$step}px !important;
+    }
 
-  .#{$prefix}-pl-5 {
-    padding-left: 5px !important;
-  }
+    .#{$prefix}-mt-#{$step} {
+      padding: #{$step}px !important;
+    }
 
-  .#{$prefix}-pr-40 {
-    padding-right: 40px !important;
-  }
+    .#{$prefix}-mr-#{$step} {
+      padding: #{$step}px !important;
+    }
 
-  .#{$prefix}-pr-30 {
-    padding-right: 30px !important;
-  }
+    .#{$prefix}-mb-#{$step} {
+      padding: #{$step}px !important;
+    }
 
-  .#{$prefix}-pr-20 {
-    padding-right: 20px !important;
-  }
-
-  .#{$prefix}-pr-10 {
-    padding-right: 10px !important;
-  }
-
-  .#{$prefix}-pr-5 {
-    padding-right: 5px !important;
-  }
-
-  .#{$prefix}-pt-40 {
-    padding-top: 40px !important;
-  }
-
-  .#{$prefix}-pt-30 {
-    padding-top: 30px !important;
-  }
-
-  .#{$prefix}-pt-20 {
-    padding-top: 20px !important;
-  }
-
-  .#{$prefix}-pt-10 {
-    padding-top: 10px !important;
-  }
-
-  .#{$prefix}-pt-5 {
-    padding-top: 5px !important;
-  }
-
-  .#{$prefix}-pb-40 {
-    padding-bottom: 40px !important;
-  }
-
-  .#{$prefix}-pb-30 {
-    padding-bottom: 30px !important;
-  }
-
-  .#{$prefix}-pb-20 {
-    padding-bottom: 20px !important;
-  }
-
-  .#{$prefix}-pb-10 {
-    padding-bottom: 10px !important;
-  }
-
-  .#{$prefix}-pb-5 {
-    padding-bottom: 5px !important;
-  }
-
-  .#{$prefix}-m-40 {
-    margin: 40px !important;
-  }
-
-  .#{$prefix}-m-30 {
-    margin: 30px !important;
-  }
-
-  .#{$prefix}-m-20 {
-    margin: 20px !important;
-  }
-
-  .#{$prefix}-m-10 {
-    margin: 10px !important;
-  }
-
-  .#{$prefix}-m-5 {
-    margin: 5px !important;
-  }
-
-  .#{$prefix}-ml-40 {
-    margin-left: 40px !important;
-  }
-
-  .#{$prefix}-ml-30 {
-    margin-left: 30px !important;
-  }
-
-  .#{$prefix}-ml-20 {
-    margin-left: 20px !important;
-  }
-
-  .#{$prefix}-ml-10 {
-    margin-left: 10px !important;
-  }
-
-  .#{$prefix}-ml-5 {
-    margin-left: 5px !important;
-  }
-
-  .#{$prefix}-mr-40 {
-    margin-right: 40px !important;
-  }
-
-  .#{$prefix}-mr-30 {
-    margin-right: 30px !important;
-  }
-
-  .#{$prefix}-mr-20 {
-    margin-right: 20px !important;
-  }
-
-  .#{$prefix}-mr-10 {
-    margin-right: 10px !important;
-  }
-
-  .#{$prefix}-mr-5 {
-    margin-right: 5px !important;
-  }
-
-  .#{$prefix}-mt-40 {
-    margin-top: 40px !important;
-  }
-
-  .#{$prefix}-mt-30 {
-    margin-top: 30px !important;
-  }
-
-  .#{$prefix}-mt-20 {
-    margin-top: 20px !important;
-  }
-
-  .#{$prefix}-mt-10 {
-    margin-top: 10px !important;
-  }
-
-  .#{$prefix}-mt-5 {
-    margin-top: 5px !important;
-  }
-
-  .#{$prefix}-mb-40 {
-    margin-bottom: 40px !important;
-  }
-
-  .#{$prefix}-mb-30 {
-    margin-bottom: 30px !important;
-  }
-
-  .#{$prefix}-mb-20 {
-    margin-bottom: 20px !important;
-  }
-
-  .#{$prefix}-mb-10 {
-    margin-bottom: 10px !important;
-  }
-
-  .#{$prefix}-mb-5 {
-    margin-bottom: 5px !important;
+    .#{$prefix}-ml-#{$step} {
+      padding: #{$step}px !important;
+    }
   }
 }

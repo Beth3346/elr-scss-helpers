@@ -10,26 +10,67 @@
   );
 
   $prefix: map-get($config, prefix);
+  $breakpoints: (
+    desktop: (
+      name: 'desktop',
+      width: 1600px
+    ),
+    laptop: (
+      name: 'laptop',
+      width: 1200px
+    ),
+    small-laptop: (
+      name: 'small-laptop',
+      width: 1024px
+    ),
+    tablet: (
+      name: 'tablet',
+      width: 768px
+    ),
+    mobile: (
+      name: 'mobile',
+      width: 568px
+    ),
+    small-mobile: (
+      name: 'small-mobile',
+      width: 320px
+    )
+  );
 
   .#{$prefix}-hide {
     display: none !important;
   }
 
-  .#{$prefix}-hide-desktop {
-    @media (min-width: 769px) {
-      display: none !important;
-    }
-  }
+  @each $breakpoint, $map in $breakpoints {
+    $name: map-get($map, name);
+    $width: map-get($map, width);
+    $index: index(($breakpoints), ($name $map));
+    $length: length($breakpoints);
 
-  .#{$prefix}-hide-tablet {
-    @media (max-width: 768px) and (min-width: 569px) {
-      display: none !important;
-    }
-  }
+    // check if its the first or last breakpoint
+    @if $index == 1 {
+      .#{$prefix}-hide-#{$name} {
+        @media (min-width: $width) {
+          display: none !important;
+        }
+      }
+    } @else if $index == $length {
+      .#{$prefix}-hide-#{$name} {
+        @media (max-width: $width) {
+          display: none !important;
+        }
+      }
+    } @else {
+      $next-width: nth($breakpoints, $index + 1);
 
-  .#{$prefix}-hide-mobile {
-    @media (max-width: 568px) {
-      display: none !important;
+      .#{$prefix}-hide-#{$name} {
+        @media (max-width: $width) and (min-width: map-get(nth($next-width, 2), width)) {
+          padding: $index + 1;
+          display: none !important;
+        }
+      }
     }
+
+    // if its not the first or last get the index of the previous breakpoint so we can grab its width
   }
 }

@@ -121,7 +121,6 @@
         round: true
       )
     );
-    // padding: 10px 13px;
   }
 }
 
@@ -139,59 +138,41 @@
   );
 
   $prefix: map-get($config, prefix);
-  $danger-color: map-get($config, danger-color);
-  $warning-color: map-get($config, warning-color);
-  $success-color: map-get($config, success-color);
-  $info-color: map-get($config, info-color);
-  $muted-color: map-get($config, muted-color);
+  $state-map: (
+    danger: (
+      name: 'danger',
+      color: map-get($config, danger-color)
+    ),
+    warning: (
+      name: 'warning',
+      color: map-get($config, warning-color)
+    ),
+    success: (
+      name: 'success',
+      color: map-get($config, success-color)
+    ),
+    info: (
+      name: 'info',
+      color: map-get($config, info-color)
+    ),
+    muted: (
+      name: 'muted',
+      color: map-get($config, muted-color)
+    )
+  );
 
-  .#{$prefix}-button-danger {
-    background-color: $danger-color;
-    border-color: $danger-color;
+  @each $state, $map in $state-map {
+    $name: map-get($map, name);
+    $color: map-get($map, color);
 
-    &:hover {
-      background-color: lighten($danger-color, 10%);
-      border-color: lighten($danger-color, 10%);
-    }
-  }
+    .#{$prefix}-button-#{$name} {
+      background-color: $color;
+      border-color: $color;
 
-  .#{$prefix}-button-warning {
-    background-color: $warning-color;
-    border-color: $warning-color;
-
-    &:hover {
-      background-color: lighten($warning-color, 10%);
-      border-color: lighten($warning-color, 10%);
-    }
-  }
-
-  .#{$prefix}-button-success {
-    background-color: $success-color;
-    border-color: $success-color;
-
-    &:hover {
-      background-color: lighten($success-color, 10%);
-      border-color: lighten($success-color, 10%);
-    }
-  }
-
-  .#{$prefix}-button-muted {
-    background-color: $muted-color;
-    border-color: $muted-color;
-
-    &:hover {
-      background-color: lighten($muted-color, 10%);
-      border-color: lighten($muted-color, 10%);
-    }
-  }
-
-  .#{$prefix}-button-info {
-    background-color: $info-color;
-    border-color: $info-color;
-
-    &:hover {
-      background-color: lighten($info-color, 10%);
-      border-color: lighten($info-color, 10%);
+      &:hover {
+        background-color: lighten($color, 10%);
+        border-color: lighten($color, 10%);
+      }
     }
   }
 }

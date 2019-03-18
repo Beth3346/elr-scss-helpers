@@ -10,6 +10,23 @@
   );
 
   $prefix: map-get($config, prefix);
+  $state-map: (
+    danger: (
+      name: 'danger'
+    ),
+    warning: (
+      name: 'warning'
+    ),
+    success: (
+      name: 'success'
+    ),
+    info: (
+      name: 'info'
+    ),
+    muted: (
+      name: 'muted'
+    )
+  );
 
   .#{$prefix}-notification {
     @include elr-alert(
@@ -22,43 +39,15 @@
     width: 100%;
   }
 
-  .#{$prefix}-notification-info {
-    @include elr-alert-context(
-      $config: (
-        type: info
-      )
-    );
-  }
+  @each $state, $map in $state-map {
+    $name: map-get($map, name);
 
-  .#{$prefix}-notification-danger {
-    @include elr-alert-context(
-      $config: (
-        type: danger
-      )
-    );
-  }
-
-  .#{$prefix}-notification-warning {
-    @include elr-alert-context(
-      $config: (
-        type: warning
-      )
-    );
-  }
-
-  .#{$prefix}-notification-success {
-    @include elr-alert-context(
-      $config: (
-        type: success
-      )
-    );
-  }
-
-  .#{$prefix}-notification-muted {
-    @include elr-alert-context(
-      $config: (
-        type: muted
-      )
-    );
+    .#{$prefix}-notification-#{$name} {
+      @include elr-alert-context(
+        $config: (
+          type: #{$name}
+        )
+      );
+    }
   }
 }

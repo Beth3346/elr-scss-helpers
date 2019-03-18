@@ -79,18 +79,6 @@
     flex-shrink: 1;
   }
 
-  .#{$prefix}-flex-1 {
-    flex: 1;
-  }
-
-  .#{$prefix}-flex-2 {
-    flex: 2;
-  }
-
-  .#{$prefix}-flex-3 {
-    flex: 3;
-  }
-
   .#{$prefix}-flex-first {
     order: -1;
   }
@@ -101,5 +89,11 @@
 
   .#{$prefix}-flex-reverse {
     flex-direction: row-reverse;
+  }
+
+  @for $i from 1 through 4 {
+    .#{$prefix}-flex-#{$i} {
+      flex: $i;
+    }
   }
 }

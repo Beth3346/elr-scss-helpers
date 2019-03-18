@@ -9,41 +9,19 @@
   );
 
   $prefix: map-get($config, prefix);
+  $positions: 'static' 'absolute' 'relative' 'fixed' 'sticky';
+  $directions: 'top' 'right' 'bottom' 'left';
 
-  .#{$prefix}-static {
-    position: static !important;
+  @each $position in $positions {
+    .#{$prefix}-#{$position} {
+      position: $position !important;
+    }
   }
 
-  .#{$prefix}-absolute {
-    position: absolute !important;
-  }
-
-  .#{$prefix}-relative {
-    position: relative !important;
-  }
-
-  .#{$prefix}-fixed {
-    position: fixed !important;
-  }
-
-  .#{$prefix}-sticky {
-    position: sticky !important;
-  }
-
-  .#{$prefix}-position-top {
-    top: 0 !important;
-  }
-
-  .#{$prefix}-position-left {
-    left: 0 !important;
-  }
-
-  .#{$prefix}-position-right {
-    right: 0 !important;
-  }
-
-  .#{$prefix}-position-bottom {
-    bottom: 0 !important;
+  @each $direction in $directions {
+    .#{$prefix}-position-#{$direction} {
+      #{$direction}: 0 !important;
+    }
   }
 
   .#{$prefix}-position-center-x {

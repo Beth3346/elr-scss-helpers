@@ -7,17 +7,12 @@
   );
 
   $prefix: map-get($config, prefix);
+  $displays: 'block' 'inline' 'inline-block' 'table';
 
-  .#{$prefix}-block {
-    display: block !important;
-  }
-
-  .#{$prefix}-inline {
-    display: inline !important;
-  }
-
-  .#{$prefix}-inline-block {
-    display: inline-block !important;
+  @each $display in $displays {
+    .#{$prefix}-#{$display} {
+      display: $display !important;
+    }
   }
 
   .#{$prefix}-display-none {

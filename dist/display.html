@@ -22,6 +22,11 @@
       integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
       crossorigin="anonymous"
     />
+    <script
+      src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js"
+      integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ="
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/helpers.css" />
   </head>
@@ -68,20 +73,76 @@
             Helpers for common display rules. Flex and grid are intentionally
             left out. They are included in other mixins.
           </p>
+          <p>
+            Most HTML elements are either displayed as block-level elements or
+            inline elements by default.
+          </p>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements"
+            >Learn More About Block vs. Inline</a
+          >
           <h3 id="display-block">Display Block</h3>
+          <p>
+            A block-level element will stretch to fill the entire width of its
+            container. A block-level element can also have top/bottom margin.
+            All of the span elements below have a inline style of margin: 20px;
+            applied. Notice how all of the inline span elements just ignore the
+            top and bottom margin.
+          </p>
+          <p>
+            Sometimes you may want inline elements to behave as blocks. In this
+            case you can apply the elr-block class.
+          </p>
+          <p>
+            Note: elements are automatically converted to block-level when they
+            are floated.
+          </p>
           <div class="display-helpers">
-            <span>Default Span</span><span>Default Span</span>
-            <span class="elr-block">Span with Display Block</span>
-            <span>Default Span</span><span>Default Span</span>
+            <span style="margin: 20px;">Default Span</span
+            ><span style="margin: 20px;">Default Span</span>
+            <span style="margin: 20px;">Default Span</span
+            ><span style="margin: 20px;">Default Span</span>
+            <span style="margin: 20px;">Default Span</span
+            ><span style="margin: 20px;">Default Span</span>
+            <span style="margin: 20px;" class="elr-block"
+              >Span with Display Block</span
+            >
+            <span style="margin: 20px;">Default Span</span
+            ><span style="margin: 20px;">Default Span</span>
           </div>
           <pre>
             <span>&lt;span class="elr-block"&gt;Span with Display Block&lt;/span&gt;</span>
             <button class="button-clip js-clip"><i class="fas fa-clipboard"></i></button>
           </pre>
+          <p>
+            This comes in handy when you are dealing with images placed inside
+            parent containers. Notice that weird gap between the bottom of the
+            image and the border. By default images are inline elements. Adding
+            our block helper class gets rid of that ugly gap.
+          </p>
+          <div class="display-helpers elr-flex elr-flex-top">
+            <figure>
+              <p>inline img</p>
+              <img
+                src="http://placekitten.com/200/300"
+                alt="cute kitten image"
+              />
+            </figure>
+            <figure>
+              <p>block image</p>
+              <img
+                class="elr-block"
+                src="http://placekitten.com/200/300"
+                alt="cute kitten image"
+              />
+            </figure>
+          </div>
           <h3 id="display-inline">Display Inline</h3>
           <div class="display-helpers">
             <div>Default Div</div>
             <div>Default Div</div>
+            <div class="elr-inline">Div with Display Inline</div>
+            <div class="elr-inline">Div with Display Inline</div>
             <div class="elr-inline">Div with Display Inline</div>
             <div>Default Div</div>
             <div>Default Div</div>
@@ -90,7 +151,7 @@
             <span>&lt;div class="elr-inline"&gt;Div with Display Inline&lt;/div&gt;</span>
             <button class="button-clip js-clip"><i class="fas fa-clipboard"></i></button>
           </pre>
-          <h3>Display Inline Block</h3>
+          <h3 id="display-inline-block">Display Inline Block</h3>
           <div class="display-helpers">
             <div>Default Span</div>
             <div>Default Span</div>

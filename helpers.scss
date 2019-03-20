@@ -112,16 +112,27 @@ h4 + p.box-model-label {
 
 .display-helpers {
   width: 100%;
+  margin-top: 20px;
   padding: 20px;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+
+  figure {
+    margin: 20px;
+    width: 206px;
+    border: 3px solid lighten(#1976d2, 20%);
+  }
 }
 
 .display-helpers span,
 .display-helpers div {
   background-color: #1976d2;
   color: #fff;
-  padding: 10px;
+  padding: 0 10px;
   line-height: 1;
   margin: 10px 5px;
+  white-space: nowrap;
 }
 
 // .elr-flex-column {

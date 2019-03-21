@@ -213,6 +213,10 @@ a {
   max-width: 75%;
 }
 
+.content-holder-full {
+  min-width: 100%;
+}
+
 .main-heading {
   font-size: 36px;
   font-weight: 700;
@@ -220,6 +224,7 @@ a {
   padding-bottom: 5px;
   margin-bottom: 10px;
   width: 100%;
+  padding-top: 10px;
 }
 
 .subheading {
@@ -349,15 +354,24 @@ pre {
   }
 }
 
+.lead-content {
+  max-width: 768px;
+  margin: auto;
+}
+
 .lead-content p {
   padding: 5px 0;
+  line-height: 1.5;
 }
 
 .lead-content h2 {
-  font-size: 20px;
+  padding-top: 20px;
+  font-size: 24px;
 }
 
 .feature-list {
+  max-width: 768px;
+  margin: auto;
   list-style: none;
   padding: 20px 0 40px;
 

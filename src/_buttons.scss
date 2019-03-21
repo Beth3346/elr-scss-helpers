@@ -50,41 +50,13 @@
   }
 
   .#{$prefix}-button-pill {
-    @include elr-button(
-      $config: (
-        pill: true
-      )
-    );
-
-    &.#{$prefix}-button-primary {
-      background-color: $bg-color;
-      border-color: $bg-color;
-
-      &:hover {
-        background-color: lighten($bg-color, 10%);
-        border-color: lighten($bg-color, 10%);
-      }
-    }
-
-    &.#{$prefix}-button-secondary {
-      background-color: $accent-color;
-      border-color: $accent-color;
-
-      &:hover {
-        background-color: lighten($accent-color, 10%);
-        border-color: lighten($accent-color, 10%);
-      }
-    }
+    border-radius: 25px;
   }
 
   .#{$prefix}-button-ghost {
-    @include elr-button(
-      $config: (
-        border-color: #333,
-        background-color: transparent,
-        color: #333
-      )
-    );
+    border-color: #333;
+    background-color: transparent;
+    color: #333;
 
     &.#{$prefix}-button-primary {
       border-color: $bg-color;

@@ -18,6 +18,10 @@ button {
   text-align: center;
   font-weight: bold;
   margin: 10px;
+
+  p {
+    color: #fff;
+  }
 }
 
 .float-demo {
@@ -35,6 +39,20 @@ button {
 
 .box {
   clear: both;
+}
+
+.step-box {
+  background-color: #1976d2;
+  padding: 5px;
+  height: auto;
+  width: auto;
+
+  > .step-box {
+    margin: 0;
+    width: 200px;
+    height: 200px;
+    background-color: #ff7f50;
+  }
 }
 
 .box-model-holder {
@@ -113,6 +131,7 @@ h4 + p.box-model-label {
 .display-helpers {
   width: 100%;
   margin-top: 20px;
+  margin-bottom: 20px;
   padding: 20px;
   background-color: #eee;
   border: 1px solid #ccc;

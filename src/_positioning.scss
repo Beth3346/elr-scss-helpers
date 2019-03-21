@@ -11,6 +11,7 @@
   $prefix: map-get($config, prefix);
   $positions: 'static' 'absolute' 'relative' 'fixed' 'sticky';
   $directions: 'top' 'right' 'bottom' 'left';
+  $increments: 5 10 15 20 20 25;
 
   @each $position in $positions {
     .#{$prefix}-#{$position} {
@@ -21,6 +22,12 @@
   @each $direction in $directions {
     .#{$prefix}-position-#{$direction} {
       #{$direction}: 0 !important;
+    }
+
+    @each $increment in $increments {
+      .#{$prefix}-position-#{$direction}-#{$increment} {
+        #{$direction}: #{$increment}px !important;
+      }
     }
   }
 

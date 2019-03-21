@@ -59,38 +59,99 @@
       </div>
     </header>
     <div class="wrapper">
+      <nav class="content-nav">
+        <ul>
+          <li><a href="#positioning">Position Helpers</a></li>
+          <li><a href="#position-placement">Position Placement Helpers</a></li>
+        </ul>
+      </nav>
       <div class="content-holder">
         <div class="demo-content elr-block">
-          <h1 class="main-heading elr-mb-10">Positioning Helpers</h1>
+          <h1 id="positioning" class="main-heading elr-mb-10">
+            Positioning Helpers
+          </h1>
+          <a href="https://css-tricks.com/almanac/properties/p/position/"
+            >Learn more about positioning</a
+          >
+          <h3 class="subheading">Static Positioning</h3>
+          <p>
+            Static positioning is the default position rule value for all
+            elements.
+          </p>
           <div class="flex-demo">
             <div class="flex-item">Static</div>
           </div>
+          <h3 class="subheading">Relative Positioning</h3>
+          <p></p>
           <div class="flex-demo">
             <div class="flex-item elr-relative">Relative</div>
           </div>
+          <h3 class="subheading">Absolute Positioning</h3>
+          <p></p>
           <div class="flex-demo">
-            <div class="flex-item elr-absolute elr-position-bottom">
-              Position Bottom
-            </div>
-            <div class="flex-item elr-absolute elr-position-center-x">
-              Position Center X
-            </div>
-            <div class="flex-item elr-absolute elr-position-center-y">
-              Position Center Y
-            </div>
-            <div class="flex-item elr-absolute elr-position-right">
-              Position Right
-            </div>
+            <div class="flex-item elr-absolute">Absolute</div>
+          </div>
+          <h3 class="subheading">Fixed Positioning</h3>
+          <p></p>
+          <h3 class="subheading">Sticky Positioning</h3>
+          <p></p>
+          <h3 id="position-placement" class="main-heading">
+            Position Placement Helpers
+          </h3>
+          <p>
+            Using CSS we can position elements along 3 dimensions. x-axis,
+            y-axis, and z-axis.
+          </p>
+          <p>
+            Keyword placement helpers only work with position absolute and
+            position fixed elements.
+          </p> 
             <div class="flex-item elr-absolute elr-position-top">
               Position Top
             </div>
+            <div class="flex-item elr-absolute elr-position-bottom">
+              Position Bottom
+            </div>
+          </div>
+          <div class="flex-demo">
+            <div class="flex-item elr-absolute elr-position-center-x">
+              Position Center X
+            </div>
+          </div>
+          <div class="flex-demo">
+            <div class="flex-item elr-absolute elr-position-center-y">
+              Position Center Y
+            </div>
+          </div>
+          <div class="flex-demo">
+            <div class="flex-item elr-absolute elr-position-center">
+              Position Center
+            </div>
+          </div>
+          <div class="flex-demo">
+            <div class="flex-item elr-absolute elr-position-right">
+              Position Right
+            </div>
+          </div>
+          <div class="flex-demo">
             <div class="flex-item elr-absolute elr-position-left">
               Position Left
             </div>
           </div>
+          <div class="flex-demo">
+            <div
+              class="flex-item elr-absolute elr-position-right elr-position-top"
+            >
+              Position Right and Position Top
+            </div>
+            <div
+              class="flex-item elr-absolute elr-position-right elr-position-bottom"
+            >
+              Position Right and Position Bottom
+            </div>
+          </div>
         </div>
       </div>
-      <a class="elr-block" href="/">Home</a>
     </div>
     <script>
       let clipboard = new ClipboardJS('.js-clip', {

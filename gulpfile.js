@@ -9,7 +9,16 @@ const del = require('del');
 
 var paths = {
   app: 'dist/',
-  css: 'dist/css/'
+  css: 'dist/css/',
+  images: 'dist/images/',
+  scss: './*.scss',
+  html: 'dist/*.html',
+  srcImages: [
+    'src/images/*.jpg',
+    'src/images/*.png',
+    'src/images/*.jpeg',
+    'src/images/*.gif'
+  ]
 };
 
 // BrowserSync
@@ -31,14 +40,16 @@ function browserSyncReload(done) {
 
 // Clean assets
 function clean() {
-  return del(['./dist/css/']);
+  return del([paths.css, paths.images]);
 }
 
 // Watch files
 function watchFiles(done) {
-  gulp.watch(['./**/*.scss', 'dist/*.html'], () => {
+  gulp.watch(['./src', paths.html, './*.scss'], () => {
+    gulp.src(paths.srcImages).pipe(gulp.dest(paths.images));
+
     return gulp
-      .src('./*.scss')
+      .src(paths.scss)
       .pipe(plumber())
       .pipe(
         sass({
@@ -46,26 +57,17 @@ function watchFiles(done) {
         }).on('error', sass.logError)
       )
       .pipe(gulp.dest(paths.css))
-      .pipe(
-        autoprefixer({
-          browsers: ['last 3 versions'],
-          cascade: false
-        })
-      )
-      .pipe(gulp.dest(paths.css))
-      .pipe(cleanCSS({ debug: true }))
-      .pipe(gulp.dest(paths.css))
       .pipe(browserSyncReload(done));
   });
 }
 
 gulp.task('default', () => {
-  return gulp
-    .src('./*.scss')
+  gulp
+    .src(paths.scss)
     .pipe(plumber())
     .pipe(
       sass({
-        includePaths: ['node_modules']
+        // includePaths: ['node_modules']
       }).on('error', sass.logError)
     )
     .pipe(gulp.dest(paths.css))
@@ -78,6 +80,8 @@ gulp.task('default', () => {
     .pipe(gulp.dest(paths.css))
     .pipe(cleanCSS({ debug: true }))
     .pipe(gulp.dest(paths.css));
+
+  return gulp.src(paths.srcImages).pipe(gulp.dest(paths.images));
 });
 
 const watch = gulp.parallel(watchFiles, browserSync);

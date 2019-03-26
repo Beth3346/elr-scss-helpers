@@ -1,15 +1,15 @@
 @import 'node_modules/elr-scss-functions/main';
-@import 'alerts';
-@import 'background';
-@import 'buttons';
-@import 'layout';
-@import 'lists';
-@import 'responsiveness';
-@import 'typography';
-@import 'flex';
-@import 'display';
-@import 'positioning';
-@import 'transforms';
+@import 'scss/alerts';
+@import 'scss/background';
+@import 'scss/buttons';
+@import 'scss/layout';
+@import 'scss/lists';
+@import 'scss/responsiveness';
+@import 'scss/typography';
+@import 'scss/flex';
+@import 'scss/display';
+@import 'scss/positioning';
+@import 'scss/transforms';
 
 // config
 $primary-color: #1976d2;

@@ -14,15 +14,25 @@
     background: transparent !important;
   }
 
-  .#{$prefix}-no-repeat {
+  .#{$prefix}-background-no-repeat {
     background-repeat: no-repeat !important;
   }
 
   .#{$prefix}-background-fixed {
-    background-attachment: fixed;
+    background-attachment: fixed !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
   }
 
   .#{$prefix}-background-centered {
-    background-position: center center;
+    background-position: center center !important;
+  }
+
+  .#{$prefix}-background-cover {
+    background-size: cover !important;
+  }
+
+  .#{$prefix}-background-contain {
+    background-size: contain !important;
   }
 }

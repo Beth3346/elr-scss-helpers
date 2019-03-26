@@ -154,8 +154,51 @@ h4 + p.box-model-label {
   white-space: nowrap;
 }
 
-// .elr-flex-column {
-//   .flex-item {
-//     flex: 1;
-//   }
-// }
+.background-box {
+  background-image: url('../images/background-image.jpg');
+  background-repeat: no-repeat;
+  height: 500px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+
+  p {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  &.elr-no-background p {
+    color: #333;
+  }
+
+  &.elr-background-fixed {
+    background-image: url('../images/landscape-background.jpg');
+  }
+}
+
+.background-pattern-box {
+  background-image: url('../images/pattern-bg.jpg');
+  height: 480px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+
+  p {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  &.elr-background-no-repeat p {
+    color: #333;
+  }
+}

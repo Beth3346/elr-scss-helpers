@@ -59,12 +59,47 @@
       </div>
     </header>
     <div class="wrapper">
+      <nav class="content-nav">
+        <ul>
+          <li><a href="#display-block">Display Block</a></li>
+        </ul>
+      </nav>
       <div class="content-holder">
         <div class="demo-content elr-block">
           <h1 class="main-heading elr-mb-10">Background Helpers</h1>
+          <p>Box with a background image</p>
+          <div class="background-box elr-no-border"><p>Some Background</p></div>
+          <h3 class="subheading">Fixed Background</h3>
+          <div class="background-box elr-background-fixed elr-no-border">
+            <p>Fixed Background</p>
+          </div>
+          <h3 class="subheading">No Background</h3>
+          <div class="background-box elr-no-background">
+            <p>No Background</p>
+          </div>
+          <div class="background-pattern-box">
+            <p>Repeating background pattern</p>
+          </div>
+          <div class="background-pattern-box elr-background-no-repeat">
+            <p>no repeat background pattern</p>
+          </div>
+          <div
+            class="background-pattern-box elr-background-no-repeat elr-background-centered"
+          >
+            <p>no repeat centered background pattern</p>
+          </div>
+          <div
+            class="background-pattern-box elr-background-no-repeat elr-background-cover"
+          >
+            <p>no repeat background pattern cover</p>
+          </div>
+          <div
+            class="background-pattern-box elr-background-no-repeat elr-background-contain"
+          >
+            <p>no repeat background pattern contain</p>
+          </div>
         </div>
       </div>
-      <a class="elr-block" href="/">Home</a>
     </div>
     <script>
       let clipboard = new ClipboardJS('.js-clip', {

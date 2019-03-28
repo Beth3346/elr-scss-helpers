@@ -154,17 +154,22 @@ h4 + p.box-model-label {
   white-space: nowrap;
 }
 
-.background-box {
-  background-image: url('../images/background-image.jpg');
-  background-repeat: no-repeat;
-  height: 500px;
+.background-box,
+.background-pattern-box {
+  height: 480px;
   width: 100%;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 20px;
   margin-bottom: 20px;
   border: 1px solid #ccc;
+}
+
+.background-box {
+  background-image: url('../images/background-image.jpg');
+  background-repeat: no-repeat;
 
   p {
     color: #fff;
@@ -183,14 +188,6 @@ h4 + p.box-model-label {
 
 .background-pattern-box {
   background-image: url('../images/pattern-bg.jpg');
-  height: 480px;
-  width: 100%;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
 
   p {
     color: #fff;

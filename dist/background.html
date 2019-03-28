@@ -74,6 +74,13 @@
           <p>Box with a background image</p>
           <div class="background-box elr-no-border"><p>Some Background</p></div>
           <h3 id="background-fixed" class="subheading">Fixed Background</h3>
+          <p>
+            This will set the background attachment to &quot;fixed&quot;. This
+            creates an interesting effect where it looks like the container is
+            actually moving over the background. This works best with large
+            images or backgrounds with repeating patterns.
+          </p>
+          <p>Fixed backgrounds can also work well as page backgrounds.</p>
           <div class="background-box elr-background-fixed elr-no-border">
             <p>Fixed Background</p>
           </div>
@@ -81,7 +88,29 @@
             <span>&lt;div class="elr-background-fixed"&gt;&lt;/div&gt;</span>
             <button class="button-clip js-clip"><i class="fas fa-clipboard"></i></button>
           </pre>
+          <div
+            class="background-pattern-box elr-background-fixed-repeat elr-no-border"
+          >
+            <p>Repeating Fixed Background</p>
+          </div>
+          <pre>
+            <span>&lt;div class="elr-background-fixed-repeat"&gt;&lt;/div&gt;</span>
+            <button class="button-clip js-clip"><i class="fas fa-clipboard"></i></button>
+          </pre>
+          <h3 id="background-scroll" class="subheading">
+            Scrolling Background
+          </h3>
+          <p>
+            To set a fixed background to scroll add the elr-background-scroll
+            class. This will restore the default background attachment scroll
+            behavior.
+          </p>
+          <pre>
+            <span>&lt;div class="elr-background-scroll"&gt;&lt;/div&gt;</span>
+            <button class="button-clip js-clip"><i class="fas fa-clipboard"></i></button>
+          </pre>
           <h3 id="background-none" class="subheading">No Background</h3>
+          <p>Sometimes its necessary to remove a background quickly.</p>
           <div class="background-box elr-no-background">
             <p>No Background</p>
           </div>
@@ -90,6 +119,10 @@
             <button class="button-clip js-clip"><i class="fas fa-clipboard"></i></button>
           </pre>
           <h3 id="background-repeat" class="subheading">Background Repeat</h3>
+          <p>
+            By default CSS backgrounds will repeat again and again to fill their
+            container.
+          </p>
           <div class="background-pattern-box">
             <p>Repeating background pattern</p>
           </div>
@@ -112,7 +145,32 @@
             <span>&lt;div class="elr-background-centered"&gt;&lt;/div&gt;</span>
             <button class="button-clip js-clip"><i class="fas fa-clipboard"></i></button>
           </pre>
+          <div
+            class="background-pattern-box elr-background-no-repeat elr-background-centered-top"
+          >
+            <p>no repeat centered background pattern</p>
+          </div>
+          <div
+            class="background-pattern-box elr-background-no-repeat elr-background-centered-bottom"
+          >
+            <p>no repeat centered background pattern</p>
+          </div>
           <h3 id="background-size" class="subheading">Background Size</h3>
+          <p>
+            CSS backgrounds can be resized using fixed units, percentages, or
+            keywords.
+          </p>
+          <p>
+            The cover keyword forces the background to fill the entire
+            container. It will keep its aspect ratio so images will no distort.
+            However small images will stretch so you will need to use a large
+            image to fill large containers.
+          </p>
+          <p>Background images with a size of cover will not repeat.</p>
+          <p>
+            Keep in mind that the background image may appear cut off and
+            position it appropriately.
+          </p>
           <div
             class="background-pattern-box elr-background-no-repeat elr-background-cover"
           >
@@ -122,6 +180,20 @@
             <span>&lt;div class="elr-background-cover"&gt;&lt;/div&gt;</span>
             <button class="button-clip js-clip"><i class="fas fa-clipboard"></i></button>
           </pre>
+          <p>
+            The contain keyword forces that background to fill to its largest
+            size while maintaining aspect ratio. This means it will either take
+            up the entire width or height of its container. The entire
+            background image will be visible. It will stretch if necessary.
+          </p>
+          <p>
+            Unless the background image has the exact same proportions as its
+            container it will not fill the entire container.
+          </p>
+          <p>
+            The contain keyword is useful when you need to make sure the entire
+            background image is visible.
+          </p>
           <div
             class="background-pattern-box elr-background-no-repeat elr-background-contain"
           >

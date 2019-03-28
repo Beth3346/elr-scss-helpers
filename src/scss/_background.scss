@@ -18,14 +18,34 @@
     background-repeat: no-repeat !important;
   }
 
+  .#{$prefix}-background-repeat {
+    background-repeat: repeat !important;
+  }
+
   .#{$prefix}-background-fixed {
     background-attachment: fixed !important;
     background-repeat: no-repeat !important;
     background-size: cover !important;
   }
 
+  .#{$prefix}-background-fixed-repeat {
+    background-attachment: fixed !important;
+  }
+
+  .#{$prefix}-background-scroll {
+    background-attachment: scroll !important;
+  }
+
   .#{$prefix}-background-centered {
     background-position: center center !important;
+  }
+
+  .#{$prefix}-background-centered-top {
+    background-position: top center !important;
+  }
+
+  .#{$prefix}-background-centered-bottom {
+    background-position: bottom center !important;
   }
 
   .#{$prefix}-background-cover {

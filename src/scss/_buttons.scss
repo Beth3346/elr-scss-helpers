@@ -54,9 +54,14 @@
   }
 
   .#{$prefix}-button-ghost {
-    border-color: #333;
+    border-color: $bg-color;
     background-color: transparent;
-    color: #333;
+    color: $bg-color;
+
+    &:hover {
+      background-color: $bg-color;
+      color: #fff;
+    }
 
     &.#{$prefix}-button-primary {
       border-color: $bg-color;
@@ -93,6 +98,57 @@
         round: true
       )
     );
+  }
+
+  .#{$prefix}-button-raised {
+    background-color: darken($bg-color, 5%);
+    border: 1px solid darken($bg-color, 5%);
+    border-bottom: 4px solid darken($bg-color, 10%);
+
+    &:hover {
+      background-color: $bg-color;
+      border: 1px solid $bg-color;
+      border-bottom: 4px solid darken($bg-color, 5%);
+    }
+  }
+
+  .#{$prefix}-button-gradient {
+    color: #fff;
+    border: 0;
+    background-image: linear-gradient(
+      to right,
+      lighten($bg-color, 10%) 0%,
+      $bg-color 51%,
+      lighten($bg-color, 10%) 100%
+    );
+    transition: 0.3s;
+    background-size: 200% auto;
+    text-shadow: #aaa 0 0 1px;
+
+    &:hover {
+      border: 0;
+      background-position: right center;
+    }
+  }
+
+  .#{$prefix}-button-glass {
+    color: #fff;
+    border: 1px solid lighten($bg-color, 5%);
+    background-position: center bottom;
+    background-image: linear-gradient(
+      to top,
+      lighten($bg-color, 10%) 0%,
+      #333 51%,
+      lighten($bg-color, 10%) 100%
+    );
+    transition: 0.3s;
+    background-size: auto 150%;
+    text-shadow: #aaaaaa 0 0 1px;
+
+    &:hover {
+      border: 1px solid lighten($bg-color, 5%);
+      background-position: center top;
+    }
   }
 }
 

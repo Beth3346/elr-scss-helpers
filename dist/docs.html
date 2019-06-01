@@ -22,11 +22,6 @@
       integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
       crossorigin="anonymous"
     />
-    <script
-      src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js"
-      integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ="
-      crossorigin="anonymous"
-    ></script>
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/helpers.css" />
   </head>
@@ -52,25 +47,38 @@
       </div>
     </header>
     <div class="wrapper">
-      <div class="content-holder">
-        <div class="demo-content elr-block">
-          <h1 class="main-heading elr-mb-10">Typography State Helpers</h1>
-        </div>
+      <div class="content-holder content-holder-full">
+        <ul class="feature-list">
+          <li>
+            <p class="feature-name">Notifications Demo</p>
+            <a href="/notifications.html">Notifications Demo</a>
+          </li>
+          <li>
+            <p class="feature-name">Button Helpers Demo</p>
+            <a href="/buttons.html">Buttons</a>
+          </li>
+          <li>
+            <p class="feature-name">Display Helpers Demo</p>
+            <a href="/display.html">Display Demo</a>
+          </li>
+          <li>
+            <p class="feature-name">Layout Helpers Demo</p>
+            <a href="/layout.html">Layout Demo</a>
+          </li>
+          <li>
+            <p class="feature-name">Flex Helpers Demo</p>
+            <a href="/flex.html">Flex Demo</a>
+          </li>
+          <li>
+            <p class="feature-name">Positioning Helpers Demo</p>
+            <a href="/positioning.html">Positioning Demo</a>
+          </li>
+          <li>
+            <p class="feature-name">List Helpers Demo</p>
+            <a href="/list.html">List Demo</a>
+          </li>
+        </ul>
       </div>
-      <a class="elr-block" href="/">Home</a>
     </div>
-    <script>
-      let clipboard = new ClipboardJS('.js-clip', {
-        target: function(trigger) {
-          return trigger.previousElementSibling;
-        }
-      });
-
-      clipboard.on('success', function(e) {
-        console.log('copied');
-
-        e.clearSelection();
-      });
-    </script>
   </body>
 </html>

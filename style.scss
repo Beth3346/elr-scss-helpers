@@ -183,6 +183,10 @@ section {
   left: 0;
   height: calc(100vh - 100px);
 
+  @media (max-width: 1024px) {
+    display: none;
+  }
+
   ul {
     list-style: none;
     margin-right: 40px;
@@ -211,6 +215,11 @@ a {
   flex-grow: 1;
   flex-shrink: 1;
   max-width: 75%;
+
+  @media (max-width: 1024px) {
+    max-width: 100%;
+    width: 100%;
+  }
 }
 
 .content-holder-full {
@@ -225,6 +234,10 @@ a {
   margin-bottom: 10px;
   width: 100%;
   padding-top: 10px;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
 }
 
 .subheading {
@@ -233,6 +246,10 @@ a {
   padding-bottom: 5px;
   margin-bottom: 10px;
   width: 100%;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
 }
 
 .demo-content {
@@ -318,6 +335,10 @@ pre {
   height: 80px;
   z-index: 1;
 
+  @media (max-width: 568px) {
+    height: auto;
+  }
+
   .header-inner {
     max-width: 1200px;
     margin: auto;
@@ -326,16 +347,34 @@ pre {
     align-items: center;
     justify-content: space-between;
     height: 100%;
+
+    @media (max-width: 568px) {
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+
+    @media (max-width: 350px) {
+      flex-direction: column;
+    }
   }
 
   .logo {
     color: #fff;
     font-size: 30px;
-    font-weight: bold;
+    font-weight: 900;
+    padding: 0;
     line-height: 1;
 
     a {
       color: #fff;
+
+      @media (max-width: 568px) {
+        font-size: 18px;
+        padding: 10px;
+        position: relative;
+        top: -5px;
+        padding-left: 0;
+      }
     }
   }
 
@@ -350,6 +389,13 @@ pre {
 
     a {
       color: #fff;
+      display: inline-block;
+      padding: 10px;
+
+      @media (max-width: 568px) {
+        font-size: 14px;
+        padding: 10px;
+      }
     }
   }
 }

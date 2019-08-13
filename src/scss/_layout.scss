@@ -115,6 +115,10 @@
     padding: 0 !important;
   }
 
+  .#{$prefix}-full {
+    width: 100% !important;
+  }
+
   $steps: 5 10 15 20 25 30 35 40 45 50 55 60;
 
   @each $step in $steps {

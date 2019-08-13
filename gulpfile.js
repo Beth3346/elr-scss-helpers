@@ -73,7 +73,7 @@ gulp.task('default', () => {
     .pipe(gulp.dest(paths.css))
     .pipe(
       autoprefixer({
-        browsers: ['last 3 versions'],
+        overrideBrowserslist: ['last 3 versions'],
         cascade: false
       })
     )

@@ -10,52 +10,64 @@
 
   $prefix: map-get($config, prefix);
 
+  .#{$prefix}-extra-bold {
+    font-weight: 900 !important;
+  }
+
   .#{$prefix}-bold {
-    font-weight: bold;
+    font-weight: 700 !important;
+  }
+
+  .#{$prefix}-normal {
+    font-weight: 400 !important;
+  }
+
+  .#{$prefix}-light {
+    font-weight: 200 !important;
   }
 
   .#{$prefix}-italic {
-    font-style: italic;
+    font-style: italic !important;
   }
 
   .#{$prefix}-underline {
-    text-decoration: underline;
+    text-decoration: underline !important;
   }
 
   .#{$prefix}-uppercase {
-    text-transform: uppercase;
+    text-transform: uppercase !important;
   }
 
   .#{$prefix}-capitalize {
-    text-transform: capitalize;
+    text-transform: capitalize !important;
   }
 
   .#{$prefix}-text-large {
-    font-size: 120%;
+    font-size: 120% !important;
   }
 
   .#{$prefix}-text-small {
-    font-size: 80%;
+    font-size: 80% !important;
   }
 
   .#{$prefix}-text-left {
-    text-align: left;
+    text-align: left !important;
   }
 
   .#{$prefix}-text-right {
-    text-align: right;
+    text-align: right !important;
   }
 
   .#{$prefix}-text-center {
-    text-align: center;
+    text-align: center !important;
   }
 
   .#{$prefix}-text-justified {
-    text-align: justify;
+    text-align: justify !important;
   }
 
   .#{$prefix}-avoid-wrap {
-    display: inline-block;
+    display: inline-block !important;
   }
 
   $font-sizes: 14 16 18 24 30 36 48;

@@ -12,10 +12,7 @@
     <title>CSS Helpers Demo | ELR CSS Utilities</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato:400,700,900"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
@@ -52,39 +49,94 @@
       </div>
     </header>
     <div class="wrapper">
-      <div class="content-holder">
+      <nav class="content-nav">
+        <ul>
+          <li><a href="#notifications">Notifications</a></li>
+        </ul>
+      </nav>
+      <div id="notifications" class="content-holder">
         <div class="demo-content elr-block">
-          <h1 class="main-heading elr-mb-10">Notification Helpers</h1>
+          <h1 class="main-heading">Notifications</h1>
+          <h3 class="subheading">Dismissible Notifications</h3>
+          <p>Applies style only. Its up to you to wire up the JavaScript.</p>
           <div class="elr-notification">
             <button class="close">x</button>
             <h2>This Is a Heading</h2>
             <p>This is a generic notification message</p>
           </div>
+          <pre>
+            <span>&lt;div class="elr-notification"&gt;
+              &lt;button class="close"&gt;x&lt;/button&gt;
+              &lt;h2&gt;This Is a Heading&lt;/h2&gt;
+              &lt;p&gt;This is a generic notification message&lt;/p&gt;
+  &lt;/div&gt;</span>
+            <button class="button-clip js-clip"><i class="fas fa-clipboard"></i></button>
+          </pre>
           <div class="elr-notification elr-notification-info">
             <button class="close">x</button>
             <h2>This Is a Heading</h2>
             <p>This is a generic notification message</p>
           </div>
+          <pre>
+            <span>&lt;div class="elr-notification elr-notification-info"&gt;
+              &lt;button class="close"&gt;x&lt;/button&gt;
+              &lt;h2&gt;This Is a Heading&lt;/h2&gt;
+              &lt;p&gt;This is a generic notification message&lt;/p&gt;
+  &lt;/div&gt;</span>
+            <button class="button-clip js-clip"><i class="fas fa-clipboard"></i></button>
+          </pre>
           <div class="elr-notification elr-notification-danger">
             <button class="close">x</button>
             <h2>This Is a Heading</h2>
             <p>This is a generic notification message</p>
           </div>
+          <pre>
+            <span>&lt;div class="elr-notification elr-notification-danger"&gt;
+              &lt;button class="close"&gt;x&lt;/button&gt;
+              &lt;h2&gt;This Is a Heading&lt;/h2&gt;
+              &lt;p&gt;This is a generic notification message&lt;/p&gt;
+  &lt;/div&gt;</span>
+            <button class="button-clip js-clip"><i class="fas fa-clipboard"></i></button>
+          </pre>
           <div class="elr-notification elr-notification-warning">
             <button class="close">x</button>
             <h2>This Is a Heading</h2>
             <p>This is a generic notification message</p>
           </div>
+          <pre>
+            <span>&lt;div class="elr-notification elr-notification-warning"&gt;
+              &lt;button class="close"&gt;x&lt;/button&gt;
+              &lt;h2&gt;This Is a Heading&lt;/h2&gt;
+              &lt;p&gt;This is a generic notification message&lt;/p&gt;
+  &lt;/div&gt;</span>
+            <button class="button-clip js-clip"><i class="fas fa-clipboard"></i></button>
+          </pre>
           <div class="elr-notification elr-notification-success">
             <button class="close">x</button>
             <h2>This Is a Heading</h2>
             <p>This is a generic notification message</p>
           </div>
+          <pre>
+            <span>&lt;div class="elr-notification elr-notification-success"&gt;
+              &lt;button class="close"&gt;x&lt;/button&gt;
+              &lt;h2&gt;This Is a Heading&lt;/h2&gt;
+              &lt;p&gt;This is a generic notification message&lt;/p&gt;
+  &lt;/div&gt;</span>
+            <button class="button-clip js-clip"><i class="fas fa-clipboard"></i></button>
+          </pre>
           <div class="elr-notification elr-notification-muted">
             <button class="close">x</button>
             <h2>This Is a Heading</h2>
             <p>This is a generic notification message</p>
           </div>
+          <pre>
+            <span>&lt;div class="elr-notification elr-notification-muted"&gt;
+              &lt;button class="close"&gt;x&lt;/button&gt;
+              &lt;h2&gt;This Is a Heading&lt;/h2&gt;
+              &lt;p&gt;This is a generic notification message&lt;/p&gt;
+  &lt;/div&gt;</span>
+            <button class="button-clip js-clip"><i class="fas fa-clipboard"></i></button>
+          </pre>
         </div>
       </div>
     </div>

@@ -227,7 +227,7 @@ a {
 }
 
 .main-heading {
-  font-size: 36px;
+  font-size: 30px;
   font-weight: 700;
   border-bottom: 1px solid #ccc;
   padding-bottom: 5px;
@@ -258,6 +258,10 @@ a {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+
+  &:first-child {
+    padding-top: 0;
+  }
 
   h3 {
     padding: 10px 0;

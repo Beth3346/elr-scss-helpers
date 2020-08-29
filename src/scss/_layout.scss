@@ -119,6 +119,16 @@
     width: 100% !important;
   }
 
+  .#{$prefix}-disable-scrollbars::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* Chrome/Safari/Webkit */
+  }
+  
+  .#{$prefix}-disable-scrollbars {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE 10+ */
+  }
+
   $steps: 5 10 15 20 25 30 35 40 45 50 55 60;
 
   @each $step in $steps {

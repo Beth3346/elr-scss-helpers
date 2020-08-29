@@ -182,6 +182,14 @@ section {
   top: 130px;
   left: 0;
   height: calc(100vh - 100px);
+  margin-top: 20px;
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE 10+ */
+  &::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* Chrome/Safari/Webkit */
+  }
 
   @media (max-width: 1024px) {
     display: none;
@@ -190,6 +198,9 @@ section {
   ul {
     list-style: none;
     margin-right: 40px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
   }
 
   li {

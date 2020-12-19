@@ -222,3 +222,6 @@ dwsync.xml
 *.scssc
 /.sass-cache/
 /dist/css
+
+# Local Netlify folder
+.netlify

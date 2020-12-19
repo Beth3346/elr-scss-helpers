@@ -129,7 +129,7 @@
   -ms-overflow-style: none;  /* IE 10+ */
   }
 
-  $steps: 5 10 15 20 25 30 35 40 45 50 55 60;
+  $steps: 0 4 8 16 20 24 28 32 36 40 48 52 64 72;
 
   @each $step in $steps {
     .#{$prefix}-p-#{$step} {

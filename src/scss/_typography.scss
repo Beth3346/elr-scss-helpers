@@ -70,7 +70,7 @@
     display: inline-block !important;
   }
 
-  $font-sizes: 14 16 18 24 30 36 48;
+  $font-sizes: 12 14 16 18 24 28 30 32 36 48;
 
   @each $size in $font-sizes {
     .#{$prefix}-fz-#{$size} {

@@ -8,15 +8,15 @@
     "email": "beth3346@gmail.com"
   },
   "devDependencies": {
-    "browser-sync": "^2.26.12",
-    "del": "^5.1.0",
+    "browser-sync": "^2.26.14",
+    "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-clean-css": "^4.3.0",
     "gulp-plumber": "^1.2.1",
     "gulp-sass": "^4.1.0",
-    "husky": "^4.2.5",
-    "node-sass": "^4.14.1",
+    "husky": "^6.0.0",
+    "node-sass": "^6.0.0",
     "path": "^0.12.7"
   },
   "homepage": "http://www.elizabeth-rogers.com/elr-utilities/css.html",
@@ -31,7 +31,7 @@
   },
   "dependencies": {
     "elr-scss-alerts": "^0.1.4",
-    "elr-scss-buttons": "^0.0.4",
+    "elr-scss-buttons": "^0.0.6",
     "elr-scss-functions": "0.1.2",
     "elr-scss-lists": "^0.0.1"
   },

@@ -1,15 +1,14 @@
-@import 'node_modules/elr-scss-functions/main';
-@import 'node_modules/elr-scss-buttons/src/main';
+@import "node_modules/elr-scss-buttons/src/main";
 
 @mixin elr-button-classes($config: ()) {
   $config: extend(
     (
-      prefix: 'elr',
+      prefix: "elr",
       background-color: #1976d2,
       color: #fff,
       width: 250px,
       border-radius: 3px,
-      accent-color: rgb(240, 44, 151)
+      accent-color: rgb(240, 44, 151),
     ),
     $config
   );
@@ -97,7 +96,7 @@
   .#{$prefix}-button-icon-round {
     @include elr-icon-button(
       $config: (
-        round: true
+        round: true,
       )
     );
   }
@@ -157,12 +156,12 @@
 @mixin elr-buttons-action($config: ()) {
   $config: extend(
     (
-      prefix: 'elr',
+      prefix: "elr",
       danger-color: #f7322f,
       warning-color: #d1cb34,
       success-color: #7aba7b,
       info-color: #1daaf0,
-      muted-color: #999
+      muted-color: #999,
     ),
     $config
   );
@@ -170,25 +169,25 @@
   $prefix: map-get($config, prefix);
   $state-map: (
     danger: (
-      name: 'danger',
-      color: map-get($config, danger-color)
+      name: "danger",
+      color: map-get($config, danger-color),
     ),
     warning: (
-      name: 'warning',
-      color: map-get($config, warning-color)
+      name: "warning",
+      color: map-get($config, warning-color),
     ),
     success: (
-      name: 'success',
-      color: map-get($config, success-color)
+      name: "success",
+      color: map-get($config, success-color),
     ),
     info: (
-      name: 'info',
-      color: map-get($config, info-color)
+      name: "info",
+      color: map-get($config, info-color),
     ),
     muted: (
-      name: 'muted',
-      color: map-get($config, muted-color)
-    )
+      name: "muted",
+      color: map-get($config, muted-color),
+    ),
   );
 
   @each $state, $map in $state-map {

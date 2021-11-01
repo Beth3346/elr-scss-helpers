@@ -1,9 +1,7 @@
-@import 'node_modules/elr-scss-functions/main';
-
 @mixin elr-background-classes($config: ()) {
   $config: extend(
     (
-      prefix: 'elr'
+      prefix: "elr",
     ),
     $config
   );

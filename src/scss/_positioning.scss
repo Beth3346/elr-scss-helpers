@@ -1,16 +1,14 @@
-@import 'node_modules/elr-scss-functions/main';
-
 @mixin elr-positioning-classes($config: ()) {
   $config: extend(
     (
-      prefix: 'elr'
+      prefix: "elr",
     ),
     $config
   );
 
   $prefix: map-get($config, prefix);
-  $positions: 'static' 'absolute' 'relative' 'fixed' 'sticky';
-  $directions: 'top' 'right' 'bottom' 'left';
+  $positions: "static" "absolute" "relative" "fixed" "sticky";
+  $directions: "top" "right" "bottom" "left";
   $increments: 5 10 15 20 20 25;
 
   @each $position in $positions {

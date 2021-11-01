@@ -1,10 +1,9 @@
 // scss-lint:disable ImportantRule
-@import 'node_modules/elr-scss-functions/main';
 
 @mixin elr-responsive-classes($config: ()) {
   $config: extend(
     (
-      prefix: 'elr'
+      prefix: "elr",
     ),
     $config
   );
@@ -12,29 +11,29 @@
   $prefix: map-get($config, prefix);
   $breakpoints: (
     desktop: (
-      name: 'desktop',
-      width: 1600px
+      name: "desktop",
+      width: 1600px,
     ),
     laptop: (
-      name: 'laptop',
-      width: 1200px
+      name: "laptop",
+      width: 1200px,
     ),
     small-laptop: (
-      name: 'small-laptop',
-      width: 1024px
+      name: "small-laptop",
+      width: 1024px,
     ),
     tablet: (
-      name: 'tablet',
-      width: 768px
+      name: "tablet",
+      width: 768px,
     ),
     mobile: (
-      name: 'mobile',
-      width: 568px
+      name: "mobile",
+      width: 568px,
     ),
     small-mobile: (
-      name: 'small-mobile',
-      width: 320px
-    )
+      name: "small-mobile",
+      width: 320px,
+    ),
   );
 
   .#{$prefix}-hide {

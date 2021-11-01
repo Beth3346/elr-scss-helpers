@@ -1,11 +1,11 @@
 // List Classes
-@import 'node_modules/elr-scss-functions/main';
-@import 'node_modules/elr-scss-lists/src/main';
+
+@import "node_modules/elr-scss-lists/src/main";
 
 @mixin elr-list-classes($config: ()) {
   $config: extend(
     (
-      prefix: 'elr'
+      prefix: "elr",
     ),
     $config
   );

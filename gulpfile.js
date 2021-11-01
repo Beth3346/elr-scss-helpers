@@ -1,6 +1,6 @@
 const gulp = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
-const plumber = require("gulp-plumber");
+// const plumber = require("gulp-plumber");
 const autoprefixer = require("gulp-autoprefixer");
 const cleanCSS = require("gulp-clean-css");
 const del = require("del");
@@ -17,39 +17,49 @@ function clean() {
 }
 
 // Copy HTML
-function copyIndex() {
+function copyHtml() {
   return gulp.src(["./public/*.html"]).pipe(gulp.dest(paths.app));
 }
 
 function copyImages() {
   return gulp
-    .src("public/images/**/*.{gif,jpg,png,svg}")
+    .src(["public/images/**/*.{gif,jpg,png,svg}"])
     .pipe(gulp.dest(paths.images));
 }
 
-gulp.task("default", () => {
-  copyImages();
+function processStyles(done) {
+  return (
+    gulp
+      .src(["public/*.scss"])
+      // .pipe(plumber())
+      .pipe(
+        sass({
+          includePaths: ["node_modules"],
+        }).on("error", function () {
+          sass.logError();
+          process.exit(1);
+        })
+      )
+      .pipe(gulp.dest(paths.css))
+      .pipe(
+        autoprefixer({
+          cascade: false,
+        })
+      )
+      .pipe(gulp.dest(paths.css))
+      .pipe(cleanCSS({ debug: true }))
+      .pipe(gulp.dest(paths.css))
+  );
+}
 
-  return gulp
-    .src(["./public/*.scss"])
-    .pipe(plumber())
-    .pipe(
-      sass({
-        includePaths: ["node_modules"],
-      }).on("error", sass.logError)
-    )
-    .pipe(gulp.dest(paths.css))
-    .pipe(
-      autoprefixer({
-        cascade: false,
-      })
-    )
-    .pipe(gulp.dest(paths.css))
-    .pipe(cleanCSS({ debug: true }))
-    .pipe(gulp.dest(paths.css))
-    .pipe(copyIndex());
+gulp.task("default", done => {
+  copyImages();
+  copyHtml();
+  const styles = processStyles(done);
+  // console.log({ styles });
+  done();
 });
 
 exports.clean = clean;
-exports.copyIndex = copyIndex;
+exports.copyHtml = copyHtml;
 exports.copyImages = copyImages;

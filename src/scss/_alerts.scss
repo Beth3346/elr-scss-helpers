@@ -1,10 +1,9 @@
-@import 'node_modules/elr-scss-functions/main';
-@import 'node_modules/elr-scss-alerts/src/main';
+@import "node_modules/elr-scss-alerts/src/main";
 
 @mixin elr-notification-classes($config: ()) {
   $config: extend(
     (
-      prefix: 'elr'
+      prefix: "elr",
     ),
     $config
   );
@@ -12,26 +11,26 @@
   $prefix: map-get($config, prefix);
   $state-map: (
     danger: (
-      name: 'danger'
+      name: "danger",
     ),
     warning: (
-      name: 'warning'
+      name: "warning",
     ),
     success: (
-      name: 'success'
+      name: "success",
     ),
     info: (
-      name: 'info'
+      name: "info",
     ),
     muted: (
-      name: 'muted'
-    )
+      name: "muted",
+    ),
   );
 
   .#{$prefix}-notification {
     @include elr-alert(
       $config: (
-        border-radius: 3px
+        border-radius: 3px,
       )
     );
     margin: 10px 0;
@@ -45,7 +44,7 @@
     .#{$prefix}-notification-#{$name} {
       @include elr-alert-context(
         $config: (
-          type: #{$name}
+          type: #{$name},
         )
       );
     }

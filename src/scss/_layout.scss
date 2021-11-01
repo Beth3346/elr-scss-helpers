@@ -1,5 +1,4 @@
 // scss-lint:disable ImportantRule
-@import 'node_modules/elr-scss-functions/main';
 
 // Layout Classes
 @mixin elr-reset-element() {
@@ -16,7 +15,7 @@
 @mixin elr-clearfix() {
   &:after,
   &:before {
-    content: '';
+    content: "";
     display: table;
   }
 
@@ -47,7 +46,7 @@
 @mixin elr-layout-classes($config: ()) {
   $config: extend(
     (
-      prefix: 'elr'
+      prefix: "elr",
     ),
     $config
   );
@@ -123,10 +122,10 @@
     width: 0px;
     background: transparent; /* Chrome/Safari/Webkit */
   }
-  
+
   .#{$prefix}-disable-scrollbars {
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none;  /* IE 10+ */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE 10+ */
   }
 
   $steps: 0 4 8 16 20 24 28 32 36 40 48 52 64 72;

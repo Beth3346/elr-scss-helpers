@@ -1,9 +1,7 @@
-@import 'node_modules/elr-scss-functions/main';
-
 @mixin elr-typography-classes($config: ()) {
   $config: extend(
     (
-      prefix: 'elr'
+      prefix: "elr",
     ),
     $config
   );
@@ -82,13 +80,13 @@
 @mixin elr-typography-states($config: ()) {
   $config: extend(
     (
-      prefix: 'elr',
+      prefix: "elr",
       danger-color: #f7322f,
       warning-color: #d1cb34,
       success-color: #7aba7b,
       info-color: #1daaf0,
       muted-color: #999,
-      accent-color: rgb(240, 44, 151)
+      accent-color: rgb(240, 44, 151),
     ),
     $config
   );
@@ -96,29 +94,29 @@
   $prefix: map-get($config, prefix);
   $color-map: (
     danger: (
-      name: 'danger',
-      color: map-get($config, danger-color)
+      name: "danger",
+      color: map-get($config, danger-color),
     ),
     warning: (
-      name: 'warning',
-      color: map-get($config, warning-color)
+      name: "warning",
+      color: map-get($config, warning-color),
     ),
     success: (
-      name: 'success',
-      color: map-get($config, success-color)
+      name: "success",
+      color: map-get($config, success-color),
     ),
     info: (
-      name: 'info',
-      color: map-get($config, info-color)
+      name: "info",
+      color: map-get($config, info-color),
     ),
     muted: (
-      name: 'muted',
-      color: map-get($config, muted-color)
+      name: "muted",
+      color: map-get($config, muted-color),
     ),
     accent: (
-      name: 'accent',
-      color: map-get($config, accent-color)
-    )
+      name: "accent",
+      color: map-get($config, accent-color),
+    ),
   );
 
   @each $color, $map in $color-map {

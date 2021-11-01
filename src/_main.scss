@@ -1,15 +1,15 @@
-@import 'node_modules/elr-scss-functions/main';
-@import 'scss/alerts';
-@import 'scss/background';
-@import 'scss/buttons';
-@import 'scss/layout';
-@import 'scss/lists';
-@import 'scss/responsiveness';
-@import 'scss/typography';
-@import 'scss/flex';
-@import 'scss/display';
-@import 'scss/positioning';
-@import 'scss/transforms';
+@import "node_modules/elr-scss-functions/src/main";
+@import "scss/alerts";
+@import "scss/background";
+@import "scss/buttons";
+@import "scss/layout";
+@import "scss/lists";
+@import "scss/responsiveness";
+@import "scss/typography";
+@import "scss/flex";
+@import "scss/display";
+@import "scss/positioning";
+@import "scss/transforms";
 
 // config
 $primary-color: #1976d2;
@@ -28,12 +28,12 @@ $muted-color: #999;
 @mixin elr-helper-classes($config: ()) {
   $config: extend(
     (
-      prefix: 'elr',
+      prefix: "elr",
       link-color: $primary-color,
       color: $text-color,
       border-radius: $border-radius,
       accent-color: $accent-color,
-      button-color: $primary-color
+      button-color: $primary-color,
     ),
     $config
   );
@@ -50,52 +50,52 @@ $muted-color: #999;
       prefix: $prefix,
       background-color: $button-color,
       border-radius: $border-radius,
-      accent-color: $accent-color
+      accent-color: $accent-color,
     )
   );
   @include elr-display-classes(
     $config: (
-      prefix: $prefix
+      prefix: $prefix,
     )
   );
   @include elr-flex-classes(
     $config: (
-      prefix: $prefix
+      prefix: $prefix,
     )
   );
   @include elr-layout-classes(
     $config: (
-      prefix: $prefix
+      prefix: $prefix,
     )
   );
   @include elr-positioning-classes(
     $config: (
-      prefix: $prefix
+      prefix: $prefix,
     )
   );
   @include elr-list-classes(
     $config: (
-      prefix: $prefix
+      prefix: $prefix,
     )
   );
   @include elr-responsive-classes(
     $config: (
-      prefix: $prefix
+      prefix: $prefix,
     )
   );
   @include elr-typography-classes(
     $config: (
-      prefix: $prefix
+      prefix: $prefix,
     )
   );
   @include elr-background-classes(
     $config: (
-      prefix: $prefix
+      prefix: $prefix,
     )
   );
   @include elr-transforms-classes(
     $config: (
-      prefix: $prefix
+      prefix: $prefix,
     )
   );
 }
@@ -103,13 +103,13 @@ $muted-color: #999;
 @mixin elr-action-helper-classes($config: ()) {
   $config: extend(
     (
-      prefix: 'elr',
+      prefix: "elr",
       danger-color: $danger-color,
       warning-color: $warning-color,
       success-color: $success-color,
       info-color: $info-color,
       muted-color: $muted-color,
-      accent-color: $accent-color
+      accent-color: $accent-color,
     ),
     $config
   );
@@ -124,7 +124,7 @@ $muted-color: #999;
 
   @include elr-notification-classes(
     $config: (
-      prefix: $prefix
+      prefix: $prefix,
     )
   );
   @include elr-buttons-action(
@@ -135,7 +135,7 @@ $muted-color: #999;
       success-color: $success-color,
       info-color: $info-color,
       muted-color: $muted-color,
-      accent-color: $accent-color
+      accent-color: $accent-color,
     )
   );
   @include elr-typography-states(
@@ -146,7 +146,7 @@ $muted-color: #999;
       success-color: $success-color,
       info-color: $info-color,
       muted-color: $muted-color,
-      accent-color: $accent-color
+      accent-color: $accent-color,
     )
   );
 }

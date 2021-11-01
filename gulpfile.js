@@ -1,6 +1,6 @@
 const gulp = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
-// const plumber = require("gulp-plumber");
+const plumber = require("gulp-plumber");
 const autoprefixer = require("gulp-autoprefixer");
 const cleanCSS = require("gulp-clean-css");
 const del = require("del");
@@ -27,35 +27,32 @@ function copyImages() {
     .pipe(gulp.dest(paths.images));
 }
 
-function processStyles(done) {
-  return (
-    gulp
-      .src(["public/*.scss"])
-      // .pipe(plumber())
-      .pipe(
-        sass({
-          includePaths: ["node_modules"],
-        }).on("error", function () {
-          sass.logError();
-          process.exit(1);
-        })
-      )
-      .pipe(gulp.dest(paths.css))
-      .pipe(
-        autoprefixer({
-          cascade: false,
-        })
-      )
-      .pipe(gulp.dest(paths.css))
-      .pipe(cleanCSS({ debug: true }))
-      .pipe(gulp.dest(paths.css))
-  );
+function processStyles() {
+  return gulp
+    .src(["public/*.scss"])
+    .pipe(plumber())
+    .pipe(
+      sass({
+        includePaths: ["node_modules"],
+      })
+        .on("error", sass.logError)
+        .on("error", () => gulp.emit("error", new Error("scss compile error")))
+    )
+    .pipe(gulp.dest(paths.css))
+    .pipe(
+      autoprefixer({
+        cascade: false,
+      })
+    )
+    .pipe(gulp.dest(paths.css))
+    .pipe(cleanCSS({ debug: true }))
+    .pipe(gulp.dest(paths.css));
 }
 
 gulp.task("default", done => {
   copyImages();
   copyHtml();
-  const styles = processStyles(done);
+  processStyles();
   // console.log({ styles });
   done();
 });

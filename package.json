@@ -11,7 +11,7 @@
     "clean": "gulp clean",
     "build": "gulp clean && gulp",
     "prepare": "husky install",
-    "test": "gulp clean && gulp && gulp clean",
+    "test": "gulp clean && gulp",
     "update": "ncu",
     "update:install": "ncu -u && npm install",
     "publish": "gulp && np"
@@ -25,7 +25,7 @@
     "gulp-sass": "^5.0.0",
     "husky": "^7.0.4",
     "np": "^7.5.0",
-    "npm-check-updates": "^11.8.5",
+    "npm-check-updates": "^12.0.2",
     "sass": "^1.43.4"
   },
   "homepage": "http://www.elizabeth-rogers.com/elr-utilities/css.html",
@@ -42,6 +42,6 @@
     "elr-scss-alerts": "^0.1.7",
     "elr-scss-buttons": "^0.0.8",
     "elr-scss-functions": "1.1.6",
-    "elr-scss-lists": "^0.0.2"
+    "elr-scss-lists": "^0.0.3"
   }
 }

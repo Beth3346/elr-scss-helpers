@@ -11,16 +11,18 @@
 @import "scss/positioning";
 @import "scss/transforms";
 
-// config
-$primary-color: #1976d2;
-$text-color: #333;
+// config\
+$text-color: #111;
 $border-radius: 3px;
-$accent-color: rgb(240, 44, 151);
+
+$box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1), -1px -1px 5px rgba(0, 0, 0, 0.1);
+$primary-color: #1976d2;
+$accent-color: #f81190;
 $button-color: #1976d2;
-$danger-color: #f7322f;
-$warning-color: #d1cb34;
-$success-color: #7aba7b;
-$info-color: #1daaf0;
+$danger-color: #af100d;
+$warning-color: #ca9626;
+$success-color: #337234;
+$info-color: #1976d2;
 $muted-color: #999;
 
 // TODO: allow for custom prefixes

@@ -45,6 +45,7 @@
   "dependencies": {
     "elr-scss-alerts": "^0.1.10",
     "elr-scss-buttons": "^0.0.10",
+    "elr-scss-config": "^1.1.2",
     "elr-scss-functions": "1.1.6",
     "elr-scss-lists": "^0.0.5",
     "elr-scss-reset": "^0.0.7"

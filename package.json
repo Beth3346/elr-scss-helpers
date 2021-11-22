@@ -9,23 +9,19 @@
   },
   "scripts": {
     "clean": "gulp clean",
-    "build": "gulp clean && gulp",
+    "build": "parcel build src/index.html",
+    "serve": "parcel serve src/index.html",
     "prepare": "husky install",
-    "test": "gulp clean && gulp",
+    "test": "echo 'no tests for scss'",
     "update": "ncu",
     "update:install": "ncu -u && npm install",
     "np": "np"
   },
   "devDependencies": {
-    "del": "^6.0.0",
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^8.0.0",
-    "gulp-clean-css": "^4.3.0",
-    "gulp-plumber": "^1.2.1",
-    "gulp-sass": "^5.0.0",
     "husky": "^7.0.4",
     "np": "^7.6.0",
     "npm-check-updates": "^12.0.2",
+    "parcel": "^2.0.1",
     "sass": "^1.43.4"
   },
   "homepage": "http://www.elizabeth-rogers.com/elr-utilities/css.html",
@@ -33,8 +29,6 @@
     "sass, css, mixins, helpers"
   ],
   "license": "SEE LICENSE IN LICENSE.md",
-  "sass": "/src/main.scss",
-  "main": "/src/main.scss",
   "repository": {
     "type": "git",
     "url": "https://github.com/Beth3346/elr-scss-helpers.git"

@@ -173,7 +173,7 @@ h4 + p.box-model-label {
 }
 
 .background-box {
-  background-image: url("../images/background-image.jpg");
+  background-image: url("images/background-image.jpg");
   background-repeat: no-repeat;
 
   p {
@@ -187,12 +187,12 @@ h4 + p.box-model-label {
   }
 
   &.elr-background-fixed {
-    background-image: url("../images/landscape-background.jpg");
+    background-image: url("images/landscape-background.jpg");
   }
 }
 
 .background-pattern-box {
-  background-image: url("../images/pattern-bg.jpg");
+  background-image: url("images/pattern-bg.jpg");
 
   p {
     color: #fff;

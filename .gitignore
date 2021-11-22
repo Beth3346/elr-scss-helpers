@@ -222,6 +222,4 @@ dwsync.xml
 *.scssc
 /.sass-cache/
 /dist
-
-# Local Netlify folder
-.netlify
+/.parcel-cache

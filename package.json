@@ -12,8 +12,8 @@
     "serve": "parcel serve src/index.html",
     "prepare": "husky install",
     "test": "npm run build",
-    "update": "ncu",
-    "update:install": "ncu -u && npm install",
+    "ncu": "ncu",
+    "ncu:install": "ncu -u && npm install",
     "np": "np"
   },
   "devDependencies": {
@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "elr-scss-alerts": "^0.1.11",
-    "elr-scss-base": "^0.0.9",
+    "elr-scss-base": "^0.0.10",
     "elr-scss-buttons": "^0.0.11",
     "elr-scss-config": "^1.1.2",
     "elr-scss-functions": "1.1.6",

@@ -1,8 +1,10 @@
-# elr-scss-helpers
+# CSS Helpers
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/2d768ae3-693a-40d5-b5e1-d5a53aa76bb5/deploy-status)](https://app.netlify.com/sites/elr-scss-helpers/deploys)
+[![npm version](http://img.shields.io/npm/v/elr-scss-helpers.svg)](https://www.npmjs.org/package/elr-scss-helpers)
+[![Build Status](https://github.com/elr-scss-helpers/workflows/CI/badge.svg)](https://github.com/elr-scss-helpers/actions?workflow=CI)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![npm](https://img.shields.io/npm/dm/elr-scss-helpers.svg?style=flat)](https://npmjs.com/package/elr-scss-helpers)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2d768ae3-693a-40d5-b5e1-d5a53aa76bb5/deploy-status)](https://app.netlify.com/sites/elr-scss-helpers/deploys)
 [![last commit](https://img.shields.io/github/last-commit/Beth3346/elr-scss-helpers.svg)](https://github.com/Beth3346/elr-scss-helpers)
 
 a library of sass mixins
@@ -12,7 +14,12 @@ a library of sass mixins
 Download node at [nodejs.org](http://nodejs.org) and install it, if you haven't already.
 
 ```sh
-npm install elr-scss-helpers --save
+npm install elr-scss-helpers
+```
+
+or
+
+```sh
 yarn add elr-scss-helpers
 ```
 
@@ -60,7 +67,7 @@ you don't like the 'elr' prefix or want to use a brand prefix you are free to ch
 ```scss
 @include elr-helper-classes(
   $config: (
-    prefix: 'abc'
+    prefix: "abc",
   )
 );
 ```
@@ -88,7 +95,7 @@ These classes allow for common styles.
   - used to style default buttons
 
 ```scss
-@import '~elr-scss-helpers';
+@import "~elr-scss-helpers";
 
 @include elr-helper-classes(
   $config: (
@@ -96,7 +103,7 @@ These classes allow for common styles.
     color: white,
     border-radius: 3px,
     accent-color: green,
-    button-color: blue
+    button-color: blue,
   )
 );
 ```
@@ -106,13 +113,13 @@ These classes allow for common styles.
 if you only want to add button helpers
 
 ```scss
-@import '~elr-scss-helpers';
+@import "~elr-scss-helpers";
 @include elr-button-classes(
   $config: (
     background-color: blue,
     border-radius: 3px,
     width: 250px,
-    color: white
+    color: white,
   )
 );
 ```
@@ -186,7 +193,7 @@ if you only want to add button helpers
 if you only want to add display classes. classes for display: flex and display: grid are included in other mixins.
 
 ```scss
-@import '~elr-scss-helpers';
+@import "~elr-scss-helpers";
 @include elr-display-classes;
 ```
 
@@ -202,7 +209,7 @@ if you only want to add display classes. classes for display: flex and display: 
 if you only want to add flex classes
 
 ```scss
-@import '~elr-scss-helpers';
+@import "~elr-scss-helpers";
 @include elr-flex-classes;
 ```
 
@@ -211,7 +218,7 @@ if you only want to add flex classes
 if you only want to add layout classes
 
 ```scss
-@import '~elr-scss-helpers';
+@import "~elr-scss-helpers";
 @include elr-layout-classes;
 ```
 
@@ -220,7 +227,7 @@ if you only want to add layout classes
 if you only want to add positioning classes
 
 ```scss
-@import '~elr-scss-helpers';
+@import "~elr-scss-helpers";
 @include elr-positioning-classes;
 ```
 
@@ -229,7 +236,7 @@ if you only want to add positioning classes
 if you only want to add list classes
 
 ```scss
-@import '~elr-scss-helpers';
+@import "~elr-scss-helpers";
 @include elr-list-classes;
 ```
 
@@ -238,7 +245,7 @@ if you only want to add list classes
 if you only want to add responsive classes
 
 ```scss
-@import '~elr-scss-helpers';
+@import "~elr-scss-helpers";
 @include elr-responsive-classes;
 ```
 
@@ -247,7 +254,7 @@ if you only want to add responsive classes
 if you only want to add typography classes
 
 ```scss
-@import '~elr-scss-helpers';
+@import "~elr-scss-helpers";
 @include elr-typography-classes;
 ```
 
@@ -256,7 +263,7 @@ if you only want to add typography classes
 if you only want to add background classes
 
 ```scss
-@import '~elr-scss-helpers';
+@import "~elr-scss-helpers";
 @include elr-background-classes;
 ```
 
